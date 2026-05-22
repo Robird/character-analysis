@@ -34,7 +34,8 @@
 - Aigis（アイギス）— 《P3》，有心的机器人少女
 
 ## 魂系（FromSoftware，宫崎英高）
-- 不死人 / Chosen Undead — 《黑暗之魂》，在火的时代终结处传火/灭火
+- 不死人— 《黑暗之魂》，在火的时代终结处传火/灭火
+- Chosen Undead— 《黑暗之魂》，在火的时代终结处传火/灭火
 - Solaire of Astora（太阳战士索拉尔）— 《黑魂》，"Praise the Sun!" \[T]/
 - Artorias the Abysswalker（深渊行者阿尔特留斯）— 《黑魂》
 - 狼（Wolf / 只狼）— 《只狼：影逝二度》（SEKIRO），独臂忍者，"犹豫就会败北"

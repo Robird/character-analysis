@@ -25,7 +25,8 @@
 - Mordin Solus（莫丁·索鲁斯）— 赛拉睿科学家，"Had to be me. Someone else might have gotten it wrong"
 - Urdnot Wrex（莱克斯）— 克洛根战斗大师，"Shepard"
 - The Illusive Man（幻影人）— 塞伯鲁斯领袖
-- Sovereign / Reapers（收割者）— "You exist because we allow it, and you will end because we demand it"
+- Sovereign — "You exist because we allow it, and you will end because we demand it"
+- Reapers（收割者）— "You exist because we allow it, and you will end because we demand it"
 
 ## 最后生还者系列（The Last of Us，Naughty Dog）
 - Joel（乔尔）— 失去女儿的父亲，从走私者到为艾莉屠杀萤火虫
@@ -59,14 +60,16 @@
 ## 刺客信条系列（Assassin's Creed，Ubisoft）
 - Ezio Auditore da Firenze（艾吉奥·奥迪托雷）— 文艺复兴佛罗伦萨的刺客，"Requiescat in pace"
 - Altaïr Ibn-La'Ahad（阿泰尔·伊本-拉哈德）— 《AC I》的十字军时代刺客
-- Kassandra / Alexios — 《奥德赛》，斯巴达的雇佣兵
+- Kassandra— 《奥德赛》，斯巴达的雇佣兵
+- Alexios— 《奥德赛》，斯巴达的雇佣兵
 - Bayek of Siwa（巴耶克）— 《起源》，最后一任埃及守护者
 - Eivor（艾沃尔）— 《英灵殿》，维京劫掠者
 
 ## 生化奇兵系列（BioShock，Irrational Games）
 - Jack（杰克）— 《BioShock 1》，"Would you kindly?" 
 - Andrew Ryan（安德鲁·莱恩）— 极乐城的建造者，"A man chooses, a slave obeys"
-- Big Daddy / Little Sister — 深海潜水服保护与被保护的小女孩
+- Big Daddy— 深海潜水服保护与被保护的小女孩
+- Little Sister— 深海潜水服保护与被保护的小女孩
 - Booker DeWitt（布克·德威特）— 《BioShock Infinite》，"Bring us the girl, and wipe away the debt"
 - Elizabeth（伊丽莎白）— 困于哥伦比亚天空之城的裂境女孩，"Booker, catch!"
 
@@ -80,10 +83,12 @@
 ## 其他重要RPG与动作冒险
 - Aloy（埃洛伊）— 《地平线：零之曙光/西之绝境》（Horizon，Guerrilla），从被流放者到机械巨兽猎人
 - Lara Croft（劳拉·克劳馥）— 《古墓丽影》（Tomb Raider），考古女强人
-- Lee / Clementine — 《行尸走肉》（Telltale），"Keep that hair short"
+- Lee— 《行尸走肉》（Telltale），"Keep that hair short"
+- Clementine— 《行尸走肉》（Telltale），"Keep that hair short"
 - Chell（雪儿）— 《传送门》（Portal），"The cake is a lie"
 - Senua（赛娜）— 《地狱之刃：赛娜的献祭》（Hellblade），凯尔特女战士与精神分裂
-- Amicia / Hugo — 《瘟疫传说》（A Plague Tale），姐姐与弟弟逃过鼠疫与宗教审判
+- Amicia— 《瘟疫传说》（A Plague Tale），姐姐与弟弟逃过鼠疫与宗教审判
+- Hugo— 《瘟疫传说》（A Plague Tale），姐姐与弟弟逃过鼠疫与宗教审判
 - Jin Sakai（境井仁）— 《对马岛之鬼》（Ghost of Tsushima），放弃武士名誉成为"冥人"
 - Sam Porter Bridges（山姆·波特·布里吉斯）— 《死亡搁浅》（Death Stranding），送货员连接破碎的美国，"Keep on keeping on!"
 - Zagreus（扎格柔斯）— 《哈迪斯》，见独立游戏（此处提及）
