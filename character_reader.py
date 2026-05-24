@@ -23,11 +23,10 @@ class CharacterEntry(NamedTuple):
     """破折号前的角色名。"""
     gist: str
     """破折号后的简介。"""
-    path_segments: tuple[str, ...]
+    classification: tuple[str, ...]
     """相对于 base_dir 的路径分段，末段为去掉 .md 后缀的文件名。
-    例: ("real", "中华文化") / ("fiction", "文学", "英国文学", "古典至19世纪")"""
-    heading: str | None
-    """该角色上方最近的 ATX 标题文本（不含 # 号），无标题时为 None。"""
+    例: ("real", "中华文化") / ("fiction", "文学", "英国文学", "古典至19世纪")。
+    最后一个部分是该角色上方最近的 ATX 标题文本（不含 # 号）。"""
 
 
 # ATX heading: 1-6 个 # + 至少一个空格 + 标题文本
@@ -55,6 +54,8 @@ def iter_characters(
         if stem.endswith(".md"):
             stem = stem[:-3]
         path_segments = parts[:-1] + (stem,) if len(parts) > 1 else (stem,)
+        while(len(path_segments) > 1 and path_segments[-1]==path_segments[-2]):
+            path_segments = path_segments[:-1]
 
         current_heading: str | None = None
 
@@ -81,7 +82,11 @@ def iter_characters(
                 gist = body[em_idx + 1 :].strip()
 
                 if name:  # 跳过空名称
-                    yield CharacterEntry(name, gist, path_segments, current_heading)
+                    if current_heading and current_heading != path_segments[-1]:
+                        classification = (*path_segments, current_heading)
+                    else:
+                        classification = path_segments
+                    yield CharacterEntry(name, gist, classification)
 
 
 # ── 测试 ──────────────────────────────────────────────
@@ -95,9 +100,9 @@ if __name__ == "__main__":
 
     print(f"# 前 {max_lines} 条角色\n")
     for i, entry in enumerate(islice(iter_characters(), max_lines), 1):
-        path_str = "/".join(entry.path_segments)
-        head_str = f"§ {entry.heading}" if entry.heading else "(无标题)"
-        print(f"{i:4d}. {entry.name}")
-        print(f"      [{path_str}]  {head_str}")
-        print(f"      {entry.gist}")
+        classification = "/".join(entry.classification)
+        
+        user_prompt = f"`{classification}` 中的 `{entry.name}` — {entry.gist}"
+        print(f"{i:4d}")
+        print(user_prompt)
         print()
