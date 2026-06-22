@@ -7,26 +7,14 @@
     from itertools import islice
 
     for entry in islice(iter_characters(), 20):
-        print(entry.name, entry.heading, entry.path_segments)
+        print(entry.name, entry.gist, entry.classification)
 """
 
 import re
 from pathlib import Path
 from collections.abc import Generator
-from typing import NamedTuple
 
-
-class CharacterEntry(NamedTuple):
-    """一条角色记录。兼容元组解包：name, gist, path_segments, heading = entry。"""
-
-    name: str
-    """破折号前的角色名。"""
-    gist: str
-    """破折号后的简介。"""
-    classification: tuple[str, ...]
-    """相对于 base_dir 的路径分段，末段为去掉 .md 后缀的文件名。
-    例: ("real", "中华文化") / ("fiction", "文学", "英国文学", "古典至19世纪")。
-    最后一个部分是该角色上方最近的 ATX 标题文本（不含 # 号）。"""
+from character_gist import CharacterGist
 
 
 # ATX heading: 1-6 个 # + 至少一个空格 + 标题文本
@@ -35,14 +23,14 @@ _ATX_RE = re.compile(r"^#{1,6}\s+(.+)")
 
 def iter_characters(
     base_dir: str | Path = "characters",
-) -> Generator[CharacterEntry, None, None]:
+) -> Generator[CharacterGist, None, None]:
     """生成器：遍历 base_dir 下所有 .md 文件中的角色行。
 
     Args:
         base_dir: characters 目录的路径。
 
     Yields:
-        CharacterEntry — 含 name、gist、path_segments、heading 四个字段。
+        CharacterEntry — 含 name、gist、classification 三个字段。
     """
     root = Path(base_dir)
 
@@ -86,7 +74,7 @@ def iter_characters(
                         classification = (*path_segments, current_heading)
                     else:
                         classification = path_segments
-                    yield CharacterEntry(name, gist, classification)
+                    yield CharacterGist(name, gist, classification)
 
 
 # ── 测试 ──────────────────────────────────────────────
