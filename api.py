@@ -75,7 +75,7 @@ class LLMClient:
         self,
         base_url: str | None = None,
         api_key: str | None = None,
-        model: str = "deepseek-v4-flash",
+        model: str = "deepseek-v4-pro",
         timeout: int = 240,
     ):
         resolved_base_url = (base_url or os.environ.get("DEEPSEEK_BASE_URL") or "https://api.deepseek.com").rstrip("/")
