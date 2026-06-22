@@ -3,11 +3,8 @@ import json
 import logging
 import os
 from typing import Any
-from typing import Generic
-from typing import TypeVar
 
 import httpx
-from pydantic import BaseModel, ValidationError
 from tenacity import (
     before_sleep_log,
     retry,
@@ -18,23 +15,8 @@ from tenacity import (
 
 logger = logging.getLogger(__name__)
 
-StructuredModelT = TypeVar("StructuredModelT", bound=BaseModel)
-DEFAULT_STRUCTURED_TOOL_NAME = "submit_structured_output"
-
 
 class LLMResponseError(Exception):
-    pass
-
-
-class MissingToolCallError(LLMResponseError):
-    pass
-
-
-class InvalidToolArgumentsError(LLMResponseError):
-    pass
-
-
-class StructuredOutputValidationError(LLMResponseError):
     pass
 
 
@@ -43,31 +25,70 @@ RETRYABLE_STATUS_CODES = {408, 429, 500, 502, 503, 504}
 
 def _is_retryable_exception(exc: BaseException) -> bool:
     if isinstance(exc, LLMResponseError):
-        # Contract violations rarely improve with blind retries.
-        return not isinstance(
-            exc,
-            (
-                MissingToolCallError,
-                InvalidToolArgumentsError,
-                StructuredOutputValidationError,
-            ),
-        )
+        return False
     if isinstance(exc, httpx.HTTPStatusError):
         return exc.response.status_code in RETRYABLE_STATUS_CODES
     return isinstance(exc, httpx.RequestError)
 
 
 @dataclass(frozen=True)
-class LLMTextResult:
-    text: str
-    reasoning: str = ""
+class RawToolCall:
+    """从模型响应中原样提取出的一次工具调用。
+
+    Attributes:
+        id: 工具调用 id，回传 ``role="tool"`` 反馈时需要原样带上。
+        name: 被调用的工具名。
+        arguments: 工具参数的原始 JSON 字符串，尚未解析或校验。
+    """
+
+    id: str
+    name: str
+    arguments: str
 
 
 @dataclass(frozen=True)
-class LLMFillResult(Generic[StructuredModelT]):
-    value: StructuredModelT
+class LLMChatResult:
+    """一次多工具对话请求的结果，供工具调用循环（agent）使用。
+
+    本结果不强制满足任何更高层语义约束：模型可能返回 0 个、1 个或多个工具调用，
+    参数也未经解析或校验，由上层 agent / 调度器决定如何反馈。
+
+    Attributes:
+        text: 助手正文内容（可与工具调用并存）。
+        reasoning: 推理内容（若模型提供）。
+        tool_calls: 本轮模型发起的所有工具调用，按原样顺序排列。
+        message: 原始 assistant message，保留以便调试与审计。
+        finish_reason: 本次响应的 finish_reason。
+    """
+
     text: str
-    reasoning: str = ""
+    reasoning: str
+    tool_calls: tuple[RawToolCall, ...]
+    message: dict[str, Any]
+    finish_reason: str
+
+    def to_assistant_message(self) -> dict[str, Any]:
+        """返回可直接回放到下一轮请求的标准 assistant 消息。
+
+        基于解析后的 ``text`` / ``tool_calls`` 重建，而不是原样复用 provider
+        返回的 ``message``，以避免把 ``reasoning_content`` 等供应商私有字段重新
+        喂回模型。
+        """
+
+        message: dict[str, Any] = {"role": "assistant"}
+        if self.tool_calls:
+            message["content"] = self.text or None
+            message["tool_calls"] = [
+                {
+                    "id": tool_call.id,
+                    "type": "function",
+                    "function": {"name": tool_call.name, "arguments": tool_call.arguments},
+                }
+                for tool_call in self.tool_calls
+            ]
+            return message
+        message["content"] = self.text
+        return message
 
 
 class LLMClient:
@@ -100,30 +121,24 @@ class LLMClient:
     def __exit__(self, exc_type: object, exc: object, tb: object) -> None:
         self.close()
 
-    def text(
-        self,
-        messages: list[dict],
-        temperature: float = 0.3,
-    ) -> LLMTextResult:
-        # Do not expose max_tokens caps on this client. In practice they often
-        # burn budget on reasoning or truncate tool arguments, producing a
-        # half-result that must be retried anyway.
-        return self._request_text_result(
-            messages,
-            temperature=temperature,
-        )
-
-    def fill(
+    def chat(
         self,
         messages: list[dict],
         *,
-        schema: type[StructuredModelT],
-        temperature: float = 0.0,
-    ) -> LLMFillResult[StructuredModelT]:
-        return self._request_fill_result(
+        tools: list[dict[str, Any]] | None = None,
+        tool_choice: str = "auto",
+        temperature: float = 0.3,
+        parallel_tool_calls: bool | None = None,
+    ) -> LLMChatResult:
+        # Low-level building block for tool-call loops. It only speaks the wire
+        # protocol and normalizes the response; higher-level semantics such as
+        # "must emit one valid structured object" belong in the agent layer.
+        return self._request_chat_result(
             messages,
-            schema=schema,
+            tools=tools,
+            tool_choice=tool_choice,
             temperature=temperature,
+            parallel_tool_calls=parallel_tool_calls,
         )
 
     @retry(
@@ -132,134 +147,46 @@ class LLMClient:
         retry=retry_if_exception(_is_retryable_exception),
         before_sleep=before_sleep_log(logger, logging.WARNING),
     )
-    def _request_text_result(
-        self,
-        messages: list[dict],
-        temperature: float = 0.3,
-    ) -> LLMTextResult:
-        # Some tasks only need the model's natural-language answer while still
-        # preserving reasoning capture. Keep this path separate from structured
-        # contracts so callers do not force long-form text through a fake
-        # one-field schema.
-        raw = self._post(self._build_text_body(messages, temperature))
-        return self._parse_chat_text_result(raw)
-
-    @retry(
-        stop=stop_after_attempt(5),
-        wait=wait_exponential(multiplier=1, min=2, max=60),
-        retry=retry_if_exception(_is_retryable_exception),
-        before_sleep=before_sleep_log(logger, logging.WARNING),
-    )
-    def _request_fill_result(
+    def _request_chat_result(
         self,
         messages: list[dict],
         *,
-        schema: type[StructuredModelT],
-        temperature: float = 0.0,
-    ) -> LLMFillResult[StructuredModelT]:
-        tool = self._build_structured_output_tool(schema)
+        tools: list[dict[str, Any]] | None,
+        tool_choice: str,
+        temperature: float,
+        parallel_tool_calls: bool | None,
+    ) -> LLMChatResult:
         raw = self._post(
-            self._build_tool_call_body(
-                self._with_structured_output_guidance(messages),
-                tool,
-                temperature,
+            self._build_chat_body(
+                messages,
+                tools=tools,
+                tool_choice=tool_choice,
+                temperature=temperature,
+                parallel_tool_calls=parallel_tool_calls,
             )
         )
-        arguments, reasoning, text = self._extract_expected_tool_call(
-            raw,
-            expected_tool_name=DEFAULT_STRUCTURED_TOOL_NAME,
-        )
-        payload = self._validate_structured_payload(
-            schema,
-            arguments,
-            output_label=DEFAULT_STRUCTURED_TOOL_NAME,
-        )
-        return LLMFillResult(
-            value=payload,
-            text=text,
-            reasoning=reasoning,
-        )
+        return self._parse_chat_result(raw)
 
-    def _build_text_body(
+    def _build_chat_body(
         self,
         messages: list[dict],
-        temperature: float,
-    ) -> dict[str, Any]:
-        body = {
-            "model": self.model,
-            "messages": messages,
-            "temperature": temperature,
-        }
-        return body
-
-    def _build_tool_call_body(
-        self,
-        messages: list[dict],
-        tool: dict[str, Any],
-        temperature: float,
-    ) -> dict[str, Any]:
-        body = {
-            "model": self.model,
-            "messages": messages,
-            "temperature": temperature,
-            "tools": [tool],
-            "parallel_tool_calls": False,
-            "tool_choice": "auto",
-        }
-        return body
-
-    @staticmethod
-    def _with_structured_output_guidance(
-        messages: list[dict],
-    ) -> list[dict]:
-        # Keep this guidance centralized so provider/protocol knowledge lives in
-        # one place instead of being re-explained in every business prompt.
-        guidance = {
-            "role": "system",
-            "content": (
-                "Return the final structured result by calling the provided function "
-                f"`{DEFAULT_STRUCTURED_TOOL_NAME}` exactly once. Do not place the final structured payload "
-                "in assistant text."
-            ),
-        }
-        insert_at = 0
-        for message in messages:
-            if message.get("role") == "system":
-                insert_at += 1
-                continue
-            break
-        return [*messages[:insert_at], guidance, *messages[insert_at:]]
-
-    @staticmethod
-    def _build_structured_output_tool(
-        schema: type[BaseModel],
-    ) -> dict[str, Any]:
-        # Tool parameter schema is derived from the typed output model so the
-        # wire contract and runtime validation stay aligned.
-        schema_title = schema.model_json_schema().get("title") or schema.__name__
-        return {
-            "type": "function",
-            "function": {
-                "name": DEFAULT_STRUCTURED_TOOL_NAME,
-                "description": f"Submit the structured result for {schema_title}.",
-                "parameters": schema.model_json_schema(),
-            },
-        }
-
-    @staticmethod
-    def _validate_structured_payload(
-        output_model: type[StructuredModelT],
-        raw_payload: dict[str, Any],
         *,
-        output_label: str,
-    ) -> StructuredModelT:
-        try:
-            return output_model.model_validate(raw_payload)
-        except ValidationError as exc:
-            raise StructuredOutputValidationError(
-                "Invalid structured output for "
-                f"{output_label!r}: {exc}; payload_preview={str(raw_payload)[:500]}"
-            ) from exc
+        tools: list[dict[str, Any]] | None,
+        tool_choice: str,
+        temperature: float,
+        parallel_tool_calls: bool | None,
+    ) -> dict[str, Any]:
+        body: dict[str, Any] = {
+            "model": self.model,
+            "messages": messages,
+            "temperature": temperature,
+        }
+        if tools:
+            body["tools"] = tools
+            body["tool_choice"] = tool_choice
+            if parallel_tool_calls is not None:
+                body["parallel_tool_calls"] = parallel_tool_calls
+        return body
 
     def _post(self, body: dict) -> dict:
         resp = self._client.post(
@@ -270,55 +197,33 @@ class LLMClient:
         return resp.json()
 
     @classmethod
-    def _parse_chat_text_result(cls, raw_response: dict) -> LLMTextResult:
+    def _parse_chat_result(cls, raw_response: dict) -> LLMChatResult:
         message = cls._extract_message(raw_response)
         content = cls._normalize_message_content(message.get("content", ""))
         reasoning = cls._extract_reasoning_content(raw_response)
-        if not content:
-            finish_reason = raw_response.get("choices", [{}])[0].get("finish_reason", "unknown")
-            raise LLMResponseError(
-                "Empty content from model when text was expected. "
-                f"finish_reason={finish_reason!r}, reasoning_preview={reasoning[:200]!r}"
-            )
-        return LLMTextResult(
+        finish_reason = raw_response.get("choices", [{}])[0].get("finish_reason", "")
+        return LLMChatResult(
             text=content,
             reasoning=reasoning,
+            tool_calls=cls._extract_raw_tool_calls(message),
+            message=message,
+            finish_reason=finish_reason,
         )
 
     @classmethod
-    def _extract_expected_tool_call(
-        cls,
-        raw_response: dict,
-        *,
-        expected_tool_name: str,
-    ) -> tuple[dict[str, Any], str, str]:
-        message = cls._extract_message(raw_response)
-        tool_calls = message.get("tool_calls") or []
-        reasoning = cls._extract_reasoning_content(raw_response)
-        content = cls._normalize_message_content(message.get("content", ""))
-        if not tool_calls:
-            finish_reason = raw_response.get("choices", [{}])[0].get("finish_reason", "unknown")
-            # Keep both content and reasoning previews in the error: with
-            # reasoning models this is often the fastest way to tell whether we
-            # hit a token budget issue, a contract drift, or a genuine API bug.
-            raise MissingToolCallError(
-                "Missing tool call from model. "
-                f"expected_tool={expected_tool_name!r}, finish_reason={finish_reason!r}, "
-                f"content_preview={content[:200]!r}, reasoning_preview={reasoning[:200]!r}"
-            )
-        for tool_call in tool_calls:
+    def _extract_raw_tool_calls(cls, message: dict) -> tuple[RawToolCall, ...]:
+        raw_tool_calls = message.get("tool_calls") or []
+        calls: list[RawToolCall] = []
+        for tool_call in raw_tool_calls:
             function_payload = tool_call.get("function") or {}
-            tool_name = function_payload.get("name")
-            if tool_name != expected_tool_name:
-                continue
-            arguments_text = cls._normalize_message_content(function_payload.get("arguments", ""))
-            arguments = cls._parse_tool_arguments(arguments_text, tool_name=tool_name)
-            return arguments, reasoning, content
-        available_tools = [((tool_call.get("function") or {}).get("name")) for tool_call in tool_calls]
-        raise MissingToolCallError(
-            "Expected tool call not found. "
-            f"expected_tool={expected_tool_name!r}, available_tools={available_tools!r}"
-        )
+            calls.append(
+                RawToolCall(
+                    id=tool_call.get("id", ""),
+                    name=function_payload.get("name", ""),
+                    arguments=cls._normalize_message_content(function_payload.get("arguments", "")),
+                )
+            )
+        return tuple(calls)
 
     @staticmethod
     def _extract_message(raw_response: dict) -> dict[str, Any]:
@@ -346,21 +251,6 @@ class LLMClient:
                     parts.append(str(text).strip())
             return "\n".join(part for part in parts if part).strip()
         return str(content).strip() if content else ""
-
-    @staticmethod
-    def _parse_tool_arguments(content: str, *, tool_name: str) -> dict[str, Any]:
-        try:
-            parsed = json.loads(content)
-        except json.JSONDecodeError as exc:
-            raise InvalidToolArgumentsError(
-                "Invalid tool arguments JSON for "
-                f"{tool_name!r}: {exc}; content_preview={content[:500]!r}"
-            ) from exc
-        if not isinstance(parsed, dict):
-            raise InvalidToolArgumentsError(
-                f"Expected tool arguments object for {tool_name!r}, got {type(parsed).__name__}"
-            )
-        return parsed
 
     @staticmethod
     def _extract_reasoning_content(raw_response: dict) -> str:
