@@ -31,7 +31,8 @@ from pydantic import Field
 from agent import Agent
 from agent import AgentResult
 from api import LLMClient
-from character_gist import CharacterGist
+from character_profile import StoredProfile
+from character_profile import load_profile
 
 logger = logging.getLogger(__name__)
 
@@ -125,11 +126,14 @@ def build_meta_agent(client: LLMClient) -> Agent:
     return agent
 
 
-def _build_task_prompt(character: CharacterGist) -> str:
-    classification = "/".join(character.classification)
+def _build_task_prompt(stored: StoredProfile) -> str:
+    profile = stored.profile
+    classification = "/".join(stored.classification)
+    aliases = "、".join(profile.aliases) if profile.aliases else "无"
     return (
-        f"请系统性地分析人物「{character.name}」"
-        f"（分类：{classification}；一句话简介：{character.gist}），"
+        f"请系统性地分析人物「{profile.chinese_name}」"
+        f"（母语原名：{profile.native_name}；别名：{aliases}；"
+        f"出处：{profile.source}；分类：{classification}；简介：{profile.gist}），"
         "提取以下五类结构化元信息，每一条都用一次对应的工具调用输出：\n"
         "1. 身份与角色（output_role）：此人一生中承担过的各种身份/角色/职位。\n"
         "2. 重要关系人（output_relationship）：与此人有重要交互的人物，标注关系类型与时期。\n"
@@ -145,10 +149,10 @@ def _build_task_prompt(character: CharacterGist) -> str:
     )
 
 
-def extract_meta(character: CharacterGist, client: LLMClient) -> tuple[dict[str, Any], AgentResult]:
-    """对 *character* 运行 Phase 0 元信息提取，返回 (data, 原始 AgentResult)。"""
+def extract_meta(stored: StoredProfile, client: LLMClient) -> tuple[dict[str, Any], AgentResult]:
+    """对 *stored* 人物运行 Phase 0 元信息提取，返回 (data, 原始 AgentResult)。"""
     agent = build_meta_agent(client)
-    result = agent.run(_build_task_prompt(character), temperature=0.4)
+    result = agent.run(_build_task_prompt(stored), temperature=0.4)
 
     data: dict[str, list[dict[str, Any]]] = {field: [] for field in _FIELD_BY_TOOL.values()}
     for tool_name, field in _FIELD_BY_TOOL.items():
@@ -156,12 +160,16 @@ def extract_meta(character: CharacterGist, client: LLMClient) -> tuple[dict[str,
     return data, result
 
 
-def _build_record(character: CharacterGist, client: LLMClient, data: dict[str, Any], result: AgentResult) -> dict[str, Any]:
+def _build_record(stored: StoredProfile, client: LLMClient, data: dict[str, Any], result: AgentResult) -> dict[str, Any]:
     """组装写盘的完整记录：data 为产出主体，run 为便于复盘的运行元数据。"""
+    profile = stored.profile
     return {
-        "character": character.name,
-        "gist": character.gist,
-        "classification": list(character.classification),
+        "character": profile.chinese_name,
+        "native_name": profile.native_name,
+        "aliases": list(profile.aliases),
+        "source": profile.source,
+        "gist": profile.gist,
+        "classification": list(stored.classification),
         "pass": "phase0-meta",
         "data": data,
         "run": {
@@ -181,12 +189,12 @@ def _build_record(character: CharacterGist, client: LLMClient, data: dict[str, A
 def run(character_dir: str | Path) -> Path:
     """对 *character_dir* 中的人物执行 Phase 0 提取并写出结果文件，返回文件路径。"""
     character_dir = Path(character_dir)
-    character = CharacterGist.LoadFromJson(character_dir)
-    logger.info("开始分析人物：%s", character.name)
+    stored = load_profile(character_dir)
+    logger.info("开始分析人物：%s", stored.profile.chinese_name)
 
     with LLMClient() as client:
-        data, result = extract_meta(character, client)
-        record = _build_record(character, client, data, result)
+        data, result = extract_meta(stored, client)
+        record = _build_record(stored, client, data, result)
 
     output_path = character_dir / _OUTPUT_FILENAME
     output_path.write_text(
