@@ -31,6 +31,8 @@ import sys
 from pathlib import Path
 from typing import Any
 
+from extract_actions import load_records
+
 _DEFAULT_CHARACTER_DIR = (
     "output/fiction/文学/英国文学/古典至19世纪/勃朗特姐妹/Jane Eyre（简·爱）"
 )
@@ -56,44 +58,19 @@ _OVER_DECOMP_SCENES = 12  # 单子时期场景数超过此值 → 提示复核�
 _DENSITY_CV_FLAT = 0.18  # 动作/场景 的变异系数低于此值 → 提示密度趋同
 _CONFIDENCE_SKEW = 0.6  # 单一确信度占比超过此值 → 提示分布偏倚
 
-# 落盘时被省略默认值的字段，统计前需补回，避免 KeyError。
-_RECORD_DEFAULTS: dict[str, Any] = {
-    "scene_time_in_period": "",
-    "scene_mood": "",
-    "scene_frequency": "",
-    "participants": [],
-    "setting": "",
-    "action_detail": "",
-    "decision_alternatives": [],
-    "decision_factors": [],
-    "decision_confidence": None,
-    "decision_consequence": "",
-    "scene_has_evolution": False,
-    "scene_evolution_trajectory": "",
-    "scene_evolution_exception": "",
-    "scene_evolution_others_change": "",
-}
-
-
 def _load_records(character_dir: Path) -> tuple[list[dict[str, Any]], str]:
-    """加载记录列表，返回 (records, 来源说明)。优先聚合文件，回退到分片。"""
+    """加载并展平 Phase 2 记录，返回 (records_as_dicts, 来源说明)。
+
+    复用 ``extract_actions.load_records``（树形→展平 + 旧扁平格式兼容），统计端拿到
+    的是字段完整的 ``Phase2Record`` 字典。
+    """
     aggregate = character_dir / _AGGREGATE_FILENAME
-    if aggregate.exists():
-        doc = json.loads(aggregate.read_text(encoding="utf-8"))
-        return doc.get("data", {}).get("records", []), f"聚合文件 {_AGGREGATE_FILENAME}"
-
     shard_dir = character_dir / _SHARD_DIRNAME
-    if not shard_dir.is_dir():
+    if not aggregate.exists() and not shard_dir.is_dir():
         raise FileNotFoundError(f"未找到 {aggregate} 或 {shard_dir}")
-    records: list[dict[str, Any]] = []
-    for shard in sorted(shard_dir.glob("*.json")):
-        records.extend(json.loads(shard.read_text(encoding="utf-8")))
-    return records, f"{shard_dir.name}/ 下的分片"
-
-
-def _fill_defaults(record: dict[str, Any]) -> dict[str, Any]:
-    """把紧凑落盘时省略的默认字段补回，便于统一统计。"""
-    return {**_RECORD_DEFAULTS, **record}
+    records = load_records(character_dir)
+    source = f"聚合 {_AGGREGATE_FILENAME}" if aggregate.exists() else f"{_SHARD_DIRNAME}/ 分片"
+    return [record.model_dump() for record in records], source
 
 
 def _print_header(title: str) -> None:
@@ -220,8 +197,8 @@ def _report_duplication(records: list[dict[str, Any]]) -> None:
     body_bytes = sum(byte_size(r, body_keys) for r in records)
     denom = ctx_bytes + body_bytes or 1
     print(
-        f"  去规范化冗余：上下文字段 {ctx_bytes / 1e6:.1f}MB vs 动作本体 {body_bytes / 1e6:.1f}MB"
-        f" → 重复上下文占 {ctx_bytes / denom * 100:.0f}%"
+        f"  扁平视图冗余：上下文字段 {ctx_bytes / 1e6:.1f}MB vs 动作本体 {body_bytes / 1e6:.1f}MB"
+        f" → 上下文占 {ctx_bytes / denom * 100:.0f}%（树形落盘已消除该冗余）"
     )
 
 
@@ -247,7 +224,7 @@ def inspect(character_dir: str | Path) -> None:
     if not raw_records:
         print(f"未在 {character_dir} 找到任何 Phase 2 记录。")
         return
-    records = [_fill_defaults(r) for r in raw_records]
+    records = raw_records
 
     print(f"# Phase 2 质量体检：{character_dir.name}")
     _report_overview(records, source)

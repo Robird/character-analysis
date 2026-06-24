@@ -11,22 +11,26 @@
   备选方案、决策因素、确信程度与后续影响——直接服务于 belief-observation-action 训练格式。
 * **recurring 演变追问**：对反复发生的场景额外提取行为模式的演变轨迹。
 
-每个动作被展平为一条自包含上下文的 :class:`Phase2Record`。
+每个动作在内存中以自包含上下文的 :class:`Phase2Record` 表示；磁盘上以树形
+（:class:`StoredSubPeriod` → scenes → actions，场景上下文每场景只存一次）紧凑存储，
+通过 :func:`load_records` 展平回 ``Phase2Record`` 列表供下游消费——“磁盘紧凑、内存完整”。
 
 落盘与断点续跑（checkpoint-by-product）：
 
-* 分片：``phase2-actions/{stage:02d}-{sub:02d}-{子时期名}.json``，每个子时期一份
-  ``Phase2Record`` 的纯数组。分片文件的存在性即进度标记——重跑时已存在且合法的分片
-  直接跳过，损坏分片删除后重来。
+* 分片：``phase2-actions/{stage:02d}-{sub:02d}-{子时期名}.json``，每个子时期一棵
+  ``StoredSubPeriod`` 树。分片文件的存在性即进度标记——重跑时已存在且合法的分片直接
+  跳过（旧版扁平分片会自动迁移为树形），损坏分片删除后重来。
 * 聚合：``phase2-actions.json``，与 ``phase0-meta.json`` / ``phase1-timeline.json`` 同构的
-  元数据信封（``character`` 等 + ``data.records`` + ``run``），供 Phase 5 消费与进度查询。
+  元数据信封（``character`` 等 + ``data.sub_periods`` 树形列表 + ``run``）。下游用
+  :func:`load_records` 读取并展平。
 
 用法::
 
-    python extract_actions.py [character_dir] [--limit N] [--no-status]
+    python extract_actions.py [character_dir] [--limit N] [--workers W] [--status]
 
 ``character_dir`` 为包含 ``gist.json`` 与 ``phase1-timeline.json`` 的人物目录，缺省为简·爱。
-``--limit N`` 只处理前 N 个子时期（试点 / 增量）；``--status`` 为主 Agent 追加状态查询轮（默认关闭）。
+``--limit N`` 只处理前 N 个子时期（试点 / 增量）；``--workers W`` 子时期级并发度（默认 1）；
+``--status`` 为主 Agent 追加状态查询轮（默认关闭）。
 """
 
 from __future__ import annotations
@@ -295,14 +299,164 @@ class Phase2Record(BaseModel):
             scene_evolution_others_change=scene_evolution.others_change if scene_evolution else "",
         )
 
-    def to_storage_dict(self) -> dict[str, Any]:
-        """导出为紧凑落盘格式，省略默认值/空值字段。
 
-        反序列化时继续交给 ``Phase2Record.model_validate``，由 Pydantic 自动补齐
-        默认值，从而实现“落盘紧凑、内存完整”的双向兼容。
-        注意：这些默认值因此也成为存储 schema 的一部分；若未来调整默认值，
-        需要同步评估历史文件的反序列化兼容性。
+# ── 树形落盘模型（磁盘紧凑 / 内存完整） ───────────────────────────────────────
+
+
+class StoredAction(BaseModel):
+    """落盘用：场景内的一个动作（含可选决策上下文，去掉冗余的场景/人物上下文）。"""
+
+    seq: int
+    type: ActionType
+    description: str
+    detail: str = ""
+    decision_alternatives: list[str] = Field(default_factory=list)
+    decision_factors: list[str] = Field(default_factory=list)
+    decision_confidence: DecisionConfidence | None = None
+    decision_consequence: str = ""
+
+
+class StoredScene(BaseModel):
+    """落盘用：一个场景及其有序动作序列（场景上下文只存一次）。"""
+
+    scene_index: int
+    name: str
+    scene_type: SceneType
+    time_in_period: str = ""
+    mood: str = ""
+    sketch: str = ""
+    frequency: str = ""
+    participants: list[str] = Field(default_factory=list)
+    setting: str = ""
+    has_evolution: bool = False
+    evolution_trajectory: str = ""
+    evolution_exception: str = ""
+    evolution_others_change: str = ""
+    actions: list[StoredAction] = Field(default_factory=list)
+
+
+class StoredSubPeriod(BaseModel):
+    """一个子时期的完整产出树（= 一个分片）。
+
+    磁盘上以树形存储（场景上下文每场景只存一次），消除扁平 ``Phase2Record`` 列表
+    在每条动作上重复场景/人物上下文造成的冗余；通过 :meth:`to_records` 展平回
+    ``Phase2Record`` 列表供 Phase 5 与体检消费，实现“磁盘紧凑、内存完整”。
+    """
+
+    character: str
+    life_stage: str
+    sub_period: str
+    scenes: list[StoredScene] = Field(default_factory=list)
+
+    @classmethod
+    def from_records(
+        cls,
+        records: list[Phase2Record],
+        *,
+        character: str | None = None,
+        life_stage: str | None = None,
+        sub_period: str | None = None,
+    ) -> StoredSubPeriod:
+        """把一个子时期的扁平 ``Phase2Record`` 列表归并为树。
+
+        身份字段（character/life_stage/sub_period）缺省从 ``records[0]`` 推断；records 为空时
+        必须显式提供。按 ``scene_index_in_sub_period`` 分组并保持首次出现顺序，场景级字段
+        取该场景首条记录（同场景各动作的场景/演变上下文一致）。
         """
+        if records:
+            first = records[0]
+            character = character if character is not None else first.character
+            life_stage = life_stage if life_stage is not None else first.life_stage
+            sub_period = sub_period if sub_period is not None else first.sub_period
+        if character is None or life_stage is None or sub_period is None:
+            raise ValueError("records 为空时必须显式提供 character/life_stage/sub_period")
+
+        order: list[int] = []
+        grouped: dict[int, list[Phase2Record]] = {}
+        for record in records:
+            idx = record.scene_index_in_sub_period
+            if idx not in grouped:
+                grouped[idx] = []
+                order.append(idx)
+            grouped[idx].append(record)
+
+        scenes: list[StoredScene] = []
+        for idx in order:
+            group = grouped[idx]
+            ctx = group[0]
+            scenes.append(
+                StoredScene(
+                    scene_index=idx,
+                    name=ctx.scene_name,
+                    scene_type=ctx.scene_type,
+                    time_in_period=ctx.scene_time_in_period,
+                    mood=ctx.scene_mood,
+                    sketch=ctx.scene_sketch,
+                    frequency=ctx.scene_frequency,
+                    participants=list(ctx.participants),
+                    setting=ctx.setting,
+                    has_evolution=ctx.scene_has_evolution,
+                    evolution_trajectory=ctx.scene_evolution_trajectory,
+                    evolution_exception=ctx.scene_evolution_exception,
+                    evolution_others_change=ctx.scene_evolution_others_change,
+                    actions=[
+                        StoredAction(
+                            seq=r.seq_in_scene,
+                            type=r.action_type,
+                            description=r.action_description,
+                            detail=r.action_detail,
+                            decision_alternatives=list(r.decision_alternatives),
+                            decision_factors=list(r.decision_factors),
+                            decision_confidence=r.decision_confidence,
+                            decision_consequence=r.decision_consequence,
+                        )
+                        for r in group
+                    ],
+                )
+            )
+        return cls(character=character, life_stage=life_stage, sub_period=sub_period, scenes=scenes)
+
+    def to_records(self) -> list[Phase2Record]:
+        """展平回 ``Phase2Record`` 列表（把场景/人物上下文回填到每条动作）。"""
+        records: list[Phase2Record] = []
+        for scene in self.scenes:
+            for action in scene.actions:
+                records.append(
+                    Phase2Record(
+                        character=self.character,
+                        life_stage=self.life_stage,
+                        sub_period=self.sub_period,
+                        scene_index_in_sub_period=scene.scene_index,
+                        scene_name=scene.name,
+                        scene_type=scene.scene_type,
+                        scene_time_in_period=scene.time_in_period,
+                        scene_mood=scene.mood,
+                        scene_sketch=scene.sketch,
+                        scene_frequency=scene.frequency,
+                        participants=list(scene.participants),
+                        setting=scene.setting,
+                        seq_in_scene=action.seq,
+                        action_type=action.type,
+                        action_description=action.description,
+                        action_detail=action.detail,
+                        decision_alternatives=list(action.decision_alternatives),
+                        decision_factors=list(action.decision_factors),
+                        decision_confidence=action.decision_confidence,
+                        decision_consequence=action.decision_consequence,
+                        scene_has_evolution=scene.has_evolution,
+                        scene_evolution_trajectory=scene.evolution_trajectory,
+                        scene_evolution_exception=scene.evolution_exception,
+                        scene_evolution_others_change=scene.evolution_others_change,
+                    )
+                )
+        return records
+
+    def action_count(self) -> int:
+        """该子时期的动作总数。"""
+        return sum(len(scene.actions) for scene in self.scenes)
+
+    def to_storage_dict(self) -> dict[str, Any]:
+        """紧凑落盘：省略默认值/空值字段（嵌套场景与动作一并紧凑化）。"""
         return self.model_dump(exclude_defaults=True, exclude_none=True)
 
 
@@ -719,17 +873,28 @@ def _shard_path(
     )
 
 
-def _load_existing_shard(shard_path: Path) -> list[Phase2Record] | None:
-    """读取一个已存在的分片；损坏则删除并返回 ``None``。"""
+def _load_existing_shard(shard_path: Path) -> StoredSubPeriod | None:
+    """读取分片为子时期树；旧版扁平分片自动迁移为树形；损坏则删除并返回 ``None``。"""
     try:
         payload = json.loads(shard_path.read_text(encoding="utf-8"))
-        records = _parse_phase2_records(payload)
-        compact_payload = _dump_phase2_records(records)
-        if payload != compact_payload:
-            _write_json_atomic(shard_path, compact_payload)
-            logger.info("已将旧格式分片重写为紧凑格式：%s", shard_path)
-        return records
-    except (json.JSONDecodeError, ValidationError, KeyError, TypeError):
+    except json.JSONDecodeError:
+        logger.warning("分片 JSON 解析失败，删除后重跑：%s", shard_path, exc_info=True)
+        shard_path.unlink(missing_ok=True)
+        return None
+    try:
+        if isinstance(payload, list):
+            # 旧版扁平分片（list[Phase2Record]）→ 迁移为树形并重写。
+            records = [Phase2Record.model_validate(item) for item in payload]
+            tree = StoredSubPeriod.from_records(records)
+            _write_json_atomic(shard_path, tree.to_storage_dict())
+            logger.info("已将扁平分片迁移为树形：%s", shard_path)
+            return tree
+        tree = StoredSubPeriod.model_validate(payload)
+        compact = tree.to_storage_dict()
+        if payload != compact:  # 旧的非紧凑树 → 紧凑化（幂等）。
+            _write_json_atomic(shard_path, compact)
+        return tree
+    except (ValidationError, KeyError, TypeError, ValueError):
         logger.warning("检测到损坏分片，删除后重跑：%s", shard_path, exc_info=True)
         shard_path.unlink(missing_ok=True)
         return None
@@ -743,16 +908,33 @@ def _write_json_atomic(path: Path, payload: Any) -> None:
     tmp_path.replace(path)
 
 
-def _parse_phase2_records(payload: Any) -> list[Phase2Record]:
-    """把 JSON 数组解析为 ``Phase2Record`` 列表，并自动补齐被省略的默认字段。"""
-    if not isinstance(payload, list):
-        raise TypeError(f"Expected a list of phase2 records, got {type(payload).__name__}")
-    return [Phase2Record.model_validate(item) for item in payload]
+def load_records(character_dir: str | Path) -> list[Phase2Record]:
+    """读取一个人物的 Phase 2 产出并展平为 ``Phase2Record`` 列表（供 Phase 5 / 体检消费）。
 
+    优先读聚合 ``phase2-actions.json`` 的 ``data.sub_periods``；缺则拼接 ``phase2-actions/``
+    下各分片。兼容旧版扁平格式（``data.records`` 或分片 ``list[Phase2Record]``）。
+    """
+    character_dir = Path(character_dir)
+    records: list[Phase2Record] = []
+    aggregate = character_dir / _OUTPUT_FILENAME
+    if aggregate.exists():
+        data = json.loads(aggregate.read_text(encoding="utf-8")).get("data", {})
+        if "sub_periods" in data:
+            for tree_payload in data["sub_periods"]:
+                records.extend(StoredSubPeriod.model_validate(tree_payload).to_records())
+            return records
+        return [Phase2Record.model_validate(item) for item in data.get("records", [])]
 
-def _dump_phase2_records(records: list[Phase2Record]) -> list[dict[str, Any]]:
-    """把记录列表转为紧凑 JSON 结构，省略默认值以降低存储与阅读噪音。"""
-    return [record.to_storage_dict() for record in records]
+    shard_dir = character_dir / _SHARD_DIRNAME
+    if not shard_dir.is_dir():
+        return records
+    for shard in sorted(shard_dir.glob("*.json")):
+        payload = json.loads(shard.read_text(encoding="utf-8"))
+        if isinstance(payload, list):
+            records.extend(Phase2Record.model_validate(item) for item in payload)
+        else:
+            records.extend(StoredSubPeriod.model_validate(payload).to_records())
+    return records
 
 
 # ── 聚合记录 ──────────────────────────────────────────────────────────────────
@@ -761,15 +943,20 @@ def _dump_phase2_records(records: list[Phase2Record]) -> list[dict[str, Any]]:
 def _build_aggregate_record(
     stored: StoredProfile,
     model: str,
-    records: list[Phase2Record],
+    trees: list[StoredSubPeriod],
     summaries: list[dict[str, Any]],
     failures: list[dict[str, str]],
 ) -> dict[str, Any]:
-    """组装与 phase0/phase1 同构的聚合信封：data.records 为产出主体，run 为复盘元数据。"""
+    """组装与 phase0/phase1 同构的聚合信封：data.sub_periods 为树形产出主体，run 为复盘元数据。"""
     profile = stored.profile
-    decision_enriched = sum(1 for r in records if r.decision_factors)
-    recurring_records = sum(1 for r in records if r.scene_type == "recurring")
-    scenes_total = sum(s["scenes"] for s in summaries)
+    scenes_total = sum(len(t.scenes) for t in trees)
+    actions_total = sum(len(s.actions) for t in trees for s in t.scenes)
+    decision_enriched = sum(
+        1 for t in trees for s in t.scenes for a in s.actions if a.decision_factors
+    )
+    recurring_actions = sum(
+        len(s.actions) for t in trees for s in t.scenes if s.scene_type == "recurring"
+    )
     return {
         "character": profile.chinese_name,
         "native_name": profile.native_name,
@@ -778,7 +965,7 @@ def _build_aggregate_record(
         "gist": profile.gist,
         "classification": list(stored.classification),
         "pass": "phase2-actions",
-        "data": {"records": _dump_phase2_records(records)},
+        "data": {"sub_periods": [tree.to_storage_dict() for tree in trees]},
         "run": {
             "model": model,
             "timestamp": datetime.now().astimezone().isoformat(timespec="seconds"),
@@ -786,9 +973,9 @@ def _build_aggregate_record(
                 "sub_periods_processed": len(summaries),
                 "sub_periods_failed": len(failures),
                 "scenes": scenes_total,
-                "actions": len(records),
+                "actions": actions_total,
                 "decision_enriched_actions": decision_enriched,
-                "recurring_actions": recurring_records,
+                "recurring_actions": recurring_actions,
             },
             "sub_period_summaries": summaries,
             "failures": failures,
@@ -796,16 +983,13 @@ def _build_aggregate_record(
     }
 
 
-def _summary_from_records(
-    life_stage: LifeStageRef, sub_period: SubPeriodRef, records: list[Phase2Record], *, resumed: bool
-) -> dict[str, Any]:
-    """从一个子时期的记录列表回填进度摘要（场景数取记录中出现的最大场景序号）。"""
-    scenes = len({r.scene_index_in_sub_period for r in records})
+def _summary_from_tree(tree: StoredSubPeriod, *, resumed: bool) -> dict[str, Any]:
+    """从一个子时期树回填进度摘要。"""
     return {
-        "life_stage": life_stage.name,
-        "sub_period": sub_period.name,
-        "scenes": scenes,
-        "actions": len(records),
+        "life_stage": tree.life_stage,
+        "sub_period": tree.sub_period,
+        "scenes": len(tree.scenes),
+        "actions": tree.action_count(),
         "resumed": resumed,
     }
 
@@ -815,9 +999,9 @@ def _summary_from_records(
 
 @dataclass
 class _UnitOutcome:
-    """一个子时期的处理结果。summary 与 failure 互斥（失败时 summary 为 None）。"""
+    """一个子时期的处理结果。tree/summary 与 failure 互斥（失败时 tree、summary 均为 None）。"""
 
-    records: list[Phase2Record]
+    tree: StoredSubPeriod | None
     summary: dict[str, Any] | None
     failure: dict[str, str] | None
 
@@ -831,19 +1015,18 @@ def _process_unit(
     client: LLMClient,
     query_status: bool,
 ) -> _UnitOutcome:
-    """处理单个子时期：断点续跑命中则复用分片，否则提取并写分片。线程安全（各写各的分片）。"""
+    """处理单个子时期：断点续跑命中则复用分片树，否则提取并写树形分片。线程安全（各写各的分片）。"""
     stage_index, life_stage, sub_period_index, sub_period = unit
     shard_path = _shard_path(character_dir, stage_index, sub_period_index, sub_period)
 
     if shard_path.exists():
-        existing = _load_existing_shard(shard_path)
-        if existing is not None:
-            logger.info("跳过已完成子时期：%s（%d 条记录）", sub_period.name, len(existing))
-            return _UnitOutcome(
-                existing,
-                _summary_from_records(life_stage, sub_period, existing, resumed=True),
-                None,
+        tree = _load_existing_shard(shard_path)
+        if tree is not None:
+            logger.info(
+                "跳过已完成子时期：%s（%d 场景，%d 动作）",
+                sub_period.name, len(tree.scenes), tree.action_count(),
             )
+            return _UnitOutcome(tree, _summary_from_tree(tree, resumed=True), None)
 
     logger.info("处理子时期：%s / %s", life_stage.name, sub_period.name)
     try:
@@ -854,21 +1037,14 @@ def _process_unit(
         logger.warning(
             "子时期处理失败，跳过等待重跑：%s / %s", life_stage.name, sub_period.name, exc_info=True
         )
-        return _UnitOutcome([], None, {"life_stage": life_stage.name, "sub_period": sub_period.name})
+        return _UnitOutcome(None, None, {"life_stage": life_stage.name, "sub_period": sub_period.name})
 
-    _write_json_atomic(shard_path, _dump_phase2_records(records))
-    logger.info("完成子时期：%s（%d 场景，%d 动作）", sub_period.name, scene_count, len(records))
-    return _UnitOutcome(
-        records,
-        {
-            "life_stage": life_stage.name,
-            "sub_period": sub_period.name,
-            "scenes": scene_count,
-            "actions": len(records),
-            "resumed": False,
-        },
-        None,
+    tree = StoredSubPeriod.from_records(
+        records, character=character_name, life_stage=life_stage.name, sub_period=sub_period.name
     )
+    _write_json_atomic(shard_path, tree.to_storage_dict())
+    logger.info("完成子时期：%s（%d 场景，%d 动作）", sub_period.name, scene_count, len(records))
+    return _UnitOutcome(tree, _summary_from_tree(tree, resumed=False), None)
 
 
 # ── 主流程 ────────────────────────────────────────────────────────────────────
@@ -936,17 +1112,18 @@ def run(
                 outcomes = list(executor.map(work, units))
 
     # 按子时期顺序汇总（executor.map 保序）。
-    all_records: list[Phase2Record] = []
+    trees: list[StoredSubPeriod] = []
     summaries: list[dict[str, Any]] = []
     failures: list[dict[str, str]] = []
     for outcome in outcomes:
-        all_records.extend(outcome.records)
+        if outcome.tree is not None:
+            trees.append(outcome.tree)
         if outcome.summary is not None:
             summaries.append(outcome.summary)
         if outcome.failure is not None:
             failures.append(outcome.failure)
 
-    record = _build_aggregate_record(stored, model, all_records, summaries, failures)
+    record = _build_aggregate_record(stored, model, trees, summaries, failures)
     output_path = character_dir / _OUTPUT_FILENAME
     _write_json_atomic(output_path, record)
 
