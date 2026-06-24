@@ -34,6 +34,8 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+from concurrent.futures import ThreadPoolExecutor
+from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -808,6 +810,67 @@ def _summary_from_records(
     }
 
 
+# ── 单子时期 worker（并发单元） ────────────────────────────────────
+
+
+@dataclass
+class _UnitOutcome:
+    """一个子时期的处理结果。summary 与 failure 互斥（失败时 summary 为 None）。"""
+
+    records: list[Phase2Record]
+    summary: dict[str, Any] | None
+    failure: dict[str, str] | None
+
+
+def _process_unit(
+    unit: tuple[int, LifeStageRef, int, SubPeriodRef],
+    *,
+    character_dir: Path,
+    character_context: str,
+    character_name: str,
+    client: LLMClient,
+    query_status: bool,
+) -> _UnitOutcome:
+    """处理单个子时期：断点续跑命中则复用分片，否则提取并写分片。线程安全（各写各的分片）。"""
+    stage_index, life_stage, sub_period_index, sub_period = unit
+    shard_path = _shard_path(character_dir, stage_index, sub_period_index, sub_period)
+
+    if shard_path.exists():
+        existing = _load_existing_shard(shard_path)
+        if existing is not None:
+            logger.info("跳过已完成子时期：%s（%d 条记录）", sub_period.name, len(existing))
+            return _UnitOutcome(
+                existing,
+                _summary_from_records(life_stage, sub_period, existing, resumed=True),
+                None,
+            )
+
+    logger.info("处理子时期：%s / %s", life_stage.name, sub_period.name)
+    try:
+        records, scene_count = _process_sub_period(
+            character_context, character_name, life_stage, sub_period, client, query_status=query_status
+        )
+    except Exception:  # noqa: BLE001 - 单子时期失败需隔离，等待后续重跑覆盖
+        logger.warning(
+            "子时期处理失败，跳过等待重跑：%s / %s", life_stage.name, sub_period.name, exc_info=True
+        )
+        return _UnitOutcome([], None, {"life_stage": life_stage.name, "sub_period": sub_period.name})
+
+    _write_json_atomic(shard_path, _dump_phase2_records(records))
+    logger.info("完成子时期：%s（%d 场景，%d 动作）", sub_period.name, scene_count, len(records))
+    return _UnitOutcome(
+        records,
+        {
+            "life_stage": life_stage.name,
+            "sub_period": sub_period.name,
+            "scenes": scene_count,
+            "actions": len(records),
+            "resumed": False,
+        },
+        None,
+    )
+
+
 # ── 主流程 ────────────────────────────────────────────────────────────────────
 
 
@@ -816,6 +879,7 @@ def run(
     *,
     max_sub_periods: int | None = None,
     query_status: bool = False,
+    workers: int = 1,
 ) -> Path:
     """对 *character_dir* 中的人物执行 Phase 2 动作提取，写出分片与聚合文件。
 
@@ -824,6 +888,8 @@ def run(
         max_sub_periods: 只处理前 N 个子时期（试点/增量），None 表示全部。
         query_status: 主 Agent（场景展开/动作提取/决策上下文）是否追加状态查询轮。
             默认关闭：Phase 2 不消费中间 Agent 的状态，且结构校验/自愈不依赖它。
+        workers: 子时期级并发度。子时期相互独立（各写各的分片），>1 时用线程池并发；
+            缺省 1 为串行。注意 API 速率限制，过高可能触发 429。
 
     Returns:
         聚合产出 ``phase2-actions.json`` 的路径。
@@ -843,66 +909,42 @@ def run(
     if max_sub_periods is not None:
         units = units[:max_sub_periods]
 
-    logger.info("开始 Phase 2 动作提取：%s（共 %d 个子时期待处理）", character_name, len(units))
-
-    all_records: list[Phase2Record] = []
-    summaries: list[dict[str, Any]] = []
-    failures: list[dict[str, str]] = []
+    workers = max(1, workers)
+    logger.info(
+        "开始 Phase 2 动作提取：%s（共 %d 个子时期，并发 %d）",
+        character_name, len(units), workers,
+    )
 
     with LLMClient() as client:
         model = client.model
-        for ordinal, (stage_index, life_stage, sub_period_index, sub_period) in enumerate(units, 1):
-            shard_path = _shard_path(character_dir, stage_index, sub_period_index, sub_period)
 
-            # 断点续跑：已存在且合法的分片直接跳过。
-            if shard_path.exists():
-                existing = _load_existing_shard(shard_path)
-                if existing is not None:
-                    all_records.extend(existing)
-                    summaries.append(
-                        _summary_from_records(life_stage, sub_period, existing, resumed=True)
-                    )
-                    logger.info(
-                        "[%d/%d] 跳过已完成子时期：%s（%d 条记录）",
-                        ordinal, len(units), sub_period.name, len(existing),
-                    )
-                    continue
+        def work(unit: tuple[int, LifeStageRef, int, SubPeriodRef]) -> _UnitOutcome:
+            return _process_unit(
+                unit,
+                character_dir=character_dir,
+                character_context=character_context,
+                character_name=character_name,
+                client=client,
+                query_status=query_status,
+            )
 
-            logger.info(
-                "[%d/%d] 处理子时期：%s / %s", ordinal, len(units), life_stage.name, sub_period.name
-            )
-            try:
-                shard_records, scene_count = _process_sub_period(
-                    character_context,
-                    character_name,
-                    life_stage,
-                    sub_period,
-                    client,
-                    query_status=query_status,
-                )
-            except Exception:  # noqa: BLE001 - 单子时期失败需隔离，等待后续重跑覆盖
-                logger.warning(
-                    "子时期处理失败，跳过等待重跑：%s / %s",
-                    life_stage.name, sub_period.name, exc_info=True,
-                )
-                failures.append({"life_stage": life_stage.name, "sub_period": sub_period.name})
-                continue
+        # 子时期彼此独立（各写各的分片），可安全并发；workers=1 即退化为串行。
+        if workers == 1:
+            outcomes = [work(unit) for unit in units]
+        else:
+            with ThreadPoolExecutor(max_workers=workers) as executor:
+                outcomes = list(executor.map(work, units))
 
-            _write_json_atomic(shard_path, _dump_phase2_records(shard_records))
-            all_records.extend(shard_records)
-            summaries.append(
-                {
-                    "life_stage": life_stage.name,
-                    "sub_period": sub_period.name,
-                    "scenes": scene_count,
-                    "actions": len(shard_records),
-                    "resumed": False,
-                }
-            )
-            logger.info(
-                "[%d/%d] 完成：%d 个场景，%d 条动作记录",
-                ordinal, len(units), scene_count, len(shard_records),
-            )
+    # 按子时期顺序汇总（executor.map 保序）。
+    all_records: list[Phase2Record] = []
+    summaries: list[dict[str, Any]] = []
+    failures: list[dict[str, str]] = []
+    for outcome in outcomes:
+        all_records.extend(outcome.records)
+        if outcome.summary is not None:
+            summaries.append(outcome.summary)
+        if outcome.failure is not None:
+            failures.append(outcome.failure)
 
     record = _build_aggregate_record(stored, model, all_records, summaries, failures)
     output_path = character_dir / _OUTPUT_FILENAME
@@ -938,10 +980,17 @@ def _parse_args() -> argparse.Namespace:
         action="store_true",
         help="为主 Agent 追加状态查询轮（默认关闭，Phase 2 不消费中间 Agent 状态）。",
     )
+    parser.add_argument(
+        "--workers",
+        type=int,
+        default=1,
+        metavar="W",
+        help="子时期级并发度（默认 1 串行）。子时期独立可并发，但注意 API 速率限制。",
+    )
     return parser.parse_args()
 
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
     args = _parse_args()
-    run(args.character_dir, max_sub_periods=args.limit, query_status=args.status)
+    run(args.character_dir, max_sub_periods=args.limit, query_status=args.status, workers=args.workers)
