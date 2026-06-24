@@ -293,6 +293,16 @@ class Phase2Record(BaseModel):
             scene_evolution_others_change=scene_evolution.others_change if scene_evolution else "",
         )
 
+    def to_storage_dict(self) -> dict[str, Any]:
+        """导出为紧凑落盘格式，省略默认值/空值字段。
+
+        反序列化时继续交给 ``Phase2Record.model_validate``，由 Pydantic 自动补齐
+        默认值，从而实现“落盘紧凑、内存完整”的双向兼容。
+        注意：这些默认值因此也成为存储 schema 的一部分；若未来调整默认值，
+        需要同步评估历史文件的反序列化兼容性。
+        """
+        return self.model_dump(exclude_defaults=True, exclude_none=True)
+
 
 # ── 人物上下文格式化 ───────────────────────────────────────────────────────────
 
@@ -710,10 +720,13 @@ def _shard_path(
 def _load_existing_shard(shard_path: Path) -> list[Phase2Record] | None:
     """读取一个已存在的分片；损坏则删除并返回 ``None``。"""
     try:
-        return [
-            Phase2Record.model_validate(item)
-            for item in json.loads(shard_path.read_text(encoding="utf-8"))
-        ]
+        payload = json.loads(shard_path.read_text(encoding="utf-8"))
+        records = _parse_phase2_records(payload)
+        compact_payload = _dump_phase2_records(records)
+        if payload != compact_payload:
+            _write_json_atomic(shard_path, compact_payload)
+            logger.info("已将旧格式分片重写为紧凑格式：%s", shard_path)
+        return records
     except (json.JSONDecodeError, ValidationError, KeyError, TypeError):
         logger.warning("检测到损坏分片，删除后重跑：%s", shard_path, exc_info=True)
         shard_path.unlink(missing_ok=True)
@@ -726,6 +739,18 @@ def _write_json_atomic(path: Path, payload: Any) -> None:
     tmp_path = path.with_name(path.name + ".tmp")
     tmp_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     tmp_path.replace(path)
+
+
+def _parse_phase2_records(payload: Any) -> list[Phase2Record]:
+    """把 JSON 数组解析为 ``Phase2Record`` 列表，并自动补齐被省略的默认字段。"""
+    if not isinstance(payload, list):
+        raise TypeError(f"Expected a list of phase2 records, got {type(payload).__name__}")
+    return [Phase2Record.model_validate(item) for item in payload]
+
+
+def _dump_phase2_records(records: list[Phase2Record]) -> list[dict[str, Any]]:
+    """把记录列表转为紧凑 JSON 结构，省略默认值以降低存储与阅读噪音。"""
+    return [record.to_storage_dict() for record in records]
 
 
 # ── 聚合记录 ──────────────────────────────────────────────────────────────────
@@ -751,7 +776,7 @@ def _build_aggregate_record(
         "gist": profile.gist,
         "classification": list(stored.classification),
         "pass": "phase2-actions",
-        "data": {"records": [r.model_dump() for r in records]},
+        "data": {"records": _dump_phase2_records(records)},
         "run": {
             "model": model,
             "timestamp": datetime.now().astimezone().isoformat(timespec="seconds"),
@@ -863,7 +888,7 @@ def run(
                 failures.append({"life_stage": life_stage.name, "sub_period": sub_period.name})
                 continue
 
-            _write_json_atomic(shard_path, [r.model_dump() for r in shard_records])
+            _write_json_atomic(shard_path, _dump_phase2_records(shard_records))
             all_records.extend(shard_records)
             summaries.append(
                 {
