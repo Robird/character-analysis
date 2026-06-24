@@ -52,19 +52,17 @@ from pydantic import Field
 from pydantic import ValidationError
 
 from agent import Agent
+from analysis_shared import CharacterHeader
+from analysis_shared import CharacterWorkspace
+from analysis_shared import DEFAULT_CHARACTER_DIR
+from analysis_shared import LifeStage
+from analysis_shared import PHASE2_ACTIONS_NAME
+from analysis_shared import SubPeriod
+from analysis_shared import load_phase1_timeline
 from api import LLMClient
 from character_profile import StoredProfile
-from character_profile import load_profile
-from character_profile import safe_dir_name
 
 logger = logging.getLogger(__name__)
-
-_DEFAULT_CHARACTER_DIR = (
-    "output/fiction/文学/英国文学/古典至19世纪/勃朗特姐妹/Jane Eyre（简·爱）"
-)
-_OUTPUT_FILENAME = "phase2-actions.json"
-_SHARD_DIRNAME = "phase2-actions"
-_PHASE1_FILENAME = "phase1-timeline.json"
 
 
 # ── 类型别名 ──────────────────────────────────────────────────────────────────
@@ -90,41 +88,6 @@ DecisionConfidence: TypeAlias = Literal["坚定", "犹豫", "被迫", "冲动"]
 
 # 仅对这些动作类型触发 Round 2 决策上下文补充。
 DECISION_RELATED_ACTION_TYPES: tuple[ActionType, ...] = ("decision", "suppression", "social")
-
-
-# ── Phase 1 输入模型（类型安全地读取 phase1-timeline.json） ─────────────────────
-
-
-class SubPeriodRef(BaseModel):
-    """Phase 1 子时期的结构化引用，字段与 ``extract_timeline.SubPeriod`` 一致。"""
-
-    name: str
-    time_range: str
-    core_situation: str
-    opening_event: str
-    closing_event: str = ""
-
-
-class LifeStageRef(BaseModel):
-    """Phase 1 主要阶段的结构化引用。"""
-
-    name: str
-    time_range: str
-    summary: str
-    sub_periods: list[SubPeriodRef]
-
-
-class Phase1TimelineData(BaseModel):
-    """Phase 1 时间轴主体。"""
-
-    life_stages: list[LifeStageRef]
-
-
-class Phase1Timeline(BaseModel):
-    """``phase1-timeline.json`` 的反序列化模型：人物元信息在顶层，时间轴在 ``data``。"""
-
-    character: str
-    data: Phase1TimelineData
 
 
 # ── Phase 2 中间产出模型 ───────────────────────────────────────────────────────
@@ -460,18 +423,6 @@ class StoredSubPeriod(BaseModel):
         return self.model_dump(exclude_defaults=True, exclude_none=True)
 
 
-# ── 人物上下文格式化 ───────────────────────────────────────────────────────────
-
-
-def format_character_context(stored: StoredProfile) -> str:
-    """从 gist.json 记录生成各 Agent prompt 用的紧凑人物上下文字符串。
-
-    模板：``{chinese_name}（{native_name}），{source}。{gist}``
-    """
-    p = stored.profile
-    return f"{p.chinese_name}（{p.native_name}），{p.source}。{p.gist}"
-
-
 # ── Phase 2A：场景展开 ─────────────────────────────────────────────────────────
 
 _SCENE_JUDGMENT_SYSTEM_PROMPT = (
@@ -484,7 +435,7 @@ _SCENE_JUDGMENT_SYSTEM_PROMPT = (
 )
 
 
-def needs_scene_decomposition(sub_period: SubPeriodRef, client: LLMClient) -> bool:
+def needs_scene_decomposition(sub_period: SubPeriod, client: LLMClient) -> bool:
     """用一次轻量 LLM 调用判断子时期是否需要场景展开。"""
     agent = Agent(_SCENE_JUDGMENT_SYSTEM_PROMPT, client=client, max_iterations=4)
     agent.add_output_tool(
@@ -516,7 +467,7 @@ _SCENE_DECOMP_SYSTEM_PROMPT = (
 
 def decompose_scenes(
     character_context: str,
-    sub_period: SubPeriodRef,
+    sub_period: SubPeriod,
     client: LLMClient,
     *,
     query_status: bool = True,
@@ -563,7 +514,7 @@ _SCENE_FROM_SP_SYSTEM_PROMPT = (
 )
 
 
-def scene_from_sub_period(sub_period: SubPeriodRef, client: LLMClient) -> Scene:
+def scene_from_sub_period(sub_period: SubPeriod, client: LLMClient) -> Scene:
     """将单场景子时期整理为一个 Scene（跳过展开路径）。"""
     agent = Agent(_SCENE_FROM_SP_SYSTEM_PROMPT, client=client, max_iterations=4)
     agent.add_output_tool(
@@ -631,7 +582,7 @@ _ACTION_EXTRACT_SYSTEM_PROMPT = (
 def extract_actions_with_taxonomy(
     character_context: str,
     scene: Scene,
-    sub_period: SubPeriodRef,
+    sub_period: SubPeriod,
     client: LLMClient,
     *,
     query_status: bool = True,
@@ -767,8 +718,8 @@ def extract_evolution(
 def _process_scene(
     character_context: str,
     character_name: str,
-    life_stage: LifeStageRef,
-    sub_period: SubPeriodRef,
+    life_stage: LifeStage,
+    sub_period: SubPeriod,
     scene_index: int,
     scene: Scene,
     client: LLMClient,
@@ -814,8 +765,8 @@ def _process_scene(
 def _process_sub_period(
     character_context: str,
     character_name: str,
-    life_stage: LifeStageRef,
-    sub_period: SubPeriodRef,
+    life_stage: LifeStage,
+    sub_period: SubPeriod,
     client: LLMClient,
     *,
     query_status: bool,
@@ -849,32 +800,11 @@ def _process_sub_period(
 # ── 分片 I/O 与断点续跑 ────────────────────────────────────────────────────────
 
 
-def _load_phase1_timeline(character_dir: Path) -> Phase1Timeline:
-    """读取并校验 ``phase1-timeline.json``。"""
-    path = character_dir / _PHASE1_FILENAME
-    return Phase1Timeline.model_validate(json.loads(path.read_text(encoding="utf-8")))
-
-
-def _shard_path(
-    character_dir: Path,
-    stage_index: int,
-    sub_period_index: int,
-    sub_period: SubPeriodRef,
-) -> Path:
-    """计算子时期分片文件路径。
-
-    双序号前缀提供稳定顺序与去冲突能力：同名子时期即便出现在不同阶段，
-    文件名也不会相互覆盖。
-    """
-    return (
-        character_dir
-        / _SHARD_DIRNAME
-        / f"{stage_index:02d}-{sub_period_index:02d}-{safe_dir_name(sub_period.name)}.json"
-    )
-
-
-def _load_existing_shard(shard_path: Path) -> StoredSubPeriod | None:
+def _load_existing_shard(
+    shard_path: Path, *, workspace: CharacterWorkspace | None = None
+) -> StoredSubPeriod | None:
     """读取分片为子时期树；旧版扁平分片自动迁移为树形；损坏则删除并返回 ``None``。"""
+    workspace = workspace or CharacterWorkspace.from_path(shard_path.parent.parent)
     try:
         payload = json.loads(shard_path.read_text(encoding="utf-8"))
     except json.JSONDecodeError:
@@ -886,26 +816,18 @@ def _load_existing_shard(shard_path: Path) -> StoredSubPeriod | None:
             # 旧版扁平分片（list[Phase2Record]）→ 迁移为树形并重写。
             records = [Phase2Record.model_validate(item) for item in payload]
             tree = StoredSubPeriod.from_records(records)
-            _write_json_atomic(shard_path, tree.to_storage_dict())
+            workspace.write_json(shard_path, tree.to_storage_dict(), atomic=True)
             logger.info("已将扁平分片迁移为树形：%s", shard_path)
             return tree
         tree = StoredSubPeriod.model_validate(payload)
         compact = tree.to_storage_dict()
         if payload != compact:  # 旧的非紧凑树 → 紧凑化（幂等）。
-            _write_json_atomic(shard_path, compact)
+            workspace.write_json(shard_path, compact, atomic=True)
         return tree
     except (ValidationError, KeyError, TypeError, ValueError):
         logger.warning("检测到损坏分片，删除后重跑：%s", shard_path, exc_info=True)
         shard_path.unlink(missing_ok=True)
         return None
-
-
-def _write_json_atomic(path: Path, payload: Any) -> None:
-    """先写临时文件再原子替换，避免半写入文件。``payload`` 须为可 JSON 序列化对象。"""
-    path.parent.mkdir(parents=True, exist_ok=True)
-    tmp_path = path.with_name(path.name + ".tmp")
-    tmp_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-    tmp_path.replace(path)
 
 
 def load_records(character_dir: str | Path) -> list[Phase2Record]:
@@ -914,9 +836,9 @@ def load_records(character_dir: str | Path) -> list[Phase2Record]:
     优先读聚合 ``phase2-actions.json`` 的 ``data.sub_periods``；缺则拼接 ``phase2-actions/``
     下各分片。兼容旧版扁平格式（``data.records`` 或分片 ``list[Phase2Record]``）。
     """
-    character_dir = Path(character_dir)
+    workspace = CharacterWorkspace.from_path(character_dir)
     records: list[Phase2Record] = []
-    aggregate = character_dir / _OUTPUT_FILENAME
+    aggregate = workspace.phase2_actions_path
     if aggregate.exists():
         data = json.loads(aggregate.read_text(encoding="utf-8")).get("data", {})
         if "sub_periods" in data:
@@ -925,7 +847,7 @@ def load_records(character_dir: str | Path) -> list[Phase2Record]:
             return records
         return [Phase2Record.model_validate(item) for item in data.get("records", [])]
 
-    shard_dir = character_dir / _SHARD_DIRNAME
+    shard_dir = workspace.phase2_shard_dir
     if not shard_dir.is_dir():
         return records
     for shard in sorted(shard_dir.glob("*.json")):
@@ -946,9 +868,11 @@ def _build_aggregate_record(
     trees: list[StoredSubPeriod],
     summaries: list[dict[str, Any]],
     failures: list[dict[str, str]],
+    *,
+    coverage_mode: str = "full",
 ) -> dict[str, Any]:
     """组装与 phase0/phase1 同构的聚合信封：data.sub_periods 为树形产出主体，run 为复盘元数据。"""
-    profile = stored.profile
+    header = CharacterHeader.from_stored_profile(stored)
     scenes_total = sum(len(t.scenes) for t in trees)
     actions_total = sum(len(s.actions) for t in trees for s in t.scenes)
     decision_enriched = sum(
@@ -958,17 +882,12 @@ def _build_aggregate_record(
         len(s.actions) for t in trees for s in t.scenes if s.scene_type == "recurring"
     )
     return {
-        "character": profile.chinese_name,
-        "native_name": profile.native_name,
-        "aliases": list(profile.aliases),
-        "source": profile.source,
-        "gist": profile.gist,
-        "classification": list(stored.classification),
-        "pass": "phase2-actions",
+        **header.to_record_base(PHASE2_ACTIONS_NAME),
         "data": {"sub_periods": [tree.to_storage_dict() for tree in trees]},
         "run": {
             "model": model,
             "timestamp": datetime.now().astimezone().isoformat(timespec="seconds"),
+            "coverage_mode": coverage_mode,
             "counts": {
                 "sub_periods_processed": len(summaries),
                 "sub_periods_failed": len(failures),
@@ -1007,9 +926,9 @@ class _UnitOutcome:
 
 
 def _process_unit(
-    unit: tuple[int, LifeStageRef, int, SubPeriodRef],
+    unit: tuple[int, LifeStage, int, SubPeriod],
     *,
-    character_dir: Path,
+    workspace: CharacterWorkspace,
     character_context: str,
     character_name: str,
     client: LLMClient,
@@ -1017,10 +936,10 @@ def _process_unit(
 ) -> _UnitOutcome:
     """处理单个子时期：断点续跑命中则复用分片树，否则提取并写树形分片。线程安全（各写各的分片）。"""
     stage_index, life_stage, sub_period_index, sub_period = unit
-    shard_path = _shard_path(character_dir, stage_index, sub_period_index, sub_period)
+    shard_path = workspace.phase2_shard_path(stage_index, sub_period_index, sub_period.name)
 
     if shard_path.exists():
-        tree = _load_existing_shard(shard_path)
+        tree = _load_existing_shard(shard_path, workspace=workspace)
         if tree is not None:
             logger.info(
                 "跳过已完成子时期：%s（%d 场景，%d 动作）",
@@ -1042,7 +961,7 @@ def _process_unit(
     tree = StoredSubPeriod.from_records(
         records, character=character_name, life_stage=life_stage.name, sub_period=sub_period.name
     )
-    _write_json_atomic(shard_path, tree.to_storage_dict())
+    workspace.write_json(shard_path, tree.to_storage_dict(), atomic=True)
     logger.info("完成子时期：%s（%d 场景，%d 动作）", sub_period.name, scene_count, len(records))
     return _UnitOutcome(tree, _summary_from_tree(tree, resumed=False), None)
 
@@ -1056,6 +975,7 @@ def run(
     max_sub_periods: int | None = None,
     query_status: bool = False,
     workers: int = 1,
+    coverage_mode: str = "full",
 ) -> Path:
     """对 *character_dir* 中的人物执行 Phase 2 动作提取，写出分片与聚合文件。
 
@@ -1070,18 +990,14 @@ def run(
     Returns:
         聚合产出 ``phase2-actions.json`` 的路径。
     """
-    character_dir = Path(character_dir)
-    stored = load_profile(character_dir)
-    character_context = format_character_context(stored)
+    workspace = CharacterWorkspace.from_path(character_dir)
+    stored = workspace.load_profile()
+    character_context = workspace.load_header().format_prompt_context()
     character_name = stored.profile.chinese_name
-    timeline = _load_phase1_timeline(character_dir)
+    timeline = load_phase1_timeline(workspace)
 
     # 展平 (阶段序号, 阶段, 子时期序号, 子时期)，并按需截断。
-    units: list[tuple[int, LifeStageRef, int, SubPeriodRef]] = [
-        (stage_index, life_stage, sub_period_index, sub_period)
-        for stage_index, life_stage in enumerate(timeline.data.life_stages)
-        for sub_period_index, sub_period in enumerate(life_stage.sub_periods)
-    ]
+    units: list[tuple[int, LifeStage, int, SubPeriod]] = timeline.data.iter_units()
     if max_sub_periods is not None:
         units = units[:max_sub_periods]
 
@@ -1094,10 +1010,10 @@ def run(
     with LLMClient() as client:
         model = client.model
 
-        def work(unit: tuple[int, LifeStageRef, int, SubPeriodRef]) -> _UnitOutcome:
+        def work(unit: tuple[int, LifeStage, int, SubPeriod]) -> _UnitOutcome:
             return _process_unit(
                 unit,
-                character_dir=character_dir,
+                workspace=workspace,
                 character_context=character_context,
                 character_name=character_name,
                 client=client,
@@ -1123,9 +1039,11 @@ def run(
         if outcome.failure is not None:
             failures.append(outcome.failure)
 
-    record = _build_aggregate_record(stored, model, trees, summaries, failures)
-    output_path = character_dir / _OUTPUT_FILENAME
-    _write_json_atomic(output_path, record)
+    record = _build_aggregate_record(
+        stored, model, trees, summaries, failures, coverage_mode=coverage_mode
+    )
+    output_path = workspace.phase2_actions_path
+    workspace.write_json(output_path, record, atomic=True)
 
     counts = record["run"]["counts"]
     logger.info(
@@ -1142,7 +1060,7 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument(
         "character_dir",
         nargs="?",
-        default=_DEFAULT_CHARACTER_DIR,
+        default=DEFAULT_CHARACTER_DIR,
         help="含 gist.json 与 phase1-timeline.json 的人物目录（缺省为简·爱）。",
     )
     parser.add_argument(
