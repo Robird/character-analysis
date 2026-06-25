@@ -1,0 +1,5139 @@
+{
+  "description": "高质量 SFT 训练子集：女性 + 高能动性 + 丰富结构密度 + 高心理自洽性",
+  "filters": {
+    "gender": "女",
+    "agency_level": "高",
+    "structural_density": "丰富",
+    "psychological_coherence": "高"
+  },
+  "total": 398,
+  "total_available": 398,
+  "characters": [
+    {
+      "character": "2B",
+      "native_name": "ヨルハ二号B型",
+      "source": "《尼尔：机械纪元》（NieR:Automata，白金工作室／史克威尔艾尼克斯，2017年）",
+      "gist": "《尼尔：机械纪元》中寄叶部队的战斗型人造人，型号为二号B型，代号2B，以近战能力著称。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "日本游戏",
+        "RPG与动作",
+        "其他重要作品"
+      ],
+      "rel_path": "fiction/游戏/日本游戏/RPG与动作/其他重要作品/2B（2B _ ヨルハ二号B型）"
+    },
+    {
+      "character": "Eleven",
+      "native_name": "Eleven",
+      "source": "《怪奇物语》（Stranger Things），由杜夫兄弟创作，Netflix 于 2016 年首播",
+      "gist": "一名从霍金斯国家实验室逃出的念力少女，拥有心灵遥感与心灵感应能力，喜爱华夫饼，与朋友们共同对抗来自颠倒世界的怪物。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "美剧",
+        "剧情史诗",
+        "《怪奇物语》（Stranger Things，Netflix，2016起）"
+      ],
+      "rel_path": "fiction/电视剧/美剧/剧情史诗/《怪奇物语》（Stranger Things，Netflix，2016起）/Eleven（十一 _ El _ Jane）"
+    },
+    {
+      "character": "Fleabag",
+      "native_name": "Fleabag",
+      "source": "英剧《伦敦生活》（Fleabag，BBC，2016–2019），编剧/主演：菲比·沃勒-布里奇（Phoebe Waller-Bridge）",
+      "gist": "英剧《伦敦生活》中绰号 Fleabag 的无名女主角，生活邋遢混乱，常打破第四堵墙向镜头独白，在黑色幽默中展开一段自称\"爱情故事\"的自我剖白。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "英剧",
+        "《伦敦生活》（Fleabag，BBC，2016-2019）"
+      ],
+      "rel_path": "fiction/电视剧/英剧/《伦敦生活》（Fleabag，BBC，2016-2019）/Fleabag（菲比·沃勒-布里奇）"
+    },
+    {
+      "character": "J·K·罗琳",
+      "native_name": "J. K. Rowling",
+      "source": "英国小说家、电影制片人，以《哈利·波特》系列奇幻小说闻名于世。",
+      "gist": "英国作家，以创作《哈利·波特》系列奇幻小说闻名全球。",
+      "classification": [
+        "real",
+        "英国文化",
+        "20世纪至今"
+      ],
+      "rel_path": "real/英国文化/20世纪至今/J.K. Rowling（J·K·罗琳）"
+    },
+    {
+      "character": "三笠·阿克曼",
+      "native_name": "ミカサ・アッカーマン",
+      "source": "日本漫画《进击の巨人》（諫山創，2009-2021）",
+      "gist": "日本漫画《进击的巨人》女主角，阿克曼一族后裔，调查兵团精锐士兵，拥有卓越战斗天赋与冷静判断力，视艾伦·耶格尔为最重要的家人。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "日本动漫",
+        "少年长篇与当代",
+        "《进击的巨人》（進撃の巨人，谏山创，2009-2021）"
+      ],
+      "rel_path": "fiction/动画与漫画/日本动漫/少年长篇与当代/《进击的巨人》（進撃の巨人，谏山创，2009-2021）/ミカサ·アッカーマン（三笠·阿克曼）"
+    },
+    {
+      "character": "上官鲁氏",
+      "native_name": "上官鲁氏",
+      "source": "莫言《丰乳肥臀》（1995）",
+      "gist": "莫言长篇小说《丰乳肥臀》的核心人物，上官金童的母亲，本姓鲁、嫁入上官家，一生横跨战乱与动荡年代，以坚韧顽强的生命力养育众多子女的中国北方农村女性。",
+      "classification": [
+        "fiction",
+        "文学",
+        "中国文学",
+        "当代与类型文学",
+        "莫言"
+      ],
+      "rel_path": "fiction/文学/中国文学/当代与类型文学/莫言/上官鲁氏"
+    },
+    {
+      "character": "与谢野晶子",
+      "native_name": "与謝野晶子",
+      "source": "日本近代诗人、和歌作家、评论家、女性解放思想家，活跃于明治、大正、昭和前期。",
+      "gist": "日本近代著名和歌诗人，浪漫派代表，以大胆表达女性情爱著称，代表作《乱发》（みだれ髪），亦是女性解放运动先驱。",
+      "classification": [
+        "real",
+        "日本文化",
+        "近代（明治、大正、昭和前期）"
+      ],
+      "rel_path": "real/日本文化/近代（明治、大正、昭和前期）/与謝野晶子（よさのあきこ）"
+    },
+    {
+      "character": "东京",
+      "native_name": "Silene Oliveira",
+      "source": "电视剧《纸钞屋》（La Casa de Papel，2017，Álex Pina）",
+      "gist": "西班牙电视剧《纸钞屋》中的主要角色，抢劫团伙成员，全剧的旁白叙述者，真名 Silene Oliveira，已在剧中牺牲。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "其他地区剧集",
+        "西班牙"
+      ],
+      "rel_path": "fiction/电视剧/其他地区剧集/西班牙/Tokio（东京 _ Silene Oliveira）"
+    },
+    {
+      "character": "丽莎·辛普森",
+      "native_name": "Lisa Simpson",
+      "source": "《辛普森一家》（The Simpsons，1989年首播，Matt Groening 创作）",
+      "gist": "美国动画情景喜剧《辛普森一家》中辛普森家的二女儿，以聪慧早熟、理性思辨、热爱萨克斯风萨克斯与社会正义感著称。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "美剧",
+        "喜剧与其他",
+        "动画情景喜剧"
+      ],
+      "rel_path": "fiction/电视剧/美剧/喜剧与其他/动画情景喜剧/Lisa"
+    },
+    {
+      "character": "乌姆·库勒苏姆",
+      "native_name": "أم كلثوم",
+      "source": "埃及传奇女歌手、电影演员，20世纪阿拉伯音乐最具影响力的标志性人物",
+      "gist": "埃及传奇女歌手与电影演员，阿拉伯音乐史上最伟大的歌唱家之一，被誉为\"东方之星\"（كوكب الشرق），其深沉的嗓音与宏大的演出风格深刻影响了整个阿拉伯世界。",
+      "classification": [
+        "real",
+        "阿拉伯-伊斯兰文化",
+        "近现代"
+      ],
+      "rel_path": "real/阿拉伯-伊斯兰文化/近现代/أم كلثوم（Umm Kulthūm，乌姆·库勒苏姆）"
+    },
+    {
+      "character": "乌尔苏拉·伊瓜兰",
+      "native_name": "Úrsula Iguarán",
+      "source": "《百年孤独》（加西亚·马尔克斯，1967）",
+      "gist": "《百年孤独》中布恩迪亚家族的女族长，马孔多的共同奠基者，以坚韧的生命力与务实精神贯穿家族百年兴衰。",
+      "classification": [
+        "fiction",
+        "文学",
+        "西班牙语文学",
+        "加西亚·马尔克斯（Gabriel García Márquez，哥伦比亚，诺贝尔奖）"
+      ],
+      "rel_path": "fiction/文学/西班牙语文学/加西亚·马尔克斯（Gabriel García Márquez，哥伦比亚，诺贝尔奖）/Úrsula Iguarán"
+    },
+    {
+      "character": "乌拉尼娅·卡布拉尔",
+      "native_name": "Urania Cabral",
+      "source": "《山羊的盛宴》（La fiesta del Chivo），马里奥·巴尔加斯·略萨著，2000年",
+      "gist": "巴尔加斯·略萨小说《山羊的盛宴》女主角，童年时在多米尼加共和国遭受独裁者特鲁希略侵害，流亡美国数十年后重返故土，直面过往创伤。",
+      "classification": [
+        "fiction",
+        "文学",
+        "西班牙语文学",
+        "巴尔加斯·略萨（Mario Vargas Llosa，秘鲁/西班牙，诺贝尔奖）"
+      ],
+      "rel_path": "fiction/文学/西班牙语文学/巴尔加斯·略萨（Mario Vargas Llosa，秘鲁_西班牙，诺贝尔奖）/Urania Cabral"
+    },
+    {
+      "character": "乔治·桑",
+      "native_name": "George Sand",
+      "source": "法国19世纪浪漫主义小说家、剧作家、文学评论家",
+      "gist": "法国19世纪浪漫主义女作家，以男性笔名乔治·桑行世，代表作有《魔沼》《小法黛特》等，以田园小说与女性独立精神著称，本名奥罗尔·杜邦。",
+      "classification": [
+        "real",
+        "法国文化",
+        "19世纪（复辟至第三共和）"
+      ],
+      "rel_path": "real/法国文化/19世纪（复辟至第三共和）/George Sand（乔治·桑 _ Aurore Dupin）"
+    },
+    {
+      "character": "乔治·艾略特",
+      "native_name": "Mary Anne Evans",
+      "source": "英国维多利亚时代小说家，以男性笔名乔治·艾略特发表作品，代表作包括《米德尔马契》《织工马南》《弗洛斯河上的磨坊》等。",
+      "gist": "英国维多利亚时代女作家，以男性笔名乔治·艾略特写作，代表作《米德尔马契》被誉为英语文学最伟大的小说之一。",
+      "classification": [
+        "real",
+        "英国文化",
+        "维多利亚时代"
+      ],
+      "rel_path": "real/英国文化/维多利亚时代/George Eliot（乔治·艾略特 _ Mary Ann Evans）"
+    },
+    {
+      "character": "乔治亚·欧姬芙",
+      "native_name": "Georgia O'Keeffe",
+      "source": "美国现代主义画家，20世纪美国艺术代表人物，以花卉特写、纽约摩天楼与新墨西哥州风景画著称",
+      "gist": "美国现代主义女画家，以巨幅花卉特写、纽约城市景观与新墨西哥州荒漠风景画闻名，被誉为\"美国现代主义之母\"。",
+      "classification": [
+        "real",
+        "美国文化",
+        "20世纪初至二战"
+      ],
+      "rel_path": "real/美国文化/20世纪初至二战/Georgia O'Keeffe（乔治亚·欧姬芙）"
+    },
+    {
+      "character": "伊丽莎",
+      "native_name": "Eliza Harris",
+      "source": "Harriet Beecher Stowe《汤姆叔叔的小屋》（Uncle Tom's Cabin, 1852）",
+      "gist": "《汤姆叔叔的小屋》中抱着儿子穿越冰封俄亥俄河逃亡的黑奴母亲。",
+      "classification": [
+        "fiction",
+        "文学",
+        "美国文学",
+        "19世纪至二战",
+        "斯托夫人（Harriet Beecher Stowe）"
+      ],
+      "rel_path": "fiction/文学/美国文学/19世纪至二战/斯托夫人（Harriet Beecher Stowe）/Eliza（伊莱扎）"
+    },
+    {
+      "character": "伊丽莎·杜利特尔",
+      "native_name": "Eliza Doolittle",
+      "source": "萧伯纳（George Bernard Shaw）剧作《皮格马利翁》（Pygmalion，1913），后衍生为音乐剧《窈窕淑女》（My Fair Lady，1956）",
+      "gist": "萧伯纳剧作《皮格马利翁》及音乐剧《窈窕淑女》的女主角：一位操考克尼口音的伦敦卖花女，在语音学教授希金斯训练下习得上流社会口音与仪态，过程中逐渐觉醒自我尊严。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "现代戏剧",
+        "萧伯纳（George Bernard Shaw，爱尔兰）"
+      ],
+      "rel_path": "fiction/戏剧/现代戏剧/萧伯纳（George Bernard Shaw，爱尔兰）/Eliza Doolittle（伊丽莎·杜利特尔）"
+    },
+    {
+      "character": "伊丽莎白",
+      "native_name": "Elizabeth",
+      "source": "《生化奇兵：无限》（BioShock Infinite，Irrational Games，2013）",
+      "gist": "被困于哥伦比亚天空之城的少女，拥有撕裂现实维度、穿越平行世界的超能力，在 Booker DeWitt 的帮助下逃离囚禁并揭开自身身世之谜。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "欧美游戏",
+        "RPG与动作冒险",
+        "生化奇兵系列（BioShock，Irrational Games）"
+      ],
+      "rel_path": "fiction/游戏/欧美游戏/RPG与动作冒险/生化奇兵系列（BioShock，Irrational Games）/Elizabeth（伊丽莎白）"
+    },
+    {
+      "character": "伊丽莎白·卡迪·斯坦顿",
+      "native_name": "Elizabeth Cady Stanton",
+      "source": "美国女权运动领袖、妇女选举权运动先驱，美国全国妇女选举权协会联合创始人，1848年塞内卡福尔斯会议主要组织者之一",
+      "gist": "美国女权运动领袖与妇女选举权运动先驱，1848年塞内卡福尔斯会议核心发起人之一，毕生为女性参政权与法律平等而奋斗。",
+      "classification": [
+        "real",
+        "美国文化",
+        "镀金时代"
+      ],
+      "rel_path": "real/美国文化/镀金时代/Elizabeth Cady Stanton（斯坦顿）"
+    },
+    {
+      "character": "伊丽莎白·巴雷特·布朗宁",
+      "native_name": "Elizabeth Barrett Browning",
+      "source": "英国维多利亚时代女诗人，代表作《葡萄牙人十四行诗集》，诗人罗伯特·布朗宁之妻",
+      "gist": "维多利亚时代英国最重要的女诗人之一，以爱情诗集《葡萄牙人十四行诗集》闻名于世，诗风情感真挚、语言优美，亦积极关注废奴与童工等社会议题。",
+      "classification": [
+        "real",
+        "英国文化",
+        "维多利亚时代"
+      ],
+      "rel_path": "real/英国文化/维多利亚时代/Elizabeth Barrett Browning"
+    },
+    {
+      "character": "伊丽莎白·班纳特",
+      "native_name": "Elizabeth Bennet",
+      "source": "《傲慢与偏见》（简·奥斯汀，1813年）",
+      "gist": "简·奥斯汀小说《傲慢与偏见》的女主角，聪慧机智、思想独立的乡绅之女，最终与达西先生消除偏见共结连理。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "古典至19世纪",
+        "Jane Austen"
+      ],
+      "rel_path": "fiction/文学/英国文学/古典至19世纪/Jane Austen/Elizabeth Bennet（伊丽莎白·班纳特）"
+    },
+    {
+      "character": "伊丽莎白一世",
+      "native_name": "Elisabeth",
+      "source": "弗里德里希·席勒戏剧《玛丽亚·斯图亚特》（Maria Stuart，1800年）",
+      "gist": "席勒戏剧《玛丽亚·斯图亚特》中的英格兰女王，将苏格兰女王玛丽亚·斯图亚特囚禁并处决的政治对手，在剧中与玛丽亚形成权力、信仰与女性命运上的尖锐对峙。",
+      "classification": [
+        "fiction",
+        "文学",
+        "德国文学",
+        "席勒（Friedrich Schiller）"
+      ],
+      "rel_path": "fiction/文学/德国文学/席勒（Friedrich Schiller）/Elisabeth"
+    },
+    {
+      "character": "伊丽莎白一世",
+      "native_name": "Elizabeth I",
+      "source": "英格兰都铎王朝女王（1558–1603年在位）",
+      "gist": "英格兰都铎王朝最后一位君主，开创「黄金时代」，1588年击败西班牙无敌舰队，与莎士比亚同时代。",
+      "classification": [
+        "real",
+        "英国文化",
+        "都铎王朝"
+      ],
+      "rel_path": "real/英国文化/都铎王朝/Elizabeth I（伊丽莎白一世）"
+    },
+    {
+      "character": "伊丽莎白二世",
+      "native_name": "Elizabeth II",
+      "source": "《王冠》（The Crown，2016–2023，Netflix 出品，彼得·摩根编剧）",
+      "gist": "Netflix 英剧《王冠》的核心人物，描绘英国女王伊丽莎白二世自 1950 年代登基至 21 世纪初的统治生涯、政治风云与私人家庭关系。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "美剧",
+        "剧情史诗",
+        "《王冠》/《使女的故事》等（含英美合拍）"
+      ],
+      "rel_path": "fiction/电视剧/美剧/剧情史诗/《王冠》_《使女的故事》等（含英美合拍）/Queen Elizabeth II"
+    },
+    {
+      "character": "伊什塔尔",
+      "native_name": "Ištar",
+      "source": "两河流域神话（美索不达米亚神话，苏美尔-阿卡德神系）",
+      "gist": "两河流域神话中的爱情、生育与战争女神，苏美尔女神伊南娜的阿卡德语对应名，在巴比伦时期被尊为主神之一。",
+      "classification": [
+        "fiction",
+        "神话传说民间故事",
+        "两河流域神话",
+        "苏美尔神系"
+      ],
+      "rel_path": "fiction/神话传说民间故事/两河流域神话/苏美尔神系/Ištar（伊什塔尔）"
+    },
+    {
+      "character": "伊娃·庇隆",
+      "native_name": "Eva Perón",
+      "source": "阿根廷政治人物，前第一夫人（1946–1952），胡安·庇隆之妻，妇女选举权与劳工权益倡导者",
+      "gist": "阿根廷前第一夫人，以争取妇女选举权、推动劳工福利和扶助贫民著称，被阿根廷民众尊为“精神领袖”与“穷人的守护者”。",
+      "classification": [
+        "real",
+        "拉丁美洲文化",
+        "20世纪（革命与独裁）"
+      ],
+      "rel_path": "real/拉丁美洲文化/20世纪（革命与独裁）/Eva Perón（艾薇塔）"
+    },
+    {
+      "character": "伊莎贝尔·阿连德",
+      "native_name": "Isabel Allende",
+      "source": "智利作家，魔幻现实主义文学代表人物，以《幽灵之家》等小说闻名于世",
+      "gist": "智利作家，魔幻现实主义文学代表人物，代表作《幽灵之家》。",
+      "classification": [
+        "real",
+        "拉丁美洲文化",
+        "当代"
+      ],
+      "rel_path": "real/拉丁美洲文化/当代/Isabel Allende（伊莎贝尔·阿连德）"
+    },
+    {
+      "character": "伊莎贝拉一世",
+      "native_name": "Isabel I de Castilla",
+      "source": "卡斯蒂利亚女王（1474—1504年在位），与阿拉贡国王费尔南多二世联姻共治，开创西班牙统一与帝国崛起之路。",
+      "gist": "卡斯蒂利亚女王，与阿拉贡的费尔南多二世联姻奠定西班牙统一基础，1492年资助哥伦布西航并发现美洲，同年攻陷格拉纳达终结收复失地运动，获教皇授予\"天主教国王\"称号。",
+      "classification": [
+        "real",
+        "西班牙-葡萄牙文化",
+        "中世纪与收复失地运动"
+      ],
+      "rel_path": "real/西班牙-葡萄牙文化/中世纪与收复失地运动/Isabel I de Castilla（卡斯蒂利亚的伊莎贝拉一世）"
+    },
+    {
+      "character": "伊菲姆露",
+      "native_name": "Ifemelu",
+      "source": "《美国佬》（Americanah，2013），奇玛曼达·阿迪契（Chimamanda Ngozi Adichie）著",
+      "gist": "奇玛曼达·阿迪契小说《美国佬》的女主角，从尼日利亚移居美国后以博客书写种族、身份与归属体验。",
+      "classification": [
+        "fiction",
+        "文学",
+        "美国文学",
+        "战后至今",
+        "奇玛曼达·阿迪契（Chimamanda Ngozi Adichie，尼日利亚/美国）"
+      ],
+      "rel_path": "fiction/文学/美国文学/战后至今/奇玛曼达·阿迪契（Chimamanda Ngozi Adichie，尼日利亚_美国）/Ifemelu"
+    },
+    {
+      "character": "伊迪丝·克劳利",
+      "native_name": "Lady Edith Crawley",
+      "source": "《唐顿庄园》（Downton Abbey），朱利安·费罗斯（Julian Fellowes）编剧，ITV，2010-2015",
+      "gist": "《唐顿庄园》中格兰瑟姆伯爵的次女，从家庭中备受冷落的贵族小姐逐步成长为独立自信的杂志主编，终获幸福并成为赫克瑟姆侯爵夫人。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "英剧",
+        "《唐顿庄园》（Downton Abbey，ITV，2010-2015）"
+      ],
+      "rel_path": "fiction/电视剧/英剧/《唐顿庄园》（Downton Abbey，ITV，2010-2015）/Lady Edith Crawley"
+    },
+    {
+      "character": "伊迪丝·华顿",
+      "native_name": "Edith Wharton",
+      "source": "美国作家，普利策小说奖首位女性得主，代表作包括《纯真年代》《欢乐之家》等",
+      "gist": "美国女作家，以冷峻笔触刻画镀金时代纽约上流社会，长篇小说《纯真年代》获1921年普利策小说奖，为首位获此殊荣的女性。",
+      "classification": [
+        "real",
+        "美国文化",
+        "镀金时代"
+      ],
+      "rel_path": "real/美国文化/镀金时代/Edith Wharton（伊迪丝·华顿）"
+    },
+    {
+      "character": "佐拉·尼尔·赫斯顿",
+      "native_name": "Zora Neale Hurston",
+      "source": "美国哈莱姆文艺复兴时期黑人女作家、人类学家、民俗学家",
+      "gist": "美国黑人女作家与人类学家，哈莱姆文艺复兴核心人物，代表作长篇小说《他们眼望上苍》。",
+      "classification": [
+        "real",
+        "美国文化",
+        "20世纪初至二战"
+      ],
+      "rel_path": "real/美国文化/20世纪初至二战/Zora Neale Hurston（佐拉·尼尔·赫斯顿）"
+    },
+    {
+      "character": "佩吉·奥尔森",
+      "native_name": "Peggy Olson",
+      "source": "《广告狂人》（Mad Men，马修·韦纳，AMC，2007–2015）",
+      "gist": "美国电视剧《广告狂人》中的虚构角色，从秘书成长为文案总监的纽约广告人。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "美剧",
+        "剧情史诗",
+        "《广告狂人》（Mad Men，AMC，2007-2015）"
+      ],
+      "rel_path": "fiction/电视剧/美剧/剧情史诗/《广告狂人》（Mad Men，AMC，2007-2015）/Peggy Olson（佩吉·奥尔森）"
+    },
+    {
+      "character": "俞秀莲",
+      "native_name": "俞秀莲",
+      "source": "王度庐武侠小说《卧虎藏龙》及李安2000年同名电影",
+      "gist": "《卧虎藏龙》女主角，雄远镖局女镖师，武艺高强、侠肝义胆，与李慕白情深缘浅，因道义与礼教束缚难成眷属。",
+      "classification": [
+        "fiction",
+        "电影",
+        "中国电影",
+        "香港"
+      ],
+      "rel_path": "fiction/电影/中国电影/香港/俞秀莲"
+    },
+    {
+      "character": "克利奥帕特拉七世",
+      "native_name": "Κλεοπάτρα",
+      "source": "古埃及托勒密王朝末代法老，公元前51年至前30年在位",
+      "gist": "古埃及托勒密王朝末代女法老，以先后与罗马统帅凯撒及安东尼结盟并产生情感纠葛而深刻影响地中海政治格局。",
+      "classification": [
+        "real",
+        "古埃及文化",
+        "晚期与托勒密时期"
+      ],
+      "rel_path": "real/古埃及文化/晚期与托勒密时期/Cleopatra VII（克利奥帕特拉七世 _ Κλεοπάτρα）"
+    },
+    {
+      "character": "克吕泰涅斯特拉",
+      "native_name": "Κλυταιμνήστρα",
+      "source": "古希腊神话，埃斯库罗斯《奥瑞斯提亚》三部曲（公元前458年）及其他古希腊悲剧作品",
+      "gist": "古希腊神话人物，迈锡尼国王阿伽门农之妻，因丈夫献祭女儿伊菲革涅亚而怀恨，与情夫埃癸斯托斯合谋弑夫，后为子俄瑞斯忒斯所杀。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "古希腊悲剧与喜剧",
+        "埃斯库罗斯（Αἰσχύλος / Aeschylus）"
+      ],
+      "rel_path": "fiction/戏剧/古希腊悲剧与喜剧/埃斯库罗斯（Αἰσχύλος _ Aeschylus）/Κλυταιμνήστρα（Clytemnestra，克吕泰涅斯特拉）"
+    },
+    {
+      "character": "克吕泰涅斯特拉",
+      "native_name": "Κλυταιμνήστρα",
+      "source": "希腊神话，见于荷马《奥德赛》（约公元前8世纪）及埃斯库罗斯《阿伽门农》（公元前458年）等作品",
+      "gist": "迈锡尼王后，阿伽门农之妻，因丈夫献祭女儿伊菲革涅亚而怀恨，与情夫埃癸斯托斯合谋弑夫，后为子俄瑞斯忒斯所杀。",
+      "classification": [
+        "fiction",
+        "神话传说民间故事",
+        "希腊神话",
+        "特洛伊战争关键人物"
+      ],
+      "rel_path": "fiction/神话传说民间故事/希腊神话/特洛伊战争关键人物/Κλυταιμνήστρα（Clytemnestra，克吕泰涅斯特拉）"
+    },
+    {
+      "character": "克拉丽丝·史达琳",
+      "native_name": "Clarice Starling",
+      "source": "《沉默的羔羊》（Thomas Harris，1988）",
+      "gist": "《沉默的羔羊》主角，FBI 学院实习生，为追查连环杀手“野牛比尔”而求助于高智商食人魔汉尼拔·莱克特博士。",
+      "classification": [
+        "fiction",
+        "电影",
+        "好莱坞",
+        "当代好莱坞",
+        "1990s 经典"
+      ],
+      "rel_path": "fiction/电影/好莱坞/当代好莱坞/1990s 经典/Clarice Starling（克拉丽丝·史达琳）"
+    },
+    {
+      "character": "克拉丽丝·李斯佩克朵",
+      "native_name": "Clarice Lispector",
+      "source": "巴西犹太裔女作家，20世纪葡萄牙语文学的核心人物之一。",
+      "gist": "巴西犹太裔女作家，以探索存在与身份的意识流小说著称，代表作《濒临狂野的心》（1943）与《星辰时刻》（1977）分别塑造了Joana与Macabéa等经典文学形象。",
+      "classification": [
+        "fiction",
+        "文学",
+        "葡萄牙语文学",
+        "20世纪"
+      ],
+      "rel_path": "fiction/文学/葡萄牙语文学/20世纪/Clarice Lispector"
+    },
+    {
+      "character": "克拉拉·巴顿",
+      "native_name": "Clara Barton",
+      "source": "美国红十字会创始人、战地护士及人道主义者（1821–1912）",
+      "gist": "美国红十字会创始人，美国内战期间担任战地护士，被誉为「战场天使」。",
+      "classification": [
+        "real",
+        "美国文化",
+        "内战与重建"
+      ],
+      "rel_path": "real/美国文化/内战与重建/Clara Barton（克拉拉·巴顿）"
+    },
+    {
+      "character": "克拉拉·舒曼",
+      "native_name": "Clara Schumann",
+      "source": "德国浪漫主义时期钢琴家、作曲家，罗伯特·舒曼之妻",
+      "gist": "德国浪漫主义时期最具影响力的钢琴演奏家与作曲家之一，以精湛琴艺和推动舒曼、勃拉姆斯作品闻名，同时是19世纪欧洲乐坛罕见的杰出女性音乐家。",
+      "classification": [
+        "real",
+        "德国-奥地利文化",
+        "德意志统一与第二帝国"
+      ],
+      "rel_path": "real/德国-奥地利文化/德意志统一与第二帝国/Clara Schumann（克拉拉·舒曼）"
+    },
+    {
+      "character": "克洛伊·弗雷泽",
+      "native_name": "Chloe Frazer",
+      "source": "《神秘海域》系列（Uncharted，Naughty Dog，2009）",
+      "gist": "《神秘海域》系列中拥有印度与澳大利亚血统的女性宝藏猎人，内森·德雷克的旧识与搭档。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "欧美游戏",
+        "RPG与动作冒险",
+        "神秘海域系列（Uncharted，Naughty Dog）"
+      ],
+      "rel_path": "fiction/游戏/欧美游戏/RPG与动作冒险/神秘海域系列（Uncharted，Naughty Dog）/Chloe Frazer（克洛伊）"
+    },
+    {
+      "character": "克洛蒂娜",
+      "native_name": "Claudine",
+      "source": "科莱特（Colette）《克洛蒂娜》系列小说（1900–1903）",
+      "gist": "法国作家科莱特笔下贯穿四部小说的女主人公，从勃艮第乡村走向巴黎，经历学校、婚姻与女性自我觉醒的少女。",
+      "classification": [
+        "fiction",
+        "文学",
+        "法国文学",
+        "20世纪至今",
+        "科莱特（Colette）"
+      ],
+      "rel_path": "fiction/文学/法国文学/20世纪至今/科莱特（Colette）/Claudine（克洛蒂娜）"
+    },
+    {
+      "character": "克莱尔·察哈纳西安",
+      "native_name": "Claire Zachanassian",
+      "source": "《老妇还乡》（Der Besuch der alten Dame，弗里德里希·迪伦马特，1956年）",
+      "gist": "迪伦马特悲喜剧《老妇还乡》的女主角，一位凭借石油产业成为亿万富婆的老妇，回到破败的故乡居伦，以十亿捐款为条件，要求居民处死当年背叛并抛弃她的旧情人阿尔弗雷德·伊尔。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "现代戏剧",
+        "迪伦马特（Friedrich Dürrenmatt，瑞士）"
+      ],
+      "rel_path": "fiction/戏剧/现代戏剧/迪伦马特（Friedrich Dürrenmatt，瑞士）/Claire Zachanassian"
+    },
+    {
+      "character": "克莱门汀",
+      "native_name": "Clementine",
+      "source": "《行尸走肉》（Telltale Games，2012）",
+      "gist": "Telltale Games 开发的章节式冒险游戏《行尸走肉》系列女主角，一位在丧尸末日中幸存的小女孩，从受李·埃弗雷特保护的孩童成长为独立坚强的生存者。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "欧美游戏",
+        "RPG与动作冒险",
+        "其他重要RPG与动作冒险"
+      ],
+      "rel_path": "fiction/游戏/欧美游戏/RPG与动作冒险/其他重要RPG与动作冒险/Clementine"
+    },
+    {
+      "character": "克里斯蒂娜女王",
+      "native_name": "Kristina",
+      "source": "瑞典瓦萨王朝女王（1632—1654 年在位），近代早期北欧君主",
+      "gist": "瑞典瓦萨王朝女王，以主动退位、改宗天主教并大力庇护文化艺术而闻名于世。",
+      "classification": [
+        "real",
+        "北欧文化",
+        "近代早期"
+      ],
+      "rel_path": "real/北欧文化/近代早期/Christina（Drottning Kristina，克里斯蒂娜女王）"
+    },
+    {
+      "character": "内罗毕",
+      "native_name": "Ágata Jiménez",
+      "source": "西班牙电视剧《纸钞屋》（La Casa de Papel，Álex Pina，2017）",
+      "gist": "西班牙电视剧《纸钞屋》中达利面罩劫匪团队的核心成员，真名阿加塔·希梅内斯，代号取自肯尼亚首都内罗毕，负责印钞与质量管理，性情热烈而果决。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "其他地区剧集",
+        "西班牙"
+      ],
+      "rel_path": "fiction/电视剧/其他地区剧集/西班牙/Nairobi"
+    },
+    {
+      "character": "内莉·福布什",
+      "native_name": "Nellie Forbush",
+      "source": "《南太平洋》（South Pacific），理查德·罗杰斯作曲、奥斯卡·汉默斯坦二世编剧作词，1949年首演",
+      "gist": "音乐剧《南太平洋》女主角，二战期间驻守南太平洋岛屿的美国海军护士，以歌曲《I'm Gonna Wash That Man Right Outa My Hair》著称。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "音乐剧",
+        "罗杰斯与汉默斯坦（Rodgers & Hammerstein）"
+      ],
+      "rel_path": "fiction/戏剧/音乐剧/罗杰斯与汉默斯坦（Rodgers & Hammerstein）/Nellie Forbush（内莉）"
+    },
+    {
+      "character": "内部太阳系战士",
+      "native_name": "内部太陽系戦士",
+      "source": "《美少女战士》（美少女戦士セーラームーン，武内直子，1991-1997）",
+      "gist": "日本漫画《美少女战士》中守护水手月亮的四位内部太阳系水手战士的合称，分别为水手水星、水手火星、水手木星与水手金星。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "日本动漫",
+        "经典与其他类型",
+        "《美少女战士》（美少女戦士セーラームーン，武内直子，1991-1997）"
+      ],
+      "rel_path": "fiction/动画与漫画/日本动漫/经典与其他类型/《美少女战士》（美少女戦士セーラームーン，武内直子，1991-1997）/水野亜美（水星）·火野レイ（火星）·木野まこと（木星）·愛野美奈子（金星）"
+    },
+    {
+      "character": "凯伦·布里克森",
+      "native_name": "Karen Blixen",
+      "source": "丹麦作家（1885–1962），以笔名 Isak Dinesen 发表多部英文与丹麦文作品，代表作《走出非洲》以自传体笔法记述其在英属东非的生活。",
+      "gist": "丹麦女作家，以笔名伊萨克·迪内森（Isak Dinesen）闻名，自传体小说《走出非洲》记录她在肯尼亚经营咖啡农场的十七年岁月，语言冷峻而富于诗意。",
+      "classification": [
+        "fiction",
+        "文学",
+        "北欧文学",
+        "丹麦"
+      ],
+      "rel_path": "fiction/文学/北欧文学/丹麦/Karen Blixen"
+    },
+    {
+      "character": "凯兰崔尔",
+      "native_name": "Galadriel",
+      "source": "《指环王》（J.R.R. Tolkien，1954–1955）",
+      "gist": "诺多族精灵，菲纳芬之女，与凯勒博恩共治洛丝罗瑞恩，为水之戒南雅的持有者，第三纪中洲最强大的精灵之一。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "20世纪至今",
+        "J.R.R. Tolkien"
+      ],
+      "rel_path": "fiction/文学/英国文学/20世纪至今/J.R.R. Tolkien/Galadriel"
+    },
+    {
+      "character": "凯妮",
+      "native_name": "カイネ",
+      "source": "《尼尔：人工生命》（NieR Replicant，Cavia / Square Enix，2010；2021年重制版《尼尔：人工生命 ver.1.22474487139...》）",
+      "gist": "《尼尔》系列主要角色，被「魔物」附身的双性人战士，衣着暴露、言语粗鲁，因身世遭村民排斥，实则内心善良，与尼尔和埃米尔结伴踏上旅程。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "日本游戏",
+        "RPG与动作",
+        "其他重要作品"
+      ],
+      "rel_path": "fiction/游戏/日本游戏/RPG与动作/其他重要作品/カイネ（凯妮）"
+    },
+    {
+      "character": "凯特·奥斯顿",
+      "native_name": "Kate Austen",
+      "source": "《迷失》（Lost，ABC，2004-2010）",
+      "gist": "《迷失》核心角色之一，大洋航空815航班幸存者，因不堪继父长期虐待而将其杀害，以逃犯身份登岛，在险境中展现出独立、果敢的生存能力，与杰克和索耶形成贯穿全剧的情感纠葛。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "美剧",
+        "剧情史诗",
+        "《迷失》（Lost，ABC，2004-2010）"
+      ],
+      "rel_path": "fiction/电视剧/美剧/剧情史诗/《迷失》（Lost，ABC，2004-2010）/Kate"
+    },
+    {
+      "character": "凯特尼斯·伊夫狄恩",
+      "native_name": "Katniss Everdeen",
+      "source": "《饥饿游戏》系列（苏珊·柯林斯，2008—2010）",
+      "gist": "《饥饿游戏》系列女主角，来自第12区的少女猎人，自愿代替妹妹参加残酷的生存竞技，凭借弓箭技艺与顽强意志成为推翻帕纳姆国暴政的起义象征——\"嘲笑鸟\"。",
+      "classification": [
+        "fiction",
+        "电影",
+        "好莱坞",
+        "当代好莱坞",
+        "当代系列与独立"
+      ],
+      "rel_path": "fiction/电影/好莱坞/当代好莱坞/当代系列与独立/Katniss Everdeen（凯特尼斯·伊夫狄恩）"
+    },
+    {
+      "character": "凯瑟琳·德·美第奇",
+      "native_name": "Caterina de' Medici",
+      "source": "意大利佛罗伦萨美第奇家族成员，法国国王亨利二世王后，查理九世、亨利三世等三位国王在位期间的摄政太后，法国宗教战争核心人物。",
+      "gist": "意大利美第奇家族出身的法国王后与摄政太后，在16世纪法国宗教战争中长期执掌实权，深刻影响瓦卢瓦王朝晚期的政治与宗教格局。",
+      "classification": [
+        "real",
+        "意大利文化",
+        "文艺复兴"
+      ],
+      "rel_path": "real/意大利文化/文艺复兴/Caterina de' Medici（卡特琳·德·美第奇）"
+    },
+    {
+      "character": "凯瑟琳·德·美第奇",
+      "native_name": "Caterina de' Medici",
+      "source": "法国瓦卢瓦王朝王太后，亨利二世之妻，弗朗索瓦二世、查理九世、亨利三世之母，法国宗教战争时期核心政治人物",
+      "gist": "法国瓦卢瓦王朝王太后，宗教战争期间以摄政身份实际统治法国，以权谋与政治手腕著称。",
+      "classification": [
+        "real",
+        "法国文化",
+        "瓦卢瓦王朝"
+      ],
+      "rel_path": "real/法国文化/瓦卢瓦王朝/Catherine de Médicis（卡特琳·德·美第奇）"
+    },
+    {
+      "character": "凯瑟琳·恩萧",
+      "native_name": "Catherine Earnshaw",
+      "source": "《呼啸山庄》（艾米莉·勃朗特，1847年）",
+      "gist": "艾米莉·勃朗特小说《呼啸山庄》的女主人公，性格狂野不羁，与希斯克利夫之间的爱情悲剧贯穿全书，在情感与身份的撕裂中早逝。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "古典至19世纪",
+        "勃朗特姐妹"
+      ],
+      "rel_path": "fiction/文学/英国文学/古典至19世纪/勃朗特姐妹/Catherine Earnshaw（凯瑟琳·恩萧）"
+    },
+    {
+      "character": "凯瑟琳·曼斯菲尔德",
+      "native_name": "Katherine Mansfield",
+      "source": "新西兰出生的英国现代主义短篇小说作家",
+      "gist": "新西兰现代主义短篇小说先驱，以《园会》《幸福》等作品闻名，擅长意识流与印象主义手法，深刻刻画人物内心世界。",
+      "classification": [
+        "real",
+        "大洋洲文化",
+        "20世纪"
+      ],
+      "rel_path": "real/大洋洲文化/20世纪/Katherine Mansfield（凯瑟琳·曼斯菲尔德）"
+    },
+    {
+      "character": "凯茜·弗里曼",
+      "native_name": "Cathy Freeman",
+      "source": "澳大利亚原住民田径运动员，2000年悉尼奥运会女子400米金牌得主",
+      "gist": "澳大利亚原住民田径运动员，2000年悉尼奥运会女子400米金牌得主，并在该届开幕式上点燃主火炬。",
+      "classification": [
+        "real",
+        "大洋洲文化",
+        "当代"
+      ],
+      "rel_path": "real/大洋洲文化/当代/Cathy Freeman（凯茜·弗里曼）"
+    },
+    {
+      "character": "凯莉·米洛",
+      "native_name": "Kylie Minogue",
+      "source": "澳大利亚流行歌手、词曲作者与演员，活跃于1980年代至今",
+      "gist": "澳大利亚流行音乐巨星，被誉为\"流行公主\"，自1987年出道以来全球唱片销量逾8000万张，是澳大利亚最具国际影响力的女歌手之一。",
+      "classification": [
+        "real",
+        "大洋洲文化",
+        "当代"
+      ],
+      "rel_path": "real/大洋洲文化/当代/DC, INXS, Kylie Minogue"
+    },
+    {
+      "character": "加夫列拉·米斯特拉尔",
+      "native_name": "Lucila Godoy Alcayaga",
+      "source": "智利诗人、教育家、外交家，1945年诺贝尔文学奖得主",
+      "gist": "智利女诗人、教育家与外交家，拉丁美洲首位诺贝尔文学奖得主（1945年），以诗集《绝望》《柔情》《塔拉》等作品闻名。",
+      "classification": [
+        "real",
+        "拉丁美洲文化",
+        "20世纪（革命与独裁）"
+      ],
+      "rel_path": "real/拉丁美洲文化/20世纪（革命与独裁）/Gabriela Mistral（加夫列拉·米斯特拉尔）"
+    },
+    {
+      "character": "劳拉·克劳馥",
+      "native_name": "Lara Croft",
+      "source": "《古墓丽影》（Tomb Raider）游戏系列，Core Design 创作、Eidos 发行，1996年首作",
+      "gist": "《古墓丽影》系列主角，英国贵族出身的考古学家与冒险家，以探索全球古墓遗迹、破解机关谜题与双枪战斗而闻名。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "欧美游戏",
+        "RPG与动作冒险",
+        "其他重要RPG与动作冒险"
+      ],
+      "rel_path": "fiction/游戏/欧美游戏/RPG与动作冒险/其他重要RPG与动作冒险/Lara Croft（劳拉·克劳馥）"
+    },
+    {
+      "character": "勃朗特姐妹",
+      "native_name": "Brontë sisters",
+      "source": "英国维多利亚时代作家姐妹，19世纪英国文学重要代表人物",
+      "gist": "19世纪英国维多利亚时代的三位作家姐妹——夏洛蒂·勃朗特（《简·爱》）、艾米莉·勃朗特（《呼啸山庄》）与安妮·勃朗特，均为英语文学史上的重要小说家。",
+      "classification": [
+        "real",
+        "英国文化",
+        "维多利亚时代"
+      ],
+      "rel_path": "real/英国文化/维多利亚时代/Brontë sisters"
+    },
+    {
+      "character": "千寻",
+      "native_name": "荻野千尋",
+      "source": "《千与千寻》（千と千尋の神隠し），宫崎骏导演，吉卜力工作室，2001年",
+      "gist": "日本动画电影《千与千寻》主角，意外闯入神明世界后，为解救变成猪的父母而在汤屋工作的勇敢少女。",
+      "classification": [
+        "fiction",
+        "电影",
+        "日本电影",
+        "吉卜力及剧场动画（电影版，亦见动画与漫画）"
+      ],
+      "rel_path": "fiction/电影/日本电影/吉卜力及剧场动画（电影版，亦见动画与漫画）/千尋（千寻）"
+    },
+    {
+      "character": "华妃",
+      "native_name": "华妃",
+      "source": "流潋紫小说改编电视剧《甄嬛传》（2011）",
+      "gist": "《甄嬛传》中年羹尧之妹、雍正妃子，封号华妃，骄横跋扈，以“赏你一丈红”惩戒宫人而闻名。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "中国电视剧",
+        "宫廷与历史"
+      ],
+      "rel_path": "fiction/电视剧/中国电视剧/宫廷与历史/华妃（蒋欣）"
+    },
+    {
+      "character": "南希·米特福德",
+      "native_name": "Nancy Mitford",
+      "source": "英国作家、传记作家（1904–1973），米特福德六姐妹之一。代表作包括小说《The Pursuit of Love》（1945）和《Love in a Cold Climate》（1949），以及路易十四、蓬巴杜夫人等历史人物传记。",
+      "gist": "英国作家与传记作家，米特福德家族成员，以讽刺小说《爱的追求》及多部法国历史人物传记闻名。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "20世纪至今",
+        "其他20世纪中期"
+      ],
+      "rel_path": "fiction/文学/英国文学/20世纪至今/其他20世纪中期/Nancy Mitford"
+    },
+    {
+      "character": "卡珊德拉",
+      "native_name": "Kassandra",
+      "source": "《刺客信条：奥德赛》（Assassin's Creed Odyssey，育碧，2018年）",
+      "gist": "《刺客信条：奥德赛》主角，斯巴达雇佣兵，驯鹰人，列奥尼达斯之孙。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "欧美游戏",
+        "RPG与动作冒险",
+        "刺客信条系列（Assassin's Creed，Ubisoft）"
+      ],
+      "rel_path": "fiction/游戏/欧美游戏/RPG与动作冒险/刺客信条系列（Assassin's Creed，Ubisoft）/Kassandra"
+    },
+    {
+      "character": "卡罗尔",
+      "native_name": "Carol Peletier",
+      "source": "《行尸走肉》（The Walking Dead），AMC电视剧，2010–2022 年，改编自罗伯特·柯克曼同名漫画",
+      "gist": "从长期遭受家暴的家庭主妇，蜕变为末世中冷静果断的致命生存者与团队核心战力，以对莉兹说出\"look at the flowers\"后亲手终结其生命的一幕震撼观众。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "美剧",
+        "喜剧与其他",
+        "《行尸走肉》（The Walking Dead，AMC，2010-2022）"
+      ],
+      "rel_path": "fiction/电视剧/美剧/喜剧与其他/《行尸走肉》（The Walking Dead，AMC，2010-2022）/Carol"
+    },
+    {
+      "character": "卡蒂妮",
+      "native_name": "Raden Adjeng Kartini",
+      "source": "印度尼西亚民族英雄，19世纪末爪哇贵族女性，印尼女性解放运动先驱",
+      "gist": "印度尼西亚民族英雄与女权先驱，在荷兰殖民时期倡导女性受教育权与平等地位，其思想深刻影响了印尼民族觉醒与妇女解放运动。",
+      "classification": [
+        "real",
+        "东南亚文化",
+        "印尼/满者伯夷"
+      ],
+      "rel_path": "real/东南亚文化/印尼_满者伯夷/Kartini（R.A. Kartini，卡蒂妮）"
+    },
+    {
+      "character": "厄休拉·布兰温",
+      "native_name": "Ursula Brangwen",
+      "source": "《虹》（The Rainbow, 1915）、《恋爱中的女人》（Women in Love, 1920），D.H. 劳伦斯著",
+      "gist": "D.H. 劳伦斯小说《虹》与《恋爱中的女人》中的核心女性角色，一位反抗维多利亚时代传统束缚、追求精神独立与个性解放的现代女性。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "20世纪至今",
+        "D.H. Lawrence"
+      ],
+      "rel_path": "fiction/文学/英国文学/20世纪至今/D.H. Lawrence/Ursula Brangwen"
+    },
+    {
+      "character": "厄勒克特拉",
+      "native_name": "Ἠλέκτρα",
+      "source": "欧里庇得斯悲剧《厄勒克特拉》（约公元前420–前410年）",
+      "gist": "阿伽门农与克吕泰涅斯特拉之女，在欧里庇得斯版本中被埃吉斯托斯嫁给贫穷农民以防其生下复仇者，后与流亡归来的弟弟俄瑞斯忒斯相认，联手弑母为父报仇。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "古希腊悲剧与喜剧",
+        "欧里庇得斯（Εὐριπίδης / Euripides）"
+      ],
+      "rel_path": "fiction/戏剧/古希腊悲剧与喜剧/欧里庇得斯（Εὐριπίδης _ Euripides）/Ἠλέκτρα（Electra）"
+    },
+    {
+      "character": "古德伦·布兰温",
+      "native_name": "Gudrun Brangwen",
+      "source": "《虹》（1915）与《恋爱中的女人》（1920），D.H. 劳伦斯著",
+      "gist": "D.H. 劳伦斯小说《虹》与《恋爱中的女人》中的虚构角色，布兰温家族次女、厄休拉之妹，天性敏感且富有艺术家气质，在《恋爱中的女人》中作为雕塑家与杰拉德·克里奇展开一段激烈而毁灭性的情感关系。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "20世纪至今",
+        "D.H. Lawrence"
+      ],
+      "rel_path": "fiction/文学/英国文学/20世纪至今/D.H. Lawrence/Gudrun Brangwen"
+    },
+    {
+      "character": "可可·香奈儿",
+      "native_name": "Gabrielle Bonheur Chanel",
+      "source": "法国时装设计师，香奈儿（Chanel）品牌创始人",
+      "gist": "法国时装设计师，以现代主义风格革新20世纪女性时尚，创造了小黑裙、香奈儿套装与五号香水等经典作品。",
+      "classification": [
+        "real",
+        "法国文化",
+        "20世纪至今"
+      ],
+      "rel_path": "real/法国文化/20世纪至今/Coco Chanel（可可·香奈儿）"
+    },
+    {
+      "character": "叶卡捷琳娜二世",
+      "native_name": "Екатерина II Великая",
+      "source": "俄罗斯帝国女皇（1762–1796年在位），出身普鲁士安哈尔特-采尔布斯特公国，通过宫廷政变废黜丈夫彼得三世后即位，统治时期史称俄国「黄金时代」",
+      "gist": "俄罗斯帝国女皇，推行开明专制，在位期间吞并克里米亚、三次瓜分波兰，大幅扩张领土，使俄国跻身欧洲列强之列。",
+      "classification": [
+        "real",
+        "俄罗斯-东斯拉夫文化",
+        "沙皇俄国"
+      ],
+      "rel_path": "real/俄罗斯-东斯拉夫文化/沙皇俄国/Екатерина II Великая（Catherine the Great，叶卡捷琳娜大帝）"
+    },
+    {
+      "character": "叶奈法",
+      "native_name": "Yennefer z Vengerbergu",
+      "source": "《巫师》系列（Andrzej Sapkowski 原著小说，1992年起；CD Projekt Red 游戏改编，2007年起）",
+      "gist": "《巫师》世界中来自温格堡的黑发紫眼女术士，杰洛特的挚爱与命运羁绊。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "欧美游戏",
+        "RPG与动作冒险",
+        "巫师系列（The Witcher，CD Projekt Red，波兰）"
+      ],
+      "rel_path": "fiction/游戏/欧美游戏/RPG与动作冒险/巫师系列（The Witcher，CD Projekt Red，波兰）/Yennefer of Vengerberg（叶奈法）"
+    },
+    {
+      "character": "叶文洁",
+      "native_name": "叶文洁",
+      "source": "《三体》（刘慈欣，2006）",
+      "gist": "《三体》核心人物，文革中目睹父亲叶哲泰被迫害致死，后在红岸基地利用太阳放大并发射电波，成为首个向宇宙发出地球文明信号的人类，由此引来三体文明入侵，并成为地球三体组织（ETO）的精神统帅。",
+      "classification": [
+        "fiction",
+        "文学",
+        "中国文学",
+        "当代与类型文学",
+        "刘慈欣"
+      ],
+      "rel_path": "fiction/文学/中国文学/当代与类型文学/刘慈欣/叶文洁"
+    },
+    {
+      "character": "吉安娜·普罗德摩尔",
+      "native_name": "Jaina Proudmoore",
+      "source": "《魔兽争霸》系列及《魔兽世界》（暴雪娱乐，2002年首次登场）",
+      "gist": "库尔提拉斯海军上将戴林·普罗德摩尔之女，肯瑞托大法师，曾为塞拉摩统治者，联盟核心领袖之一。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "欧美游戏",
+        "射击策略与其他",
+        "魔兽系列（Warcraft / World of Warcraft，Blizzard）"
+      ],
+      "rel_path": "fiction/游戏/欧美游戏/射击策略与其他/魔兽系列（Warcraft _ World of Warcraft，Blizzard）/Jaina Proudmoore（吉安娜·普罗德摩尔）"
+    },
+    {
+      "character": "周芷若",
+      "native_name": "周芷若",
+      "source": "金庸《倚天屠龙记》（1961–1963）",
+      "gist": "金庸武侠小说《倚天屠龙记》女主角之一，峨眉派弟子、后任掌门，以容貌清丽、武功卓绝著称，性格由温婉善良渐趋深沉狠绝，是金庸笔下最复杂的女性角色之一。",
+      "classification": [
+        "fiction",
+        "文学",
+        "中国文学",
+        "当代与类型文学",
+        "金庸"
+      ],
+      "rel_path": "fiction/文学/中国文学/当代与类型文学/金庸/周芷若"
+    },
+    {
+      "character": "和子",
+      "native_name": "かず子",
+      "source": "《斜陽》（太宰治，1947）",
+      "gist": "太宰治小说《斜陽》的女主人公，出身没落贵族家庭，在战后日本旧秩序崩塌中挣扎求存。",
+      "classification": [
+        "fiction",
+        "文学",
+        "日本文学",
+        "太宰治"
+      ],
+      "rel_path": "fiction/文学/日本文学/太宰治/かず子"
+    },
+    {
+      "character": "哈丽特·塔布曼",
+      "native_name": "Harriet Tubman",
+      "source": "美国废奴主义者、地下铁路组织者、前奴隶；19世纪美国民权活动家与内战侦察兵",
+      "gist": "美国废奴主义运动领袖，出身奴隶，通过\"地下铁路\"亲自营救数十名奴隶逃往自由，被誉为\"黑人的摩西\"；内战期间担任联邦军侦察兵、护士与间谍，晚年投身女性参政运动。",
+      "classification": [
+        "real",
+        "美国文化",
+        "内战与重建"
+      ],
+      "rel_path": "real/美国文化/内战与重建/Harriet Tubman（哈丽特·塔布曼）"
+    },
+    {
+      "character": "哈莉·奎茵",
+      "native_name": "Harley Quinn",
+      "source": "DC漫画《蝙蝠侠》系列，由保罗·迪尼与布鲁斯·蒂姆创造，首次登场于《蝙蝠侠：动画系列》（1992年）",
+      "gist": "原为阿卡姆疯人院的精神病学家，在治疗小丑过程中爱上对方并成为其犯罪搭档与伴侣，后逐渐发展为独立的反英雄角色。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "美国漫画",
+        "蝙蝠侠家族与反派"
+      ],
+      "rel_path": "fiction/动画与漫画/美国漫画/蝙蝠侠家族与反派/Harley Quinn（哈莉·奎茵）"
+    },
+    {
+      "character": "喜多川海梦",
+      "native_name": "喜多川 海夢",
+      "source": "《更衣人偶坠入爱河》（福田晋一，2018年）",
+      "gist": "日本漫画《更衣人偶坠入爱河》的女主角，热衷cosplay的活泼高中辣妹，与同班同学五条新菜因制作cos服装而逐渐走近。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "日本动漫",
+        "少年长篇与当代",
+        "其他重要少年/青年作品"
+      ],
+      "rel_path": "fiction/动画与漫画/日本动漫/少年长篇与当代/其他重要少年_青年作品/喜多川海夢"
+    },
+    {
+      "character": "圣女贞德",
+      "native_name": "Jeanne d'Arc",
+      "source": "《圣女贞德》（Saint Joan），萧伯纳（George Bernard Shaw），1923年",
+      "gist": "萧伯纳同名历史剧中的主角，一位在百年战争中自称受神启、率法军抗击英军的少女，最终被俘受火刑而死，后世追封为天主教圣人。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "现代戏剧",
+        "萧伯纳（George Bernard Shaw，爱尔兰）"
+      ],
+      "rel_path": "fiction/戏剧/现代戏剧/萧伯纳（George Bernard Shaw，爱尔兰）/Saint Joan（圣女贞德）"
+    },
+    {
+      "character": "圣毕哲",
+      "native_name": "Birgitta av Vadstena",
+      "source": "瑞典天主教圣人、神秘主义者，布里吉特修女会（救世主修女会）创始人",
+      "gist": "14世纪瑞典天主教女神秘主义者与圣人，瑞典与欧洲主保之一，瓦德斯泰纳修道院及布里吉特修女会创立者。",
+      "classification": [
+        "real",
+        "北欧文化",
+        "中世纪与卡尔马联盟"
+      ],
+      "rel_path": "real/北欧文化/中世纪与卡尔马联盟/Birgitta av Vadstena（圣毕哲 _ St. Bridget of Sweden）"
+    },
+    {
+      "character": "埃伦·约翰逊·瑟利夫",
+      "native_name": "Ellen Johnson Sirleaf",
+      "source": "利比里亚政治家，曾任利比里亚总统（2006—2018），非洲首位女性国家元首",
+      "gist": "利比里亚首位民选女总统（2006—2018在任），也是非洲首位女性国家元首，任内推动内战后的和平重建、经济复苏与妇女权益，2011年与莱伊曼·古博韦及塔瓦库勒·卡曼共同获得诺贝尔和平奖。",
+      "classification": [
+        "real",
+        "非洲文化",
+        "独立运动与后殖民"
+      ],
+      "rel_path": "real/非洲文化/独立运动与后殖民/Ellen Johnson Sirleaf（埃伦·约翰逊·瑟利夫）"
+    },
+    {
+      "character": "埃尔弗里德·耶利内克",
+      "native_name": "Elfriede Jelinek",
+      "source": "奥地利作家，2004年诺贝尔文学奖得主",
+      "gist": "奥地利女作家，2004年诺贝尔文学奖得主，代表作《钢琴教师》，以冷峻犀利的语言批判社会权力结构与性别政治。",
+      "classification": [
+        "real",
+        "德国-奥地利文化",
+        "奥地利（哈布斯堡至共和国）"
+      ],
+      "rel_path": "real/德国-奥地利文化/奥地利（哈布斯堡至共和国）/Elfriede Jelinek（埃尔弗里德·耶利内克）"
+    },
+    {
+      "character": "埃洛伊",
+      "native_name": "Aloy",
+      "source": "《地平线：零之曙光》(Horizon Zero Dawn, Guerrilla Games, 2017) 及续作《地平线：西之绝境》(Horizon Forbidden West, 2022)",
+      "gist": "《地平线》系列游戏主角，诺拉族被流放者，在后末日世界中以弓箭与智慧狩猎机械巨兽、探寻身世之谜与旧世界真相的猎人。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "欧美游戏",
+        "RPG与动作冒险",
+        "其他重要RPG与动作冒险"
+      ],
+      "rel_path": "fiction/游戏/欧美游戏/RPG与动作冒险/其他重要RPG与动作冒险/Aloy（埃洛伊）"
+    },
+    {
+      "character": "埃莉诺·罗斯福",
+      "native_name": "Eleanor Roosevelt",
+      "source": "美国前第一夫人（1933–1945年在任），人权活动家、外交官、作家，美国总统富兰克林·D·罗斯福之妻。",
+      "gist": "美国前第一夫人（1933–1945），人权活动家与外交官，主导起草《世界人权宣言》，被誉为「世界第一夫人」。",
+      "classification": [
+        "real",
+        "美国文化",
+        "20世纪初至二战"
+      ],
+      "rel_path": "real/美国文化/20世纪初至二战/Eleanor Roosevelt（埃莉诺·罗斯福）"
+    },
+    {
+      "character": "塔季扬娜·拉林娜",
+      "native_name": "Татьяна Ларина",
+      "source": "《叶甫盖尼·奥涅金》（Александр Пушкин, 1833）",
+      "gist": "普希金诗体小说《叶甫盖尼·奥涅金》女主角，纯真热情的乡村贵族少女，大胆写信向奥涅金告白却被冷漠拒绝；数年后嫁为人妇成为高贵矜持的公爵夫人，面对奥涅金迟来的追求毅然守节，成为俄国文学中理想女性形象的典范。",
+      "classification": [
+        "fiction",
+        "文学",
+        "俄国文学",
+        "普希金（Александр Пушкин）"
+      ],
+      "rel_path": "fiction/文学/俄国文学/普希金（Александр Пушкин）/Татьяна Ларина（塔吉扬娜）"
+    },
+    {
+      "character": "塔莉",
+      "native_name": "Tali'Zorah",
+      "source": "《质量效应》系列（Mass Effect，BioWare，2007）",
+      "gist": "奎利族机械工程师，诺曼底号技术专家，以醉酒时错把吸管说成“Emergency induction port”（紧急感应端口）的名场面著称。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "欧美游戏",
+        "RPG与动作冒险",
+        "质量效应系列（Mass Effect，BioWare）"
+      ],
+      "rel_path": "fiction/游戏/欧美游戏/RPG与动作冒险/质量效应系列（Mass Effect，BioWare）/Tali'Zorah（塔莉）"
+    },
+    {
+      "character": "塞丝",
+      "native_name": "Sethe",
+      "source": "《宠儿》（Beloved），托妮·莫里森著，1987年",
+      "gist": "托妮·莫里森小说《宠儿》的主人公，一位为阻止女儿沦为奴隶而亲手将其杀死的非裔美国母亲，多年后被化身为少女的亡女鬼魂纠缠索债。",
+      "classification": [
+        "fiction",
+        "文学",
+        "美国文学",
+        "战后至今",
+        "托妮·莫里森（Toni Morrison，诺贝尔奖，黑人女作家）"
+      ],
+      "rel_path": "fiction/文学/美国文学/战后至今/托妮·莫里森（Toni Morrison，诺贝尔奖，黑人女作家）/Sethe（塞丝）"
+    },
+    {
+      "character": "塞尔玛·拉格洛夫",
+      "native_name": "Selma Lagerlöf",
+      "source": "瑞典女作家，1909年诺贝尔文学奖得主，瑞典学院首位女院士",
+      "gist": "瑞典女作家，1909年诺贝尔文学奖得主，以童话小说《尼尔斯骑鹅旅行记》闻名于世。",
+      "classification": [
+        "real",
+        "北欧文化",
+        "19世纪"
+      ],
+      "rel_path": "real/北欧文化/19世纪/Selma Lagerlöf（塞尔玛·拉格洛夫）"
+    },
+    {
+      "character": "塞莱斯蒂娜",
+      "native_name": "Celestina",
+      "source": "费尔南多·德·罗哈斯《塞莱斯蒂娜》（原名《卡利斯托和梅利贝娅的悲喜剧》，约1499年）",
+      "gist": "西班牙文学经典《塞莱斯蒂娜》中的老鸨，以狡猾、机敏与巧舌如簧著称，是文学史上最著名的媒婆/皮条客形象之一。",
+      "classification": [
+        "fiction",
+        "文学",
+        "西班牙语文学",
+        "中世纪与黄金时代"
+      ],
+      "rel_path": "fiction/文学/西班牙语文学/中世纪与黄金时代/《塞莱斯蒂娜》（La Celestina）"
+    },
+    {
+      "character": "夏奇拉",
+      "native_name": "Shakira Isabel Mebarak Ripoll",
+      "source": "哥伦比亚女歌手、词曲作者、舞者与唱片制作人，拉丁流行乐代表人物",
+      "gist": "哥伦比亚著名女歌手、词曲作者与舞者，以融合拉丁、流行与摇滚风格闻名全球，被誉为\"拉丁天后\"，代表作包括《Hips Don't Lie》《Whenever, Wherever》等。",
+      "classification": [
+        "real",
+        "拉丁美洲文化",
+        "当代"
+      ],
+      "rel_path": "real/拉丁美洲文化/当代/Shakira"
+    },
+    {
+      "character": "夏娃",
+      "native_name": "Eve",
+      "source": "John Milton《失乐园》（1667）",
+      "gist": "约翰·弥尔顿史诗《失乐园》中的人类始祖、第一位女性，亚当之妻，因受撒旦诱惑偷食禁果导致人类堕落。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "古典至19世纪",
+        "John Milton《失乐园》（17世纪）"
+      ],
+      "rel_path": "fiction/文学/英国文学/古典至19世纪/John Milton《失乐园》（17世纪）/Eve（夏娃）"
+    },
+    {
+      "character": "多莉·莱维",
+      "native_name": "Dolly Levi",
+      "source": "《你好，多莉！》（Hello, Dolly!，1964年百老汇音乐剧，Jerry Herman 词曲，Michael Stewart 编剧，改编自 Thornton Wilder 剧作《The Matchmaker》）",
+      "gist": "音乐剧《你好，多莉！》女主角，一位丧偶后以撮合姻缘、安排百事为生的精明媒人，性格热情强势、足智多谋。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "音乐剧",
+        "其他经典百老汇"
+      ],
+      "rel_path": "fiction/戏剧/音乐剧/其他经典百老汇/Dolly Levi（多莉·莱维）"
+    },
+    {
+      "character": "多萝西娅·布鲁克",
+      "native_name": "Dorothea Brooke",
+      "source": "《米德尔马契》（Middlemarch），乔治·艾略特（George Eliot）著，1871–1872年",
+      "gist": "《米德尔马契》的女主人公，一位满怀理想主义热忱的英国乡村少女，因仰慕智识而误嫁年长学究卡苏朋，在婚姻的幻灭与磨难中走向成熟，最终寻得真正的爱与自我。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "古典至19世纪",
+        "George Eliot（Mary Ann Evans）"
+      ],
+      "rel_path": "fiction/文学/英国文学/古典至19世纪/George Eliot（Mary Ann Evans）/Dorothea Brooke（多萝西娅）"
+    },
+    {
+      "character": "大崎娜娜",
+      "native_name": "大崎ナナ",
+      "source": "《NANA》（矢泽爱，2000-2009）",
+      "gist": "日本漫画《NANA》女主角之一，朋克乐队 Black Stones（Blast）的主唱，本城莲的恋人。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "日本动漫",
+        "经典与其他类型",
+        "《NANA》（矢泽爱，2000-2009）"
+      ],
+      "rel_path": "fiction/动画与漫画/日本动漫/经典与其他类型/《NANA》（矢泽爱，2000-2009）/大崎ナナ"
+    },
+    {
+      "character": "天照大神",
+      "native_name": "アマテラス",
+      "source": "《大神》（Okami，2006年，Clover Studio开发、Capcom发行）",
+      "gist": "《大神》主角，天照大神化身的白狼，以水墨画风格世界为舞台，运用笔神之力斩妖除魔、恢复被诅咒的大地。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "日本游戏",
+        "RPG与动作",
+        "其他重要作品"
+      ],
+      "rel_path": "fiction/游戏/日本游戏/RPG与动作/其他重要作品/Amaterasu（アマテラス _ 天照大神）"
+    },
+    {
+      "character": "天野秋",
+      "native_name": "天野アキ",
+      "source": "《海女》（あまちゃん，NHK晨间剧，2013年，宫藤官九郎编剧）",
+      "gist": "《海女》女主角，从东京随母亲回到故乡北三陆，成为海女并追寻偶像梦想的少女，口头禅为「じぇじぇじぇ」。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "日剧",
+        "晨间剧·大河剧"
+      ],
+      "rel_path": "fiction/电视剧/日剧/晨间剧·大河剧/あまちゃん（天野アキ）"
+    },
+    {
+      "character": "奇玛曼达·恩戈齐·阿迪契",
+      "native_name": "Chimamanda Ngozi Adichie",
+      "source": "尼日利亚女作家、小说家，代表作《半轮黄日》《美国佬》《紫木槿》",
+      "gist": "尼日利亚女作家，当代非洲文学的重要声音，以《半轮黄日》《美国佬》等长篇闻名，作品聚焦身份认同、种族、性别与后殖民议题。",
+      "classification": [
+        "real",
+        "非洲文化",
+        "当代"
+      ],
+      "rel_path": "real/非洲文化/当代/Chimamanda Ngozi Adichie（奇玛曼达·恩戈齐·阿迪契）"
+    },
+    {
+      "character": "奥丽维娅",
+      "native_name": "Olivia",
+      "source": "莎士比亚戏剧《第十二夜》（Twelfth Night，约1601）",
+      "gist": "莎士比亚喜剧《第十二夜》中的伊利里亚女伯爵，爱上女扮男装化名\"西萨里奥\"的薇奥拉，最终与薇奥拉的孪生兄长西巴斯辛成婚。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "莎士比亚",
+        "《第十二夜》（Twelfth Night，约1601）"
+      ],
+      "rel_path": "fiction/戏剧/莎士比亚/《第十二夜》（Twelfth Night，约1601）/Olivia（奥丽维娅）"
+    },
+    {
+      "character": "奥尔加·托卡尔丘克",
+      "native_name": "Olga Tokarczuk",
+      "source": "波兰作家、心理学家，2018年诺贝尔文学奖得主（2019年颁发）",
+      "gist": "波兰当代女作家、心理学家，2018年诺贝尔文学奖得主，代表作有《太古和其他的时间》《白天的房子，夜晚的房子》《云游》等。",
+      "classification": [
+        "real",
+        "东欧文化（波兰、捷克、匈牙利等）",
+        "后冷战至今"
+      ],
+      "rel_path": "real/东欧文化（波兰、捷克、匈牙利等）/后冷战至今/Olga Tokarczuk（奥尔加·托卡尔丘克）"
+    },
+    {
+      "character": "奥普拉·温弗瑞",
+      "native_name": "Oprah Winfrey",
+      "source": "美国电视脱口秀主持人、制片人、演员与慈善家",
+      "gist": "美国电视脱口秀主持人、制片人、演员与慈善家，以长期主持《奥普拉·温弗瑞秀》闻名，被誉为\"媒体女王\"。",
+      "classification": [
+        "real",
+        "美国文化",
+        "战后至今"
+      ],
+      "rel_path": "real/美国文化/战后至今/Oprah Winfrey（奥普拉·温弗瑞）"
+    },
+    {
+      "character": "奥菲莉亚",
+      "native_name": "Ofelia",
+      "source": "电影《潘神的迷宫》（El laberinto del fauno，2006，吉尔莫·德尔·托罗执导，西班牙-墨西哥合拍）",
+      "gist": "电影《潘神的迷宫》女主角，1944年西班牙佛朗哥独裁时期的一名少女，在战乱现实中进入神秘的地下迷宫世界，被牧神告知自己是冥界公主的化身，需完成三项试炼以重返地下王国。",
+      "classification": [
+        "fiction",
+        "电影",
+        "欧洲电影",
+        "法国"
+      ],
+      "rel_path": "fiction/电影/欧洲电影/法国/Ofelia"
+    },
+    {
+      "character": "奥菲莉娅",
+      "native_name": "Ofelia",
+      "source": "吉列尔莫·德尔·托罗执导电影《潘神的迷宫》（El laberinto del fauno，2006）",
+      "gist": "《潘神的迷宫》主角，1944年西班牙佛朗哥时期的小女孩，在继父的军事据点附近发现古老迷宫，被农牧神告知自己是地下王国的失落公主，需完成三项试炼方可回归。",
+      "classification": [
+        "fiction",
+        "电影",
+        "拉丁美洲电影",
+        "墨西哥"
+      ],
+      "rel_path": "fiction/电影/拉丁美洲电影/墨西哥/Ofelia（奥菲莉娅）"
+    },
+    {
+      "character": "奥顺",
+      "native_name": "Ọ̀ṣún",
+      "source": "约鲁巴神话与 Ifá/Òrìṣà 宗教传统（尼日利亚及西非约鲁巴人）",
+      "gist": "约鲁巴神话中司掌河流、爱情、生育、美丽与丰饶的 Òrìṣà（神祇），常以手持镜子、身着黄衣的优雅女性形象出现，在非洲裔美洲宗教中演化为 Ochún（萨泰里阿）与 Oxum（坎东布雷）。",
+      "classification": [
+        "fiction",
+        "神话传说民间故事",
+        "非洲民间故事",
+        "尼日利亚/约鲁巴民间故事与宗教"
+      ],
+      "rel_path": "fiction/神话传说民间故事/非洲民间故事/尼日利亚_约鲁巴民间故事与宗教/Oshun（奥顺）"
+    },
+    {
+      "character": "奥黛特·德·克雷西",
+      "native_name": "Odette de Crécy",
+      "source": "马塞尔·普鲁斯特《追忆似水年华》（À la recherche du temps perdu，1913—1927）",
+      "gist": "法国作家普鲁斯特《追忆似水年华》中的核心人物，原为巴黎高级交际花（cocotte），后成为夏尔·斯万的妻子（即斯万夫人），亦是叙述者倾慕的吉尔贝特之母。",
+      "classification": [
+        "fiction",
+        "文学",
+        "法国文学",
+        "20世纪至今",
+        "普鲁斯特（Marcel Proust，《追忆似水年华》）"
+      ],
+      "rel_path": "fiction/文学/法国文学/20世纪至今/普鲁斯特（Marcel Proust，《追忆似水年华》）/Odette de Crécy（奥黛特）"
+    },
+    {
+      "character": "女巫",
+      "native_name": "The Witch",
+      "source": "《拜访森林》（Into the Woods，1986），斯蒂芬·桑德海姆（Stephen Sondheim）作曲作词、詹姆斯·拉派恩（James Lapine）编剧的音乐剧",
+      "gist": "《拜访森林》中的关键角色，一位因魔法豆被盗而诅咒面包师家族的女巫，以苛刻条件驱使众人进入森林寻找解咒之物，串联起灰姑娘、小红帽、长发公主、杰克与魔豆等童话人物的交织命运。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "音乐剧",
+        "桑德海姆（Stephen Sondheim）作品"
+      ],
+      "rel_path": "fiction/戏剧/音乐剧/桑德海姆（Stephen Sondheim）作品/The Witch（女巫）"
+    },
+    {
+      "character": "妮可·基德曼",
+      "native_name": "Nicole Kidman",
+      "source": "澳大利亚女演员、制片人，奥斯卡金像奖与金球奖得主",
+      "gist": "澳大利亚女演员兼制片人，以《时时刻刻》获奥斯卡最佳女主角奖，代表作包括《红磨坊》《大小谎言》《海王》等。",
+      "classification": [
+        "real",
+        "大洋洲文化",
+        "当代"
+      ],
+      "rel_path": "real/大洋洲文化/当代/Nicole Kidman"
+    },
+    {
+      "character": "妮可·罗宾",
+      "native_name": "ニコ·ロビン",
+      "source": "《海贼王》（ONE PIECE，尾田荣一郎，1997年起）",
+      "gist": "草帽一伙的考古学家，奥哈拉事件的唯一幸存者，能够解读历史正文，毕生追寻\"真正的历史\"。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "日本动漫",
+        "少年长篇与当代",
+        "《海贼王》（ONE PIECE，尾田荣一郎，1997起）"
+      ],
+      "rel_path": "fiction/动画与漫画/日本动漫/少年长篇与当代/《海贼王》（ONE PIECE，尾田荣一郎，1997起）/ニコ·ロビン（妮可·罗宾）"
+    },
+    {
+      "character": "姚木兰",
+      "native_name": "姚木兰",
+      "source": "林语堂小说《京华烟云》（Moment in Peking，1939年）",
+      "gist": "《京华烟云》女主角，姚家女儿，深具道家涵养，于乱世沉浮中始终从容淡定、柔韧不折。",
+      "classification": [
+        "fiction",
+        "文学",
+        "中国文学",
+        "现代文学",
+        "林语堂"
+      ],
+      "rel_path": "fiction/文学/中国文学/现代文学/林语堂/姚木兰"
+    },
+    {
+      "character": "娜乌西卡",
+      "native_name": "ナウシカ",
+      "source": "宫崎骏动画电影《风之谷》（1984）",
+      "gist": "宫崎骏动画电影《风之谷》的女主角，风之谷的公主，拥有与王虫及腐海生物沟通的罕见能力，致力于探寻腐海的秘密与人类世界的出路。",
+      "classification": [
+        "fiction",
+        "电影",
+        "日本电影",
+        "吉卜力及剧场动画（电影版，亦见动画与漫画）"
+      ],
+      "rel_path": "fiction/电影/日本电影/吉卜力及剧场动画（电影版，亦见动画与漫画）/ナウシカ（娜乌西卡）"
+    },
+    {
+      "character": "娜塔莉·波特曼",
+      "native_name": "נטלי פורטמן",
+      "source": "以色列裔美国演员、导演、制片人，奥斯卡最佳女主角得主",
+      "gist": "以色列裔美国演员，第83届奥斯卡最佳女主角得主，代表作有《黑天鹅》《这个杀手不太冷》《V字仇杀队》等。",
+      "classification": [
+        "real",
+        "犹太文化",
+        "以色列建国至今"
+      ],
+      "rel_path": "real/犹太文化/以色列建国至今/נטלי פורטמן（Natalie Portman，娜塔莉·波特曼）"
+    },
+    {
+      "character": "娜娜",
+      "native_name": "Nana",
+      "source": "左拉《娜娜》（1880），《卢贡-马卡尔家族》系列",
+      "gist": "左拉长篇小说《娜娜》主角，热尔维丝与库波之女，巴黎高级妓女，以美貌与性魅力为武器，引诱并毁灭了众多上流社会男性。",
+      "classification": [
+        "fiction",
+        "文学",
+        "法国文学",
+        "古典至19世纪",
+        "左拉（Zola，卢贡-马卡尔家族 Les Rougon-Macquart）"
+      ],
+      "rel_path": "fiction/文学/法国文学/古典至19世纪/左拉（Zola，卢贡-马卡尔家族 Les Rougon-Macquart）/Nana（娜娜）"
+    },
+    {
+      "character": "娜拉",
+      "native_name": "Nora Helmer",
+      "source": "《玩偶之家》（Henrik Ibsen，1879）",
+      "gist": "易卜生戏剧《玩偶之家》的女主角，原为安于家庭生活的妻子与母亲，在认清自己不过是丈夫的“玩偶”之后毅然出走，成为现代戏剧中女性觉醒与独立人格的经典象征。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "现代戏剧",
+        "易卜生（Henrik Ibsen，挪威）"
+      ],
+      "rel_path": "fiction/戏剧/现代戏剧/易卜生（Henrik Ibsen，挪威）/Nora Helmer（娜拉）"
+    },
+    {
+      "character": "娜美",
+      "native_name": "ナミ",
+      "source": "《海贼王》（ONE PIECE，尾田荣一郎，1997年起连载）",
+      "gist": "草帽海贼团的航海士，梦想绘制世界海图，精通气象学与导航，极度痴迷金钱与财宝。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "日本动漫",
+        "少年长篇与当代",
+        "《海贼王》（ONE PIECE，尾田荣一郎，1997起）"
+      ],
+      "rel_path": "fiction/动画与漫画/日本动漫/少年长篇与当代/《海贼王》（ONE PIECE，尾田荣一郎，1997起）/ナミ（娜美）"
+    },
+    {
+      "character": "孙柔嘉",
+      "native_name": "孙柔嘉",
+      "source": "《围城》（钱钟书，1947年）",
+      "gist": "《围城》女主角之一，方鸿渐的妻子。外表柔顺温驯、看似毫无主见，实则工于心计，以退为进、步步为营，最终使方鸿渐在被动中娶她为妻，婚后两人关系在琐碎日常中日趋紧张。",
+      "classification": [
+        "fiction",
+        "文学",
+        "中国文学",
+        "现代文学",
+        "钱钟书作品"
+      ],
+      "rel_path": "fiction/文学/中国文学/现代文学/钱钟书作品/孙柔嘉"
+    },
+    {
+      "character": "孝庄",
+      "native_name": "孝庄",
+      "source": "电视剧《康熙王朝》（2001年，陈家林导演）",
+      "gist": "电视剧《康熙王朝》中由斯琴高娃饰演的孝庄太后，康熙帝的祖母，辅佐顺治、康熙两代幼主的蒙古族女政治家。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "中国电视剧",
+        "宫廷与历史"
+      ],
+      "rel_path": "fiction/电视剧/中国电视剧/宫廷与历史/孝庄（斯琴高娃）"
+    },
+    {
+      "character": "安妮·博林",
+      "native_name": "Anne Boleyn",
+      "source": "英格兰都铎王朝王后，亨利八世第二任妻子，伊丽莎白一世之母",
+      "gist": "英格兰都铎王朝王后，亨利八世第二任妻子，女王伊丽莎白一世之母，因亨利八世与凯瑟琳婚姻无效而得以成婚，最终以叛国、通奸等罪名被斩首。",
+      "classification": [
+        "real",
+        "英国文化",
+        "都铎王朝"
+      ],
+      "rel_path": "real/英国文化/都铎王朝/Anne Boleyn（安妮·博林）"
+    },
+    {
+      "character": "安娜·卡列尼娜",
+      "native_name": "Анна Каренина",
+      "source": "《安娜·卡列尼娜》（列夫·托尔斯泰，1877年）",
+      "gist": "俄国作家列夫·托尔斯泰长篇小说《安娜·卡列尼娜》的女主角，为与军官沃伦斯基的婚外情抛弃家庭与社会地位，最终在绝望中卧轨自杀的贵族女性。",
+      "classification": [
+        "fiction",
+        "文学",
+        "俄国文学",
+        "托尔斯泰（Лев Толстой）"
+      ],
+      "rel_path": "fiction/文学/俄国文学/托尔斯泰（Лев Толстой）/Анна Каренина（安娜·卡列尼娜）"
+    },
+    {
+      "character": "安娜·李奥诺文斯",
+      "native_name": "Anna Leonowens",
+      "source": "音乐剧《国王与我》（The King and I，1951，理查德·罗杰斯作曲，奥斯卡·汉默斯坦二世作词）",
+      "gist": "受雇于暹罗国王拉玛四世的英国女教师，在宫廷中教导众王子与公主的近代化课业。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "音乐剧",
+        "罗杰斯与汉默斯坦（Rodgers & Hammerstein）"
+      ],
+      "rel_path": "fiction/戏剧/音乐剧/罗杰斯与汉默斯坦（Rodgers & Hammerstein）/Anna Leonowens"
+    },
+    {
+      "character": "安娜·沃尔夫",
+      "native_name": "Anna Wulf",
+      "source": "《金色笔记》（Doris Lessing，1962）",
+      "gist": "多丽丝·莱辛小说《金色笔记》的女主人公，一位通过黑、红、黄、蓝四色笔记本记录并剖析自身生活与创作的女作家。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "20世纪至今",
+        "Doris Lessing（诺贝尔奖）"
+      ],
+      "rel_path": "fiction/文学/英国文学/20世纪至今/Doris Lessing（诺贝尔奖）/Anna Wulf"
+    },
+    {
+      "character": "安娜·科穆宁娜",
+      "native_name": "Ἄννα Κομνηνή",
+      "source": "拜占庭帝国科穆宁王朝公主、历史学家与学者",
+      "gist": "拜占庭帝国公主、历史学家，著有记述其父阿历克塞一世统治的《阿历克塞传》，是研究拜占庭帝国与十字军东征的重要一手史料。",
+      "classification": [
+        "real",
+        "古罗马文化",
+        "拜占庭帝国（东罗马）"
+      ],
+      "rel_path": "real/古罗马文化/拜占庭帝国（东罗马）/Ἄννα Κομνηνή（Anna Komnene，安娜·科穆宁娜）"
+    },
+    {
+      "character": "安娜·迪布勒伊",
+      "native_name": "Anne Dubreuilh",
+      "source": "《名士风流》（Les Mandarins），西蒙娜·德·波伏瓦著，1954年",
+      "gist": "西蒙娜·德·波伏瓦小说《名士风流》的女主角，精神分析师，战后巴黎左翼知识分子圈的核心人物，在政治理想与个人情感之间痛苦抉择。",
+      "classification": [
+        "fiction",
+        "文学",
+        "法国文学",
+        "20世纪至今",
+        "波伏瓦（Simone de Beauvoir）"
+      ],
+      "rel_path": "fiction/文学/法国文学/20世纪至今/波伏瓦（Simone de Beauvoir）/Anne"
+    },
+    {
+      "character": "安娜·阿赫玛托娃",
+      "native_name": "Анна Ахматова",
+      "source": "俄罗斯诗人，白银时代阿克梅派代表人物，苏联时期重要文学家",
+      "gist": "俄罗斯白银时代代表性诗人，阿克梅派核心成员，被誉为\"俄罗斯诗歌的月亮\"，代表作有长诗《安魂曲》《没有主人公的叙事诗》等。",
+      "classification": [
+        "real",
+        "俄罗斯-东斯拉夫文化",
+        "苏联时期"
+      ],
+      "rel_path": "real/俄罗斯-东斯拉夫文化/苏联时期/Анна Ахматова（Anna Akhmatova，安娜·阿赫玛托娃）"
+    },
+    {
+      "character": "安德洛玛刻",
+      "native_name": "Andromaque",
+      "source": "《安德洛玛刻》（让·拉辛，1667年）",
+      "gist": "法国剧作家拉辛悲剧《安德洛玛刻》的主人公，特洛伊英雄赫克托耳的遗孀，战后沦为希腊方面俘虏，在皮洛斯宫中为保全儿子阿斯提阿那克斯而周旋于国王皮洛斯与使者俄瑞斯忒斯之间。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "法国古典主义戏剧",
+        "拉辛（Jean Racine）"
+      ],
+      "rel_path": "fiction/戏剧/法国古典主义戏剧/拉辛（Jean Racine）/Andromaque（安德洛玛刻）"
+    },
+    {
+      "character": "安提戈涅",
+      "native_name": "Ἀντιγόνη",
+      "source": "索福克勒斯《安提戈涅》（约公元前441年）",
+      "gist": "古希腊悲剧《安提戈涅》主人公，俄狄浦斯之女。为埋葬阵亡的兄长波吕涅刻斯，不惜违抗国王克瑞翁的禁令，最终被活埋处死。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "古希腊悲剧与喜剧",
+        "索福克勒斯（Σοφοκλῆς / Sophocles）"
+      ],
+      "rel_path": "fiction/戏剧/古希腊悲剧与喜剧/索福克勒斯（Σοφοκλῆς _ Sophocles）/Ἀντιγόνη（Antigone，安提戈涅）"
+    },
+    {
+      "character": "安格拉·默克尔",
+      "native_name": "Angela Merkel",
+      "source": "德国政治家，2005年至2021年任德国总理，基督教民主联盟（CDU）前主席",
+      "gist": "德国政治家，2005年至2021年担任德国总理，为德国历史上首位女性总理，也是两德统一后首位出身东德的总理，曾长期被视为欧盟事实上的核心领导者。",
+      "classification": [
+        "real",
+        "德国-奥地利文化",
+        "战后（东西德至统一）"
+      ],
+      "rel_path": "real/德国-奥地利文化/战后（东西德至统一）/Angela Merkel（安格拉·默克尔）"
+    },
+    {
+      "character": "宫二",
+      "native_name": "宫若梅",
+      "source": "王家卫电影《一代宗师》（2013）",
+      "gist": "宫宝森之女，八卦掌传人，为报父仇挑战马三，立誓终身不嫁、不传艺的刚烈女子。",
+      "classification": [
+        "fiction",
+        "电影",
+        "中国电影",
+        "大陆 · 第六代与当代"
+      ],
+      "rel_path": "fiction/电影/中国电影/大陆 · 第六代与当代/宫二"
+    },
+    {
+      "character": "家庭女教师",
+      "native_name": "The Governess",
+      "source": "《螺丝在拧紧》（The Turn of the Screw），亨利·詹姆斯，1898年",
+      "gist": "亨利·詹姆斯1898年哥特小说《螺丝在拧紧》中未具名的叙述者兼女主人公，受雇在布莱庄园照看两名幼童，她声称目击鬼魂出没，但其叙述的可靠性——鬼魂究竟真实存在还是她的幻觉——成为文学批评史上悬而未决的经典谜题。",
+      "classification": [
+        "fiction",
+        "文学",
+        "美国文学",
+        "19世纪至二战",
+        "亨利·詹姆斯（Henry James）"
+      ],
+      "rel_path": "fiction/文学/美国文学/19世纪至二战/亨利·詹姆斯（Henry James）/The Governess"
+    },
+    {
+      "character": "尤娜",
+      "native_name": "ユウナ",
+      "source": "《最终幻想X》（Final Fantasy X，Square，2001）",
+      "gist": "《最终幻想X》女主角，为阻止巨大灾厄「辛」而踏上朝圣之旅的召唤士，能以舞蹈仪式「异界送」引导死者灵魂前往异界。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "日本游戏",
+        "RPG与动作",
+        "最终幻想系列（Final Fantasy / ファイナルファンタジー，Square Enix，1987起）"
+      ],
+      "rel_path": "fiction/游戏/日本游戏/RPG与动作/最终幻想系列（Final Fantasy _ ファイナルファンタジー，Square Enix，1987起）/Yuna（ユウナ）"
+    },
+    {
+      "character": "尹女士",
+      "native_name": "윤씨 부인",
+      "source": "《母亲》（奉俊昊，2009年）",
+      "gist": "奉俊昊2009年电影《母亲》的主角，一位为保护智障儿子不惜一切代价的母亲。",
+      "classification": [
+        "fiction",
+        "电影",
+        "韩国电影",
+        "奉俊昊（봉준호）"
+      ],
+      "rel_path": "fiction/电影/韩国电影/奉俊昊（봉준호）/尹女士"
+    },
+    {
+      "character": "尹慧珍",
+      "native_name": "윤혜진",
+      "source": "《海岸村恰恰恰》（갯마을 차차차），2021年tvN韩国电视剧，导演柳济元，编剧申夏恩",
+      "gist": "韩剧《海岸村恰恰恰》女主角，由申敏儿饰演，从首尔来到海边公辰村开设牙科诊所的牙医，与洪班长（金宣虎饰）展开治愈系浪漫故事。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "韩剧",
+        "治愈/日常"
+      ],
+      "rel_path": "fiction/电视剧/韩剧/治愈_日常/《海岸村恰恰恰》（갯마을 차차차，2021）"
+    },
+    {
+      "character": "屠呦呦",
+      "native_name": "屠呦呦",
+      "source": "中国药学家，中国中医科学院终身研究员兼首席研究员，2015 年诺贝尔生理学或医学奖得主。",
+      "gist": "中国药学家，因发现青蒿素——一种用于治疗疟疾的关键药物——而获得 2015 年诺贝尔生理学或医学奖。",
+      "classification": [
+        "real",
+        "中华文化",
+        "近现代（民国至今）"
+      ],
+      "rel_path": "real/中华文化/近现代（民国至今）/屠呦呦"
+    },
+    {
+      "character": "巴斯妇",
+      "native_name": "The Wife of Bath",
+      "source": "Geoffrey Chaucer《坎特伯雷故事集》（约1387–1400年）",
+      "gist": "《坎特伯雷故事集》中一位结过五次婚的女性朝圣者，以坦率谈论婚姻、情欲与性别权力关系著称，是中世纪英语文学中最鲜明且最具话语权强势的女性角色之一。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "古典至19世纪",
+        "Geoffrey Chaucer《坎特伯雷故事集》（14世纪）"
+      ],
+      "rel_path": "fiction/文学/英国文学/古典至19世纪/Geoffrey Chaucer《坎特伯雷故事集》（14世纪）/The Wife of Bath（巴斯妇）"
+    },
+    {
+      "character": "布伦希尔德",
+      "native_name": "Brynhildr",
+      "source": "北欧神话（《诗体埃达》《散文埃达》《沃尔松格传说》等中世纪冰岛文献）",
+      "gist": "北欧神话中的女武神（瓦尔基里），英雄西格德（Sigurd）的恋人，因误会与背叛酿成悲剧，最终殉情而死。",
+      "classification": [
+        "fiction",
+        "神话传说民间故事",
+        "北欧神话",
+        "英雄与凡人"
+      ],
+      "rel_path": "fiction/神话传说民间故事/北欧神话/英雄与凡人/Brynhildr（布伦希尔德）"
+    },
+    {
+      "character": "布里奥妮·塔利斯",
+      "native_name": "Briony Tallis",
+      "source": "《赎罪》（伊恩·麦克尤恩，2001）",
+      "gist": "伊恩·麦克尤恩小说《赎罪》的女主角，童年时错误指控姐姐的恋人罗比致使三人命运剧变，成年后成为小说家，以写作寻求赎罪。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "20世纪至今",
+        "Ian McEwan"
+      ],
+      "rel_path": "fiction/文学/英国文学/20世纪至今/Ian McEwan/Briony Tallis"
+    },
+    {
+      "character": "希尔德加德·冯·宾根",
+      "native_name": "Hildegard von Bingen",
+      "source": "12世纪德意志本笃会女修道院长、作曲家、作家、神秘主义者、医学家与博学家，天主教圣人、教会圣师",
+      "gist": "12世纪德意志本笃会女修道院长，中世纪最重要的作曲家之一，亦为神秘主义神学家、作家、医学家与博物学者，被天主教会封为圣人与教会圣师。",
+      "classification": [
+        "real",
+        "德国-奥地利文化",
+        "神圣罗马帝国时期"
+      ],
+      "rel_path": "real/德国-奥地利文化/神圣罗马帝国时期/Hildegard von Bingen（希尔德加德·冯·宾根）"
+    },
+    {
+      "character": "希拉里·克林顿",
+      "native_name": "Hillary Clinton",
+      "source": "美国政治人物，曾任第67任美国国务卿、纽约州联邦参议员、美国第一夫人",
+      "gist": "美国政治人物、律师与外交官，曾任美国国务卿（2009–2013），2016年成为美国历史上首位获得主要政党总统候选人提名的女性。",
+      "classification": [
+        "real",
+        "美国文化",
+        "战后至今"
+      ],
+      "rel_path": "real/美国文化/战后至今/Hillary Clinton（希拉里·克林顿）"
+    },
+    {
+      "character": "希林·伊巴迪",
+      "native_name": "شیرین عبادی",
+      "source": "伊朗律师、人权活动家，2003年诺贝尔和平奖得主",
+      "gist": "伊朗女律师、人权活动家，2003年诺贝尔和平奖得主，首位获得该奖项的伊朗人与穆斯林女性。",
+      "classification": [
+        "real",
+        "波斯文化",
+        "卡扎尔至近现代"
+      ],
+      "rel_path": "real/波斯文化/卡扎尔至近现代/شیرین عبادی（Shirin Ebadi，希林·伊巴迪）"
+    },
+    {
+      "character": "希芙·罗伊",
+      "native_name": "Siobhan Roy",
+      "source": "电视剧《继承之战》（Succession，HBO，2018–2023，杰西·阿姆斯特朗主创）",
+      "gist": "洛根·罗伊唯一的女儿，曾任政治顾问，精明强干但在家族传媒帝国继承权争夺中屡遭挫败的继承人之一。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "美剧",
+        "剧情史诗",
+        "《继承之战》（Succession，HBO，2018-2023）"
+      ],
+      "rel_path": "fiction/电视剧/美剧/剧情史诗/《继承之战》（Succession，HBO，2018-2023）/Shiv"
+    },
+    {
+      "character": "希里",
+      "native_name": "Ciri",
+      "source": "《猎魔人》系列小说（安杰伊·萨普科夫斯基，1986年起）及《巫师》系列游戏（CD Projekt Red）",
+      "gist": "辛特拉公主，上古之血（长者之血）继承者，具备穿梭时空与位面能力的猎魔人养女。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "欧美游戏",
+        "RPG与动作冒险",
+        "巫师系列（The Witcher，CD Projekt Red，波兰）"
+      ],
+      "rel_path": "fiction/游戏/欧美游戏/RPG与动作冒险/巫师系列（The Witcher，CD Projekt Red，波兰）/Ciri _ Cirilla（希里 _ 奇莉拉）"
+    },
+    {
+      "character": "帕蒂·伯格伦德",
+      "native_name": "Patty Berglund",
+      "source": "《自由》（Freedom，乔纳森·弗兰岑，2010）",
+      "gist": "美国小说《自由》中的核心女性角色，一位在婚姻、家庭与中产阶级生活规范中痛苦挣扎并寻求自我解放的女性。",
+      "classification": [
+        "fiction",
+        "文学",
+        "美国文学",
+        "战后至今",
+        "乔纳森·弗兰岑（Jonathan Franzen）"
+      ],
+      "rel_path": "fiction/文学/美国文学/战后至今/乔纳森·弗兰岑（Jonathan Franzen）/Patty Berglund"
+    },
+    {
+      "character": "席琳·迪翁",
+      "native_name": "Céline Dion",
+      "source": "加拿大流行歌手、演员",
+      "gist": "加拿大籍法语流行天后，以《泰坦尼克号》主题曲《My Heart Will Go On》闻名全球，唱片销量逾两亿张。",
+      "classification": [
+        "real",
+        "加拿大文化",
+        "当代"
+      ],
+      "rel_path": "real/加拿大文化/当代/Céline Dion（席琳·迪翁）"
+    },
+    {
+      "character": "康斯坦丝·查泰莱",
+      "native_name": "Constance Chatterley",
+      "source": "《查泰莱夫人的情人》（Lady Chatterley's Lover，D. H. Lawrence，1928）",
+      "gist": "英国作家D. H. Lawrence小说《查泰莱夫人的情人》女主角，婚后因丈夫克利福德爵士在战争中下半身瘫痪而陷入情感与身体的双重空虚，最终与猎场看守人奥利弗·梅勒斯（Oliver Mellors）发展出跨越阶级的禁忌恋情。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "20世纪至今",
+        "D.H. Lawrence"
+      ],
+      "rel_path": "fiction/文学/英国文学/20世纪至今/D.H. Lawrence/Constance Chatterley（康斯坦丝·查泰莱）"
+    },
+    {
+      "character": "弗吉尼亚·伍尔夫",
+      "native_name": "Virginia Woolf",
+      "source": "英国现代主义作家，意识流文学代表人物，布卢姆茨伯里派核心成员",
+      "gist": "英国意识流作家与现代主义文学先驱，代表作包括《达洛维夫人》《到灯塔去》《一间自己的房间》等。",
+      "classification": [
+        "real",
+        "英国文化",
+        "20世纪至今"
+      ],
+      "rel_path": "real/英国文化/20世纪至今/Virginia Woolf（弗吉尼亚·伍尔夫）"
+    },
+    {
+      "character": "弗洛伦斯·南丁格尔",
+      "native_name": "Florence Nightingale",
+      "source": "英国护士、统计学家与社会改革者，现代护理学奠基人",
+      "gist": "英国护士与统计学家，现代护理学奠基人，在克里米亚战争中通过改善战地医院卫生条件将士兵死亡率从42%降至2%，并创办世界上第一所正规护士学校，被誉为\"提灯女神\"。",
+      "classification": [
+        "real",
+        "英国文化",
+        "维多利亚时代"
+      ],
+      "rel_path": "real/英国文化/维多利亚时代/Florence Nightingale（弗洛伦斯·南丁格尔）"
+    },
+    {
+      "character": "弗里达·卡罗",
+      "native_name": "Frida Kahlo",
+      "source": "墨西哥画家，20世纪最具影响力的拉丁美洲艺术家之一，以自画像著称于世",
+      "gist": "墨西哥女画家，以一系列极具个人风格的自画像闻名，作品融合魔幻现实主义与超现实主义元素，被誉为20世纪拉丁美洲文化偶像与女性主义先驱。",
+      "classification": [
+        "real",
+        "拉丁美洲文化",
+        "20世纪（革命与独裁）"
+      ],
+      "rel_path": "real/拉丁美洲文化/20世纪（革命与独裁）/Frida Kahlo（弗里达·卡罗）"
+    },
+    {
+      "character": "张爱玲",
+      "native_name": "张爱玲",
+      "source": "中国现代作家",
+      "gist": "中国现代作家，代表作有《倾城之恋》《金锁记》《红玫瑰与白玫瑰》等。",
+      "classification": [
+        "real",
+        "中华文化",
+        "近现代（民国至今）"
+      ],
+      "rel_path": "real/中华文化/近现代（民国至今）/张爱玲"
+    },
+    {
+      "character": "徐长今",
+      "native_name": "서장금",
+      "source": "韩剧《大长今》（대장금，MBC，2003，编剧金英贤）",
+      "gist": "朝鲜王朝中宗时期宫女出身的女御医，李氏朝鲜历史上首位女性御医，由李英爱饰演。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "韩剧",
+        "经典韩剧（2000s）"
+      ],
+      "rel_path": "fiction/电视剧/韩剧/经典韩剧（2000s）/서장금（徐长今）"
+    },
+    {
+      "character": "惣流·明日香·兰格雷",
+      "native_name": "惣流・アスカ・ラングレー",
+      "source": "《新世纪福音战士》（新世紀エヴァンゲリオン，庵野秀明/贞本义行，1995）",
+      "gist": "《新世纪福音战士》中EVA二号机驾驶员，第二适格者，性格骄傲好强的德日混血天才少女。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "日本动漫",
+        "经典与其他类型",
+        "《新世纪福音战士》（新世紀エヴァンゲリオン，庵野秀明/贞本义行，1995）"
+      ],
+      "rel_path": "fiction/动画与漫画/日本动漫/经典与其他类型/《新世纪福音战士》（新世紀エヴァンゲリオン，庵野秀明_贞本义行，1995）/惣流·アスカ·ラングレー（明日香）"
+    },
+    {
+      "character": "慈禧太后",
+      "native_name": "慈禧太后",
+      "source": "清朝咸丰帝妃嫔、同治帝生母，同治与光绪两朝实际统治者",
+      "gist": "清朝咸丰帝妃嫔，同治帝生母，同治、光绪两朝实际统治者，掌权近半个世纪，主导晚清政局。",
+      "classification": [
+        "real",
+        "中华文化",
+        "清"
+      ],
+      "rel_path": "real/中华文化/清/慈禧太后"
+    },
+    {
+      "character": "戴凤莲",
+      "native_name": "戴凤莲",
+      "source": "莫言《红高粱家族》（1986年）",
+      "gist": "莫言《红高粱家族》的核心人物，叙述者\"我\"的奶奶，山东高密东北乡一位泼辣刚烈、敢爱敢恨的传奇女性，与余占鳌共同谱写了一段血性与抗争的人生。",
+      "classification": [
+        "fiction",
+        "文学",
+        "中国文学",
+        "当代与类型文学",
+        "莫言"
+      ],
+      "rel_path": "fiction/文学/中国文学/当代与类型文学/莫言/戴凤莲（九儿）"
+    },
+    {
+      "character": "扎赫拉",
+      "native_name": "Zahra",
+      "source": "《神圣的夜晚》（La Nuit sacrée），塔哈尔·本·杰伦（Tahar Ben Jelloun）著，1987年",
+      "gist": "塔哈尔·本·杰伦龚古尔奖获奖小说《神圣的夜晚》的主人公，被父亲当作男孩抚养长大的摩洛哥女孩，在父亲死后挣脱男性伪装、寻回女性身份。",
+      "classification": [
+        "fiction",
+        "文学",
+        "非洲文学",
+        "北部非洲（阿拉伯语/法语）"
+      ],
+      "rel_path": "fiction/文学/非洲文学/北部非洲（阿拉伯语_法语）/Tahar Ben Jelloun（摩洛哥，龚古尔奖）"
+    },
+    {
+      "character": "托丽尔",
+      "native_name": "Toriel",
+      "source": "《传说之下》（Undertale，Toby Fox，2015）",
+      "gist": "《传说之下》中的山羊形女性怪物，曾是怪物王国的王后，现为废墟的守护者，以温柔慈母般的性格引导坠落的人类孩子。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "独立游戏",
+        "传说之下（Undertale，Toby Fox，2015）"
+      ],
+      "rel_path": "fiction/游戏/独立游戏/传说之下（Undertale，Toby Fox，2015）/Toriel（托丽尔）"
+    },
+    {
+      "character": "托妮·莫里森",
+      "native_name": "Toni Morrison",
+      "source": "美国黑人女作家，1993年诺贝尔文学奖得主",
+      "gist": "美国黑人女作家，1993年诺贝尔文学奖得主，代表作《宠儿》以魔幻现实主义笔法深刻书写非裔美国人的历史创伤与身份认同。",
+      "classification": [
+        "real",
+        "美国文化",
+        "战后至今"
+      ],
+      "rel_path": "real/美国文化/战后至今/Toni Morrison（托妮·莫里森）"
+    },
+    {
+      "character": "托芙·扬松",
+      "native_name": "Tove Jansson",
+      "source": "芬兰瑞典语作家、画家与插画家，姆明系列的创作者",
+      "gist": "芬兰瑞典语作家与画家，以创作姆明（Moomins）系列童话闻名于世。",
+      "classification": [
+        "real",
+        "北欧文化",
+        "20世纪至今"
+      ],
+      "rel_path": "real/北欧文化/20世纪至今/Tove Jansson（托芙·扬松）"
+    },
+    {
+      "character": "拉拉",
+      "native_name": "Lalla",
+      "source": "《沙漠》（Désert，1980年），作者勒克莱齐奥（J.M.G. Le Clézio）",
+      "gist": "勒克莱齐奥长篇小说《沙漠》的女主人公，出身北非沙漠的柏柏尔少女，辗转于摩洛哥城市边缘与法国马赛之间，象征流浪、自由与现代文明冲击下的纯真。",
+      "classification": [
+        "fiction",
+        "文学",
+        "法国文学",
+        "20世纪至今",
+        "勒克莱齐奥（J.M.G. Le Clézio，诺贝尔奖）"
+      ],
+      "rel_path": "fiction/文学/法国文学/20世纪至今/勒克莱齐奥（J.M.G. Le Clézio，诺贝尔奖）/Lalla"
+    },
+    {
+      "character": "拓跋玉儿",
+      "native_name": "拓跋玉儿",
+      "source": "《轩辕剑参外传：天之痕》（大宇资讯/DOMO小组，2000年）",
+      "gist": "《轩辕剑参外传：天之痕》女主角之一，鲜卑族侠女，与陈靖仇、于小雪共同经历了被后世铭记的“三个人的时光”。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "中国游戏",
+        "轩辕剑系列（大宇资讯/DOMO小组，1990起）"
+      ],
+      "rel_path": "fiction/游戏/中国游戏/轩辕剑系列（大宇资讯_DOMO小组，1990起）/拓跋玉儿"
+    },
+    {
+      "character": "摩尔·弗兰德斯",
+      "native_name": "Moll Flanders",
+      "source": "《摩尔·弗兰德斯》（Daniel Defoe，1722）",
+      "gist": "18世纪伦敦底层社会中，一个通过多次婚姻与各类犯罪手段谋求生存的女性角色。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "古典至19世纪",
+        "Daniel Defoe"
+      ],
+      "rel_path": "fiction/文学/英国文学/古典至19世纪/Daniel Defoe/Moll Flanders（摩尔·弗兰德斯）"
+    },
+    {
+      "character": "文东恩",
+      "native_name": "문동은",
+      "source": "《黑暗荣耀》（더 글로리，2022-2023，编剧金恩淑）",
+      "gist": "《黑暗荣耀》女主角，由宋慧乔饰演，少年时期遭校园霸凌后以一生为赌注精心复仇的教师，最终将施暴者逐个拖入地狱。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "韩剧",
+        "2010s至今"
+      ],
+      "rel_path": "fiction/电视剧/韩剧/2010s至今/문동은（文东恩）"
+    },
+    {
+      "character": "斯嘉丽·奥哈拉",
+      "native_name": "Scarlett O'Hara",
+      "source": "《飘》（Gone with the Wind），玛格丽特·米切尔小说（1936）及1939年同名改编电影《乱世佳人》",
+      "gist": "玛格丽特·米切尔小说《飘》及1939年电影《乱世佳人》的女主角，美国南北战争时期南方佐治亚州塔拉庄园的继承人，以惊人的求生意志和\"明天又是新的一天\"的乐观精神闻名。",
+      "classification": [
+        "fiction",
+        "电影",
+        "好莱坞",
+        "经典好莱坞",
+        "1930s-1940s 黄金时代"
+      ],
+      "rel_path": "fiction/电影/好莱坞/经典好莱坞/1930s-1940s 黄金时代/Scarlett O'Hara（斯嘉丽·奥哈拉）"
+    },
+    {
+      "character": "斯托夫人",
+      "native_name": "Harriet Beecher Stowe",
+      "source": "美国作家与废奴主义者，以1852年出版的小说《汤姆叔叔的小屋》闻名于世。",
+      "gist": "美国女作家，其代表作《汤姆叔叔的小屋》深刻揭露美国奴隶制的罪恶，有力推动了废奴运动，被林肯誉为\"引发大战的小妇人\"。",
+      "classification": [
+        "real",
+        "美国文化",
+        "19世纪前期（西进运动）"
+      ],
+      "rel_path": "real/美国文化/19世纪前期（西进运动）/Harriet Beecher Stowe（斯托夫人）"
+    },
+    {
+      "character": "斯维特拉娜·阿列克谢耶维奇",
+      "native_name": "Светлана Александровна Алексиевич",
+      "source": "白俄罗斯纪实文学作家，2015年诺贝尔文学奖得主",
+      "gist": "白俄罗斯俄语纪实文学作家，以口述史方法创作《战争中没有女性》《切尔诺贝利的悲鸣》《二手时间》等「乌托邦之声」系列，2015年获诺贝尔文学奖。",
+      "classification": [
+        "fiction",
+        "文学",
+        "俄国文学",
+        "当代"
+      ],
+      "rel_path": "fiction/文学/俄国文学/当代/斯维特拉娜·阿列克谢耶维奇"
+    },
+    {
+      "character": "新岛真",
+      "native_name": "新島真",
+      "source": "《女神异闻录5》（Persona 5，Atlus，2016）",
+      "gist": "日本游戏《女神异闻录5》中的主要角色，私立秀尽学园学生会长，后觉醒人格面具加入心之怪盗团，代号「Queen」。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "日本游戏",
+        "RPG与动作",
+        "女神转生/女神异闻录系列（Shin Megami Tensei / Persona，Atlus）"
+      ],
+      "rel_path": "fiction/游戏/日本游戏/RPG与动作/女神转生_女神异闻录系列（Shin Megami Tensei _ Persona，Atlus）/Makoto Niijima（新島真 _ Queen）"
+    },
+    {
+      "character": "旺加里·马塔伊",
+      "native_name": "Wangari Maathai",
+      "source": "肯尼亚环境保护主义者、政治活动家，绿带运动创始人，2004年诺贝尔和平奖得主",
+      "gist": "肯尼亚环境保护与社会活动家，绿带运动创始人，2004年诺贝尔和平奖得主，长期致力于植树造林、妇女赋权与民主政治。",
+      "classification": [
+        "real",
+        "非洲文化",
+        "独立运动与后殖民"
+      ],
+      "rel_path": "real/非洲文化/独立运动与后殖民/Wangari Maathai（旺加里·马塔伊）"
+    },
+    {
+      "character": "昂山素季",
+      "native_name": "အောင်ဆန်းစုကြည်",
+      "source": "缅甸政治家、民主运动领袖、诺贝尔和平奖得主",
+      "gist": "缅甸民主运动领袖，全国民主联盟创始人之一，1991年诺贝尔和平奖得主，缅甸独立英雄昂山将军之女。",
+      "classification": [
+        "real",
+        "东南亚文化",
+        "近现代"
+      ],
+      "rel_path": "real/东南亚文化/近现代/Aung San Suu Kyi（အောင်ဆန်းစုကြည်，昂山素季）"
+    },
+    {
+      "character": "星期三·亚当斯",
+      "native_name": "Wednesday Addams",
+      "source": "《星期三》（Wednesday），Netflix 剧集，2022 年，蒂姆·伯顿监制",
+      "gist": "哥特风格的通灵少女侦探，在奈弗莫尔学院破解一系列超自然谜案。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "其他地区剧集",
+        "流媒体时代的跨国制作"
+      ],
+      "rel_path": "fiction/电视剧/其他地区剧集/流媒体时代的跨国制作/Wednesday Addams（星期三·亚当斯）"
+    },
+    {
+      "character": "星野爱",
+      "native_name": "星野愛",
+      "source": "《我推的孩子》（【推しの子】，赤坂明原作、横枪萌果作画，2020年）",
+      "gist": "《我推的孩子》女主角，天才偶像团体B小町的核心成员，以完美偶像形象在谎言中追寻真爱，被狂热粉丝刺杀身亡；其名言「谎言是最特别的爱」奠定了作品的核心命题。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "日本动漫",
+        "少年长篇与当代",
+        "其他重要少年/青年作品"
+      ],
+      "rel_path": "fiction/动画与漫画/日本动漫/少年长篇与当代/其他重要少年_青年作品/星野愛（アイ）"
+    },
+    {
+      "character": "春琴",
+      "native_name": "春琴",
+      "source": "《春琴抄》（谷崎潤一郎，1933）",
+      "gist": "《春琴抄》女主角，出身大阪富裕商家的盲人筝曲女师，因遭人毁容后，其仆人佐助刺瞎自己双目，以永远守护她在他心中不变的美丽容颜。",
+      "classification": [
+        "fiction",
+        "文学",
+        "日本文学",
+        "谷崎潤一郎"
+      ],
+      "rel_path": "fiction/文学/日本文学/谷崎潤一郎/春琴"
+    },
+    {
+      "character": "普绪克",
+      "native_name": "Ψυχή",
+      "source": "古希腊神话",
+      "gist": "古希腊神话中爱神厄洛斯（丘比特）的凡人妻子，灵魂的化身，因美貌遭阿佛洛狄忒嫉恨，历经重重考验后获赐永生成为女神。",
+      "classification": [
+        "fiction",
+        "神话传说民间故事",
+        "希腊神话",
+        "重要凡人"
+      ],
+      "rel_path": "fiction/神话传说民间故事/希腊神话/重要凡人/Ψυχή（Psyche，普绪克）"
+    },
+    {
+      "character": "暴风女",
+      "native_name": "Ororo Munroe",
+      "source": "《X战警》（X-Men），漫威漫画，Len Wein 与 Dave Cockrum 联合创作，1975年于《Giant-Size X-Men》第1期首次登场",
+      "gist": "漫威漫画旗下超级英雄，拥有操控天气能力的欧米伽级变种人，X战警核心成员与多任领导者，曾与黑豹结婚成为瓦坎达王后。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "美国漫画",
+        "X战警"
+      ],
+      "rel_path": "fiction/动画与漫画/美国漫画/X战警/Storm _ Ororo Munroe（暴风女）"
+    },
+    {
+      "character": "曹七巧",
+      "native_name": "曹七巧",
+      "source": "《金锁记》（张爱玲，1943年）",
+      "gist": "张爱玲小说《金锁记》中因金钱与情欲的长期压抑而逐渐扭曲、以残酷手段摧毁子女幸福的悲剧女性角色。",
+      "classification": [
+        "fiction",
+        "文学",
+        "中国文学",
+        "现代文学",
+        "张爱玲作品"
+      ],
+      "rel_path": "fiction/文学/中国文学/现代文学/张爱玲作品/曹七巧"
+    },
+    {
+      "character": "曼努埃拉",
+      "native_name": "Manuela",
+      "source": "《关于我母亲的一切》（Todo sobre mi madre，佩德罗·阿莫多瓦，1999）",
+      "gist": "阿莫多瓦电影《关于我母亲的一切》的女主角，一位在马德里担任器官移植协调员的单身母亲，儿子意外身亡后孤身前往巴塞罗那寻找前夫。",
+      "classification": [
+        "fiction",
+        "电影",
+        "欧洲电影",
+        "西班牙"
+      ],
+      "rel_path": "fiction/电影/欧洲电影/西班牙/各种女性角色"
+    },
+    {
+      "character": "月野兔",
+      "native_name": "月野うさぎ",
+      "source": "《美少女战士》（武内直子，1991-1997）",
+      "gist": "爱哭的中学生，真实身份是月亮公主，变身为水手月亮（Sailor Moon）与邪恶战斗，口头禅是「月に代わってお仕置きよ！」。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "日本动漫",
+        "经典与其他类型",
+        "《美少女战士》（美少女戦士セーラームーン，武内直子，1991-1997）"
+      ],
+      "rel_path": "fiction/动画与漫画/日本动漫/经典与其他类型/《美少女战士》（美少女戦士セーラームーン，武内直子，1991-1997）/月野うさぎ（月野兔 _ Sailor Moon）"
+    },
+    {
+      "character": "木之本樱",
+      "native_name": "木之本 桜",
+      "source": "《魔卡少女樱》（カードキャプターさくら，CLAMP，1996-2000）",
+      "gist": "《魔卡少女樱》主角，被选为库洛魔法使的小学生，手持封印之杖收集库洛牌，性格乐观开朗，口头禅「绝对没问题的」。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "日本动漫",
+        "经典与其他类型",
+        "《魔卡少女樱》（カードキャプターさくら，CLAMP，1996-2000）"
+      ],
+      "rel_path": "fiction/动画与漫画/日本动漫/经典与其他类型/《魔卡少女樱》（カードキャプターさくら，CLAMP，1996-2000）/木之本桜（木之本樱）"
+    },
+    {
+      "character": "本田透",
+      "native_name": "本田透",
+      "source": "《水果篮子》（フルーツバスケット，高屋奈月，1998–2006）",
+      "gist": "日本漫画《水果篮子》的女主角，善良温柔的高中生，因母亲去世寄住在草摩家，逐渐揭开草摩一族被十二生肖附身的诅咒，以真诚与温暖治愈身边每一个人。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "日本动漫",
+        "经典与其他类型",
+        "其他少女向/女性向"
+      ],
+      "rel_path": "fiction/动画与漫画/日本动漫/经典与其他类型/其他少女向_女性向/本田透"
+    },
+    {
+      "character": "朱丽叶",
+      "native_name": "Juliet Capulet",
+      "source": "《罗密欧与朱丽叶》（Romeo and Juliet），威廉·莎士比亚，约1595年",
+      "gist": "莎士比亚悲剧《罗密欧与朱丽叶》的女主人公，凯普莱特家族的少女。为与罗密欧私奔服下假死药，醒来见爱人已死，遂以匕首殉情。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "莎士比亚",
+        "《罗密欧与朱丽叶》（Romeo and Juliet，约1595）"
+      ],
+      "rel_path": "fiction/戏剧/莎士比亚/《罗密欧与朱丽叶》（Romeo and Juliet，约1595）/Juliet Capulet（朱丽叶）"
+    },
+    {
+      "character": "朱莉娅·吉拉德",
+      "native_name": "Julia Gillard",
+      "source": "澳大利亚政治家，澳大利亚工党领袖，2010年至2013年任第27任澳大利亚总理，澳大利亚历史上首位女性总理",
+      "gist": "澳大利亚政治家，澳大利亚工党领袖，2010年至2013年担任澳大利亚第27任总理，是该国历史上首位女性总理。",
+      "classification": [
+        "real",
+        "大洋洲文化",
+        "当代"
+      ],
+      "rel_path": "real/大洋洲文化/当代/Julia Gillard"
+    },
+    {
+      "character": "朱迪",
+      "native_name": "Judy Alvarez",
+      "source": "《赛博朋克2077》（Cyberpunk 2077，CD Projekt Red，2020）",
+      "gist": "《赛博朋克2077》角色，夜之城超梦编辑专家与莫克斯帮成员，擅长超梦的录制、编辑与调试。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "欧美游戏",
+        "RPG与动作冒险",
+        "赛博朋克2077（Cyberpunk 2077，CD Projekt Red）"
+      ],
+      "rel_path": "fiction/游戏/欧美游戏/RPG与动作冒险/赛博朋克2077（Cyberpunk 2077，CD Projekt Red）/Judy Alvarez（朱迪）"
+    },
+    {
+      "character": "朱迪丝·赖特",
+      "native_name": "Judith Wright",
+      "source": "澳大利亚诗人、环保主义者与原住民土地权利活动家",
+      "gist": "澳大利亚诗人、环保主义者及原住民土地权利活动家，20世纪澳大利亚最具代表性的抒情诗人之一。",
+      "classification": [
+        "real",
+        "大洋洲文化",
+        "当代"
+      ],
+      "rel_path": "real/大洋洲文化/当代/Judith Wright"
+    },
+    {
+      "character": "朴景利",
+      "native_name": "박경리",
+      "source": "韩国现代作家，以大河小说《土地》（토지）享誉文坛",
+      "gist": "韩国现代著名女作家，以历时25年完成的大河小说《土地》闻名，该作被誉为韩国文学史上里程碑式的史诗巨著，深刻描绘了近代韩国社会的变迁",
+      "classification": [
+        "real",
+        "韩国-朝鲜文化",
+        "现代（南北分治至今）"
+      ],
+      "rel_path": "real/韩国-朝鲜文化/现代（南北分治至今）/박경리（朴景利）"
+    },
+    {
+      "character": "朵拉",
+      "native_name": "Dora",
+      "source": "巴西电影《中央车站》（Central do Brasil，1998），导演 Walter Salles",
+      "gist": "《中央车站》女主角，在里约热内卢中央车站替人代笔写信的退休老妇人，陪伴流浪男孩约书亚穿越巴西内陆寻找其父亲。",
+      "classification": [
+        "fiction",
+        "电影",
+        "拉丁美洲电影",
+        "巴西"
+      ],
+      "rel_path": "fiction/电影/拉丁美洲电影/巴西/Dora（朵拉）"
+    },
+    {
+      "character": "李李",
+      "native_name": "李李",
+      "source": "《繁花》（金宇澄长篇小说，2012年；王家卫执导电视剧改编，2023年）",
+      "gist": "《繁花》中的女性角色，至真园饭店的老板娘，身世成谜，在改革开放后的上海商海中沉浮周旋。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "中国电视剧",
+        "刑侦/悬疑"
+      ],
+      "rel_path": "fiction/电视剧/中国电视剧/刑侦_悬疑/李李"
+    },
+    {
+      "character": "李清照",
+      "native_name": "李清照",
+      "source": "宋代女词人，婉约派代表",
+      "gist": "宋代女词人，婉约派代表，号易安居士，被誉为“千古第一才女”。",
+      "classification": [
+        "real",
+        "中华文化",
+        "宋辽金西夏"
+      ],
+      "rel_path": "real/中华文化/宋辽金西夏/李清照"
+    },
+    {
+      "character": "李香君",
+      "native_name": "李香君",
+      "source": "《桃花扇》，孔尚任，清代（1699年）",
+      "gist": "《桃花扇》女主角，明末秦淮歌妓，“秦淮八艳”之一，性情刚烈，因拒绝阉党权贵田仰逼婚，以血溅诗扇、点染桃花，后与侯方域双双入道。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "中国戏曲",
+        "孔尚任"
+      ],
+      "rel_path": "fiction/戏剧/中国戏曲/孔尚任/李香君"
+    },
+    {
+      "character": "杜丽娘",
+      "native_name": "杜丽娘",
+      "source": "《牡丹亭》（汤显祖，1598）",
+      "gist": "《牡丹亭》女主角，南安太守杜宝之女，因游园惊梦与书生柳梦梅梦中相恋，伤情而死后葬于梅花观，三年后为情复生，终与柳梦梅结为夫妇，是中国古典戏曲中\"情不知所起，一往而深\"的至情化身。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "中国戏曲",
+        "汤显祖"
+      ],
+      "rel_path": "fiction/戏剧/中国戏曲/汤显祖/杜丽娘"
+    },
+    {
+      "character": "果尔达·梅厄",
+      "native_name": "גולדה מאיר",
+      "source": "以色列政治家、外交家，曾任以色列第四任总理（1969–1974）",
+      "gist": "以色列政治家，以色列第四任总理暨迄今唯一一位女性总理，被誉为“以色列的铁娘子”。",
+      "classification": [
+        "real",
+        "犹太文化",
+        "近现代（哈斯卡拉、复国主义）"
+      ],
+      "rel_path": "real/犹太文化/近现代（哈斯卡拉、复国主义）/Golda Meir（גולדה מאיר，果尔达·梅厄）"
+    },
+    {
+      "character": "桑德拉·戴·奥康纳",
+      "native_name": "Sandra Day O'Connor",
+      "source": "美国联邦最高法院大法官（1981–2006），美国历史上首位女性大法官",
+      "gist": "美国联邦最高法院首位女性大法官，1981年由里根总统提名就职，任内以温和务实立场常成为九人法庭中的关键摇摆票，2006年退休。",
+      "classification": [
+        "real",
+        "美国文化",
+        "战后至今"
+      ],
+      "rel_path": "real/美国文化/战后至今/Sandra Day O'Connor"
+    },
+    {
+      "character": "梅·博罗夫斯基",
+      "native_name": "Mae Borowski",
+      "source": "《林中之夜》（Night in the Woods），Infinite Fall，2017年",
+      "gist": "独立冒险游戏《林中之夜》的主角，从大学退学回到家乡 Possum Springs 的拟人化猫女孩，在探索小镇变迁与神秘事件的过程中重新寻找自我。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "独立游戏",
+        "其他重要独立游戏"
+      ],
+      "rel_path": "fiction/游戏/独立游戏/其他重要独立游戏/Mae Borowski（梅·博罗夫斯基）"
+    },
+    {
+      "character": "梅尔·希恩",
+      "native_name": "Mare Sheehan",
+      "source": "《东城梦魇》（Mare of Easttown，HBO，2021）",
+      "gist": "美国 HBO 限定剧《东城梦魇》主角，宾夕法尼亚州东城小镇的女警探，在调查一起少女谋杀案的同时，挣扎于丧子之痛与破碎的家庭关系。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "美剧",
+        "喜剧与其他",
+        "限定剧/迷你剧"
+      ],
+      "rel_path": "fiction/电视剧/美剧/喜剧与其他/限定剧_迷你剧/Mare Sheehan（梅尔）"
+    },
+    {
+      "character": "梅尔特伊侯爵夫人",
+      "native_name": "Madame de Merteuil",
+      "source": "《危险关系》（Les Liaisons dangereuses，皮埃尔·肖代洛·德·拉克洛，1782年）",
+      "gist": "法国小说《危险关系》中的核心反派角色，一位工于心计、以操控他人情感为乐的高雅贵族女性。",
+      "classification": [
+        "fiction",
+        "文学",
+        "法国文学",
+        "古典至19世纪",
+        "拉克洛（Laclos）"
+      ],
+      "rel_path": "fiction/文学/法国文学/古典至19世纪/拉克洛（Laclos）/Merteuil 侯爵夫人"
+    },
+    {
+      "character": "樋口一叶",
+      "native_name": "樋口一葉",
+      "source": "日本明治时代小说家、诗人，日本近代现实主义文学的早期代表之一",
+      "gist": "日本明治时代女作家，以短篇小说《青梅竹马》（たけくらべ）闻名，被誉为日本近代文学史上最重要的女性作家之一。",
+      "classification": [
+        "real",
+        "日本文化",
+        "近代（明治、大正、昭和前期）"
+      ],
+      "rel_path": "real/日本文化/近代（明治、大正、昭和前期）/樋口一葉（ひぐちいちよう）"
+    },
+    {
+      "character": "武则天",
+      "native_name": "武曌",
+      "source": "唐朝女皇帝，武周建立者，中国历史上唯一一位正统女皇帝",
+      "gist": "中国历史上唯一一位正统女皇帝，原为唐高宗皇后，后自立为帝，改国号为周，史称武周，在位十五年。",
+      "classification": [
+        "real",
+        "中华文化",
+        "隋唐五代"
+      ],
+      "rel_path": "real/中华文化/隋唐五代/武则天"
+    },
+    {
+      "character": "比莉·哈乐黛",
+      "native_name": "Billie Holiday",
+      "source": "美国爵士乐歌手，活跃于1930至1950年代，爵士史上最具影响力的女声之一",
+      "gist": "美国爵士乐女歌手，以沙哑深情的嗓音与即兴 phrasing 著称，绰号「戴女士」（Lady Day），代表作《Strange Fruit》《God Bless the Child》等，深刻影响了后世爵士与流行演唱。",
+      "classification": [
+        "real",
+        "美国文化",
+        "20世纪初至二战"
+      ],
+      "rel_path": "real/美国文化/20世纪初至二战/Billie Holiday（比莉·荷莉黛）"
+    },
+    {
+      "character": "比诺迪尼",
+      "native_name": "বিনোদিনী",
+      "source": "泰戈尔孟加拉语长篇小说《眼中的沙粒》（চোখের বালি / Chokher Bali，1903年）",
+      "gist": "泰戈尔长篇小说《眼中的沙粒》的女主角，一位受过良好教育的年轻寡妇，因其美貌与才智成为印度文学中经典的女性形象。",
+      "classification": [
+        "fiction",
+        "文学",
+        "印度文学",
+        "泰戈尔（Rabindranath Tagore / রবীন্দ্রনাথ ঠাকুর）"
+      ],
+      "rel_path": "fiction/文学/印度文学/泰戈尔（Rabindranath Tagore _ রবীন্দ্রনাথ ঠাকুর）/比诺迪尼（বিনোদিনী）"
+    },
+    {
+      "character": "毛毛",
+      "native_name": "Momo",
+      "source": "Michael Ende《Momo》（1973）",
+      "gist": "米切尔·恩德童话小说《毛毛》的主人公，一个不知来历、善于倾听的小女孩，带领人们对抗偷窃时间的\"灰先生\"。",
+      "classification": [
+        "fiction",
+        "神话传说民间故事",
+        "欧洲童话",
+        "其他欧洲经典童话"
+      ],
+      "rel_path": "fiction/神话传说民间故事/欧洲童话/其他欧洲经典童话/Momo（默默）"
+    },
+    {
+      "character": "汉娜·施密茨",
+      "native_name": "Hanna Schmitz",
+      "source": "《朗读者》（Der Vorleser），本哈德·施林克（Bernhard Schlink）著，1995年",
+      "gist": "《朗读者》女主角，二战末期曾任纳粹集中营女看守，战后隐姓埋名，与少年米夏埃尔·伯格相遇并展开一段跨越年龄、贯穿罪责与秘密的纠葛。",
+      "classification": [
+        "fiction",
+        "文学",
+        "德国文学",
+        "本哈德·施林克（Bernhard Schlink）"
+      ],
+      "rel_path": "fiction/文学/德国文学/本哈德·施林克（Bernhard Schlink）/Hanna Schmitz"
+    },
+    {
+      "character": "汉娜·阿伦特",
+      "native_name": "Hannah Arendt",
+      "source": "德裔美国政治理论家、哲学家，20世纪最具影响力的政治思想家之一",
+      "gist": "德裔美国政治理论家，以对极权主义、公共领域与「平庸之恶」的深刻分析著称，著有《极权主义的起源》《人的境况》《艾希曼在耶路撒冷》等。",
+      "classification": [
+        "real",
+        "德国-奥地利文化",
+        "魏玛共和国与第三帝国"
+      ],
+      "rel_path": "real/德国-奥地利文化/魏玛共和国与第三帝国/Hannah Arendt（汉娜·阿伦特）"
+    },
+    {
+      "character": "汉娜·阿伦特",
+      "native_name": "Hannah Arendt",
+      "source": "德裔美国政治哲学家、政治理论家，20世纪最具影响力的政治思想家之一",
+      "gist": "德裔美国政治哲学家，以《极权主义的起源》《人的境况》等著作闻名，深入剖析极权主义、政治行动与公共领域的本质。",
+      "classification": [
+        "real",
+        "犹太文化",
+        "近现代（哈斯卡拉、复国主义）"
+      ],
+      "rel_path": "real/犹太文化/近现代（哈斯卡拉、复国主义）/Hannah Arendt（汉娜·阿伦特）"
+    },
+    {
+      "character": "法国少女",
+      "native_name": "Jeune fille",
+      "source": "《情人》（L'Amant，玛格丽特·杜拉斯，1984）",
+      "gist": "玛格丽特·杜拉斯自传体小说《情人》中的主人公，以作者本人为原型的十五岁法国女孩，在1920年代末法属印度支那的湄公河渡轮上与一位中国富商邂逅并展开一段跨种族、跨阶级的禁忌之恋。",
+      "classification": [
+        "fiction",
+        "文学",
+        "法国文学",
+        "20世纪至今",
+        "玛格丽特·杜拉斯（Marguerite Duras）"
+      ],
+      "rel_path": "fiction/文学/法国文学/20世纪至今/玛格丽特·杜拉斯（Marguerite Duras）/法国少女（Jeune fille）"
+    },
+    {
+      "character": "波莉·格雷",
+      "native_name": "Polly Gray",
+      "source": "英剧《浴血黑帮》（Peaky Blinders，BBC，2013–2022，Steven Knight 创作）",
+      "gist": "英剧《浴血黑帮》中谢尔比家族的财务主管与核心智囊，托马斯·谢尔比的姨妈，以精明的商业头脑和铁腕手段维系家族运转。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "英剧",
+        "《浴血黑帮》（Peaky Blinders，BBC，2013-2022）"
+      ],
+      "rel_path": "fiction/电视剧/英剧/《浴血黑帮》（Peaky Blinders，BBC，2013-2022）/Polly Gray（波莉阿姨）"
+    },
+    {
+      "character": "洛德",
+      "native_name": "Ella Marija Lani Yelich-O'Connor",
+      "source": "新西兰歌手、词曲创作人",
+      "gist": "新西兰另类流行女歌手与词曲创作人，2013年以首张专辑《Pure Heroine》及单曲《Royals》蜚声国际，曾获多项格莱美奖。",
+      "classification": [
+        "real",
+        "大洋洲文化",
+        "当代"
+      ],
+      "rel_path": "real/大洋洲文化/当代/Lorde"
+    },
+    {
+      "character": "洛维特夫人",
+      "native_name": "Mrs. Lovett",
+      "source": "斯蒂芬·桑德海姆音乐剧《理发师陶德》（Sweeney Todd: The Demon Barber of Fleet Street，1979）",
+      "gist": "音乐剧《理发师陶德》中理发师陶德的同谋，将受害者制成人肉馅饼售卖的馅饼店老板娘。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "音乐剧",
+        "桑德海姆（Stephen Sondheim）作品"
+      ],
+      "rel_path": "fiction/戏剧/音乐剧/桑德海姆（Stephen Sondheim）作品/Mrs. Lovett（洛维特夫人）"
+    },
+    {
+      "character": "海丝特·白兰",
+      "native_name": "Hester Prynne",
+      "source": "《红字》（纳撒尼尔·霍桑，1850）",
+      "gist": "纳撒尼尔·霍桑小说《红字》的女主角，因通奸罪被迫终身佩戴猩红字母\"A\"，在清教徒社会中以隐忍与善行重塑尊严。",
+      "classification": [
+        "fiction",
+        "文学",
+        "美国文学",
+        "19世纪至二战",
+        "霍桑（Nathaniel Hawthorne）"
+      ],
+      "rel_path": "fiction/文学/美国文学/19世纪至二战/霍桑（Nathaniel Hawthorne）/Hester Prynne（海丝特·白兰）"
+    },
+    {
+      "character": "海达·高布乐",
+      "native_name": "Hedda Gabler",
+      "source": "《海达·高布乐》（Hedda Gabler，亨利克·易卜生，1890年）",
+      "gist": "易卜生同名戏剧女主角，将军之女，因厌倦婚姻的平庸而试图操控他人命运，烧毁旧情人乐务伯格的手稿并将其推向自杀，最终用手枪自尽。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "现代戏剧",
+        "易卜生（Henrik Ibsen，挪威）"
+      ],
+      "rel_path": "fiction/戏剧/现代戏剧/易卜生（Henrik Ibsen，挪威）/Hedda Gabler（海达·高布乐）"
+    },
+    {
+      "character": "涂山红红",
+      "native_name": "涂山红红",
+      "source": "《狐妖小红娘》（小新，2010年）",
+      "gist": "《狐妖小红娘》核心角色，涂山狐妖之王、妖盟之主，与东方月初缔结续缘之约，跨越前世今生以红线仙身份守护人与妖的姻缘。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "中国动画与漫画",
+        "当代国漫"
+      ],
+      "rel_path": "fiction/动画与漫画/中国动画与漫画/当代国漫/涂山红红"
+    },
+    {
+      "character": "淑姬",
+      "native_name": "숙희",
+      "source": "电影《小姐》（아가씨 / The Handmaiden），朴赞郁导演，2016年",
+      "gist": "日据朝鲜时期，被骗子伯爵雇佣伪装成女仆、潜入贵族小姐秀子身边实施骗局的朝鲜少女，在相处中与小姐萌生真情，最终联手反抗父权与殖民压迫。",
+      "classification": [
+        "fiction",
+        "电影",
+        "韩国电影",
+        "朴赞郁（박찬욱）"
+      ],
+      "rel_path": "fiction/电影/韩国电影/朴赞郁（박찬욱）/淑姬"
+    },
+    {
+      "character": "清少纳言",
+      "native_name": "清少納言",
+      "source": "日本平安时代女作家、随笔家，《枕草子》作者",
+      "gist": "日本平安时代中期女作家，以随笔集《枕草子》闻名，与紫式部并称平安文学双璧。",
+      "classification": [
+        "real",
+        "日本文化",
+        "古代（飞鸟、奈良、平安）"
+      ],
+      "rel_path": "real/日本文化/古代（飞鸟、奈良、平安）/清少納言（せいしょうなごん）"
+    },
+    {
+      "character": "潘金莲",
+      "native_name": "潘金莲",
+      "source": "《水浒传》（施耐庵，14世纪）；亦为《金瓶梅》（兰陵笑笑生，约16世纪末）核心人物",
+      "gist": "《水浒传》与《金瓶梅》中的经典女性角色，武大郎之妻，因与西门庆私通并毒杀亲夫，最终被小叔武松所杀的悲剧人物。",
+      "classification": [
+        "fiction",
+        "文学",
+        "中国文学",
+        "古典小说",
+        "《水浒传》（施耐庵，14世纪）"
+      ],
+      "rel_path": "fiction/文学/中国文学/古典小说/《水浒传》（施耐庵，14世纪）/潘金莲"
+    },
+    {
+      "character": "潘金莲",
+      "native_name": "潘金莲",
+      "source": "《金瓶梅》（兰陵笑笑生，16世纪末），亦见于《水浒传》",
+      "gist": "中国古典小说《金瓶梅》与《水浒传》中的虚构人物，西门庆第五房妾，以美貌、淫荡与狠毒著称的文学典型。",
+      "classification": [
+        "fiction",
+        "文学",
+        "中国文学",
+        "古典小说",
+        "《金瓶梅》（兰陵笑笑生，16世纪末）"
+      ],
+      "rel_path": "fiction/文学/中国文学/古典小说/《金瓶梅》（兰陵笑笑生，16世纪末）/潘金莲"
+    },
+    {
+      "character": "焰 / 光",
+      "native_name": "ホムラ / ヒカリ",
+      "source": "《异度之刃2》（Xenoblade Chronicles 2，Monolith Soft / 任天堂，2017年，高桥哲哉）",
+      "gist": "任天堂Switch游戏《异度之刃2》中的传说神剑「天之圣杯」的剑主人格，拥有温柔内敛的焰（Pyra）与傲娇外向的光（Mythra）双重人格形态，其背后隐藏着第三人格「灵魂」（Pneuma）。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "日本游戏",
+        "任天堂经典",
+        "异度系列（Xeno，高桥哲哉）"
+      ],
+      "rel_path": "fiction/游戏/日本游戏/任天堂经典/异度系列（Xeno，高桥哲哉）/Pyra _ Mythra（ホムラ _ ヒカリ）"
+    },
+    {
+      "character": "爱丽丝",
+      "native_name": "エアリス・ゲインズブール",
+      "source": "《最终幻想VII》（Final Fantasy VII，Square Enix，1997年）",
+      "gist": "《最终幻想VII》女主角之一，米德加贫民窟的卖花女，古代种（赛特拉）末裔，在忘却之都死于萨菲罗斯的长刀之下。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "日本游戏",
+        "RPG与动作",
+        "最终幻想系列（Final Fantasy / ファイナルファンタジー，Square Enix，1987起）"
+      ],
+      "rel_path": "fiction/游戏/日本游戏/RPG与动作/最终幻想系列（Final Fantasy _ ファイナルファンタジー，Square Enix，1987起）/Aerith Gainsborough（エアリス）"
+    },
+    {
+      "character": "爱丽丝",
+      "native_name": "Alice",
+      "source": "Lewis Carroll《爱丽丝梦游仙境》（Alice's Adventures in Wonderland，1865年）",
+      "gist": "英国作家Lewis Carroll创作的经典童话主角，一位掉进兔子洞后进入奇幻异想世界的小女孩，在荒诞冒险中遇到白兔、柴郡猫、疯帽匠与红心女王等角色。",
+      "classification": [
+        "fiction",
+        "神话传说民间故事",
+        "欧洲童话",
+        "其他欧洲经典童话"
+      ],
+      "rel_path": "fiction/神话传说民间故事/欧洲童话/其他欧洲经典童话/Alice（爱丽丝）"
+    },
+    {
+      "character": "爱洛伊丝",
+      "native_name": "Héloïse",
+      "source": "12世纪法国修女、学者，曾任阿尔让特伊修道院院长，以与经院哲学家彼得·阿伯拉尔的书信往来闻名",
+      "gist": "12世纪法国修女与古典学学者，阿尔让特伊修道院院长，因与哲学家彼得·阿伯拉尔的爱情悲剧及传世拉丁文书信集而载入中世纪思想史。",
+      "classification": [
+        "real",
+        "法国文化",
+        "中世纪（墨洛温、加洛林、卡佩）"
+      ],
+      "rel_path": "real/法国文化/中世纪（墨洛温、加洛林、卡佩）/Héloïse（爱洛伊丝）"
+    },
+    {
+      "character": "爱玛·伍德豪斯",
+      "native_name": "Emma Woodhouse",
+      "source": "《爱玛》（Emma），简·奥斯汀（Jane Austen）著，1815年",
+      "gist": "简·奥斯汀小说《爱玛》的女主角，海伯里村富有、聪慧而自命不凡的年轻淑女，热衷于为人做媒却屡屡误判他人情感，最终在挫折中认清自我并收获真爱。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "古典至19世纪",
+        "Jane Austen"
+      ],
+      "rel_path": "fiction/文学/英国文学/古典至19世纪/Jane Austen/Emma Woodhouse（爱玛·伍德豪斯）"
+    },
+    {
+      "character": "爱玛·包法利",
+      "native_name": "Emma Bovary",
+      "source": "小说《包法利夫人》（Gustave Flaubert, 1857）",
+      "gist": "法国外省医生的妻子，耽于浪漫小说，以两次出轨和奢侈购物填补生活空虚，终因债台高筑服毒自尽。",
+      "classification": [
+        "fiction",
+        "文学",
+        "法国文学",
+        "古典至19世纪",
+        "福楼拜（Flaubert）"
+      ],
+      "rel_path": "fiction/文学/法国文学/古典至19世纪/福楼拜（Flaubert）/Emma Bovary（包法利夫人）"
+    },
+    {
+      "character": "特蕾西·特恩布拉德",
+      "native_name": "Tracy Turnblad",
+      "source": "音乐剧《发胶明星梦》（Hairspray，2002），Marc Shaiman 作曲，Scott Wittman 作词；改编自约翰·沃特斯 1988 年同名电影",
+      "gist": "音乐剧《发胶明星梦》女主角，20 世纪 60 年代巴尔的摩一位乐观开朗的胖女孩，怀揣舞蹈梦想登上电视节目《科尼·柯林斯秀》，并积极推动种族融合。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "音乐剧",
+        "现代经典"
+      ],
+      "rel_path": "fiction/戏剧/音乐剧/现代经典/Tracy Turnblad"
+    },
+    {
+      "character": "狄奥多拉",
+      "native_name": "Θεοδώρα",
+      "source": "拜占庭帝国（东罗马帝国）皇后，查士丁尼一世之妻与共治者，东正教会封圣",
+      "gist": "拜占庭帝国皇后，查士丁尼一世之妻与共治者，出身卑微而崛起，在尼卡暴动中以坚定姿态力挽狂澜，对帝国立法、宗教与社会事务有深远影响。",
+      "classification": [
+        "real",
+        "古罗马文化",
+        "拜占庭帝国（东罗马）"
+      ],
+      "rel_path": "real/古罗马文化/拜占庭帝国（东罗马）/Θεοδώρα（Theodora，狄奥多拉皇后）"
+    },
+    {
+      "character": "猫女",
+      "native_name": "Selina Kyle",
+      "source": "DC漫画《蝙蝠侠》系列（Batman, 1940年首次登场），由比尔·芬格与鲍勃·凯恩创作",
+      "gist": "DC漫画《蝙蝠侠》系列中的经典反英雄角色，以猫为灵感的高超窃贼，亦敌亦友，常与蝙蝠侠产生情感纠葛。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "美国漫画",
+        "蝙蝠侠家族与反派"
+      ],
+      "rel_path": "fiction/动画与漫画/美国漫画/蝙蝠侠家族与反派/Selina Kyle _ Catwoman（猫女）"
+    },
+    {
+      "character": "玉娇龙",
+      "native_name": "玉娇龙",
+      "source": "李安电影《卧虎藏龙》（2000），改编自王度庐同名武侠小说",
+      "gist": "九门提督之女，天资过人的武林奇才，外表端庄却内心叛逆，不甘被礼教束缚，一生追寻江湖自由与真情，与罗小虎有一段刻骨爱恋。",
+      "classification": [
+        "fiction",
+        "电影",
+        "中国电影",
+        "香港"
+      ],
+      "rel_path": "fiction/电影/中国电影/香港/玉娇龙"
+    },
+    {
+      "character": "王熙凤",
+      "native_name": "王熙凤",
+      "source": "《红楼梦》（曹雪芹，18世纪）",
+      "gist": "《红楼梦》中贾府的实际管家人，贾琏之妻，精明强干、泼辣狠毒，\"机关算尽太聪明，反误了卿卿性命\"。",
+      "classification": [
+        "fiction",
+        "文学",
+        "中国文学",
+        "古典小说",
+        "《红楼梦》（曹雪芹，18世纪）"
+      ],
+      "rel_path": "fiction/文学/中国文学/古典小说/《红楼梦》（曹雪芹，18世纪）/王熙凤（凤姐）"
+    },
+    {
+      "character": "玛丽·克劳利",
+      "native_name": "Lady Mary Crawley",
+      "source": "《唐顿庄园》（Downton Abbey），朱利安·费罗斯创作，ITV，2010–2015",
+      "gist": "格兰瑟姆伯爵罗伯特与伯爵夫人科拉的长女，外表高傲冷漠、内心深情坚韧，在时代变革中经历情感波折并逐步成长为庄园的支柱。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "英剧",
+        "《唐顿庄园》（Downton Abbey，ITV，2010-2015）"
+      ],
+      "rel_path": "fiction/电视剧/英剧/《唐顿庄园》（Downton Abbey，ITV，2010-2015）/Lady Mary Crawley（大小姐玛丽）"
+    },
+    {
+      "character": "玛丽·居里",
+      "native_name": "Maria Skłodowska-Curie",
+      "source": "波兰裔物理学家、化学家，放射性研究先驱，1903年诺贝尔物理学奖与1911年诺贝尔化学奖得主",
+      "gist": "波兰裔物理学家、化学家，放射性研究先驱，首位两度获得诺贝尔奖的科学家，发现了钋和镭两种放射性元素，并开创了放射化学与放射性医学。",
+      "classification": [
+        "real",
+        "东欧文化（波兰、捷克、匈牙利等）",
+        "19世纪民族觉醒"
+      ],
+      "rel_path": "real/东欧文化（波兰、捷克、匈牙利等）/19世纪民族觉醒/Maria Skłodowska-Curie（玛丽亚·斯克沃多夫斯卡-居里）"
+    },
+    {
+      "character": "玛丽·居里",
+      "native_name": "Maria Skłodowska-Curie",
+      "source": "波兰裔法国物理学家、化学家，放射性研究先驱，1903年诺贝尔物理学奖与1911年诺贝尔化学奖得主",
+      "gist": "波兰裔法国物理学家与化学家，放射性研究的先驱，首位获得诺贝尔奖的女性，也是唯一一位在两个不同科学领域获得诺贝尔奖的科学家。",
+      "classification": [
+        "real",
+        "东欧文化（波兰、捷克、匈牙利等）",
+        "两次世界大战期间"
+      ],
+      "rel_path": "real/东欧文化（波兰、捷克、匈牙利等）/两次世界大战期间/Marie Curie（玛丽·居里）"
+    },
+    {
+      "character": "玛丽·居里",
+      "native_name": "Maria Skłodowska-Curie",
+      "source": "物理学家、化学家，放射性研究先驱，首位两度获得诺贝尔奖者",
+      "gist": "波兰裔法国物理学家与化学家，放射性元素钋和镭的发现者，首位两度获得诺贝尔奖（1903年物理学奖、1911年化学奖）的人物。",
+      "classification": [
+        "real",
+        "法国文化",
+        "19世纪（复辟至第三共和）"
+      ],
+      "rel_path": "real/法国文化/19世纪（复辟至第三共和）/Marie Curie（玛丽·居里 _ Maria Skłodowska-Curie）"
+    },
+    {
+      "character": "玛丽·波平斯",
+      "native_name": "Mary Poppins",
+      "source": "P.L. 特拉弗斯《玛丽·波平斯》系列小说（1934年起）",
+      "gist": "P.L. 特拉弗斯创作的经典儿童文学形象，一位随风而来、撑着伞从天而降的神奇保姆。",
+      "classification": [
+        "fiction",
+        "神话传说民间故事",
+        "欧洲童话",
+        "其他欧洲经典童话"
+      ],
+      "rel_path": "fiction/神话传说民间故事/欧洲童话/其他欧洲经典童话/Mary Poppins（玛丽·波平斯）"
+    },
+    {
+      "character": "玛丽一世",
+      "native_name": "Mary I",
+      "source": "英格兰及爱尔兰女王，都铎王朝第四位君主（1553–1558年在位）",
+      "gist": "英格兰女王，亨利八世与凯瑟琳之女，在位期间强力恢复天主教，残酷迫害新教徒，故得绰号「血腥玛丽」。",
+      "classification": [
+        "real",
+        "英国文化",
+        "都铎王朝"
+      ],
+      "rel_path": "real/英国文化/都铎王朝/Mary I（玛丽一世 _ Bloody Mary）"
+    },
+    {
+      "character": "玛丽亚",
+      "native_name": "Maria",
+      "source": "《西区故事》（West Side Story，阿瑟·劳伦茨编剧、伦纳德·伯恩斯坦作曲、斯蒂芬·桑德海姆作词，1957年）",
+      "gist": "《西区故事》女主角，波多黎各裔移民少女，与敌对帮派「喷气机帮」前成员托尼相恋，构成纽约帮派版「罗密欧与朱丽叶」的悲剧核心。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "音乐剧",
+        "现代经典"
+      ],
+      "rel_path": "fiction/戏剧/音乐剧/现代经典/Maria"
+    },
+    {
+      "character": "玛丽亚",
+      "native_name": "Maria",
+      "source": "音乐剧《音乐之声》（Richard Rodgers 作曲，Oscar Hammerstein II 作词，1959）",
+      "gist": "音乐剧《音乐之声》的女主角，一位活泼乐观的奥地利修女，被派往冯·特拉普家担任家庭教师，用音乐和爱融化了鳏居的上尉与七个孩子的心。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "音乐剧",
+        "罗杰斯与汉默斯坦（Rodgers & Hammerstein）"
+      ],
+      "rel_path": "fiction/戏剧/音乐剧/罗杰斯与汉默斯坦（Rodgers & Hammerstein）/Maria（玛丽亚）"
+    },
+    {
+      "character": "玛丽亚·特蕾西亚",
+      "native_name": "Maria Theresia",
+      "source": "哈布斯堡家族女大公、匈牙利与波希米亚女王、神圣罗马帝国皇后（1740–1780年实际执政）",
+      "gist": "哈布斯堡王朝唯一女性统治者，1740年至1780年执政，推行开明专制改革，参与俄普奥第一次瓜分波兰，被誉为\"欧洲的岳母\"。",
+      "classification": [
+        "real",
+        "东欧文化（波兰、捷克、匈牙利等）",
+        "哈布斯堡/俄普奥瓜分期"
+      ],
+      "rel_path": "real/东欧文化（波兰、捷克、匈牙利等）/哈布斯堡_俄普奥瓜分期/Mária Terézia（玛丽亚·特蕾西亚）"
+    },
+    {
+      "character": "玛丽亚·特蕾西亚",
+      "native_name": "Maria Theresia",
+      "source": "哈布斯堡王朝奥地利女大公、匈牙利女王、波希米亚女王（1740–1780年在位），神圣罗马帝国皇后",
+      "gist": "哈布斯堡君主国唯一女性统治者，1740年至1780年在位，推行全面的内政改革（行政、军事、教育、税收现代化），奠定了哈布斯堡王朝中央集权的基础。",
+      "classification": [
+        "real",
+        "德国-奥地利文化",
+        "奥地利（哈布斯堡至共和国）"
+      ],
+      "rel_path": "real/德国-奥地利文化/奥地利（哈布斯堡至共和国）/Maria Theresia（玛丽亚·特蕾西亚）"
+    },
+    {
+      "character": "玛丽安·达什伍德",
+      "native_name": "Marianne Dashwood",
+      "source": "简·奥斯汀《理智与情感》（1811年）",
+      "gist": "达什伍德家的次女，感性浪漫、情感外露，与姐姐埃莉诺形成对照，是简·奥斯汀小说《理智与情感》的核心主人公之一。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "古典至19世纪",
+        "Jane Austen"
+      ],
+      "rel_path": "fiction/文学/英国文学/古典至19世纪/Jane Austen/Marianne Dashwood"
+    },
+    {
+      "character": "玛嘉·莎塔琵",
+      "native_name": "Marjane",
+      "source": "《Persepolis》（我在伊朗长大），Marjane Satrapi 著，2000–2003 年出版的自传体图像小说",
+      "gist": "伊朗裔法国作者 Marjane Satrapi 在自传体图像小说《Persepolis》中的少女形象，记录其在伊朗伊斯兰革命与两伊战争背景下成长的亲身经历。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "欧洲漫画",
+        "当代图像小说"
+      ],
+      "rel_path": "fiction/动画与漫画/欧洲漫画/当代图像小说/Persepolis（我在伊朗长大）"
+    },
+    {
+      "character": "玛嘉·莎塔碧",
+      "native_name": "مرجان ساتراپی",
+      "source": "伊朗裔法国漫画家、作家与电影导演，1969年生于伊朗拉什特，以自传体图像小说《我在伊朗长大》（Persepolis，2000–2003）闻名于世，并联合执导同名动画电影（2007）",
+      "gist": "伊朗裔法国漫画家、作家与电影导演，以黑白自传体图像小说《我在伊朗长大》真实记录伊斯兰革命前后在伊朗的成长经历与流亡欧洲的心路历程，作品获国际广泛赞誉。",
+      "classification": [
+        "fiction",
+        "文学",
+        "中东文学",
+        "伊朗/波斯文学"
+      ],
+      "rel_path": "fiction/文学/中东文学/伊朗_波斯文学/Marjane Satrapi"
+    },
+    {
+      "character": "玛塞拉",
+      "native_name": "Marcella Backland",
+      "source": "英剧《玛塞拉》(Marcella)，汉斯·罗森费尔特(Hans Rosenfeldt)创作，2016年首播于ITV",
+      "gist": "英剧《玛塞拉》主角，一位重返伦敦警队的前侦探，患有间歇性暴怒症，在追查连环凶案的同时与婚姻破裂及心理创伤抗争。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "英剧",
+        "其他英剧经典"
+      ],
+      "rel_path": "fiction/电视剧/英剧/其他英剧经典/Marcella"
+    },
+    {
+      "character": "玛奇玛",
+      "native_name": "マキマ",
+      "source": "《电锯人》（チェンソーマン，藤本树，2018年起）",
+      "gist": "日本漫画《电锯人》中的支配恶魔，化身公安对魔特异4课领导者，以「爱」为名施行绝对支配，意图创造一个由她掌控的「平等」世界。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "日本动漫",
+        "少年长篇与当代",
+        "《电锯人》（チェンソーマン，藤本树，2018起）"
+      ],
+      "rel_path": "fiction/动画与漫画/日本动漫/少年长篇与当代/《电锯人》（チェンソーマン，藤本树，2018起）/マキマ（玛奇玛）"
+    },
+    {
+      "character": "玛德琳",
+      "native_name": "Madeline",
+      "source": "《蔚蓝》（Celeste，2018年，Extremely OK Games开发）",
+      "gist": "《蔚蓝》主角，一名攀登塞莱斯特山的跨性别少女，在登山途中直面焦虑与自我怀疑，逐步学会接纳自己。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "独立游戏",
+        "其他重要独立游戏"
+      ],
+      "rel_path": "fiction/游戏/独立游戏/其他重要独立游戏/Madeline（玛德琳）"
+    },
+    {
+      "character": "玛格丽特",
+      "native_name": "Маргарита",
+      "source": "《大师与玛格丽特》（米哈伊尔·布尔加科夫，1940年完成，1966–1967年首版）",
+      "gist": "布尔加科夫长篇小说《大师与玛格丽特》的女主角，为拯救被关进精神病院的恋人\"大师\"，与魔鬼沃兰德交易，涂魔油变为女巫并主持撒旦舞会，最终与大师共赴永恒的安宁。",
+      "classification": [
+        "fiction",
+        "文学",
+        "俄国文学",
+        "布尔加科夫（Михаил Булгаков）"
+      ],
+      "rel_path": "fiction/文学/俄国文学/布尔加科夫（Михаил Булгаков）/Маргарита（玛格丽特）"
+    },
+    {
+      "character": "玛格丽特·撒切尔",
+      "native_name": "Margaret Thatcher",
+      "source": "英国政治人物，保守党领袖，1979年至1990年任英国首相",
+      "gist": "英国政治家，保守党领袖，英国历史上首位女性首相（1979—1990），以强硬施政风格著称，被苏联媒体称为\"铁娘子\"。",
+      "classification": [
+        "real",
+        "英国文化",
+        "20世纪至今"
+      ],
+      "rel_path": "real/英国文化/20世纪至今/Margaret Thatcher（玛格丽特·撒切尔）"
+    },
+    {
+      "character": "玛格丽特·杜拉斯",
+      "native_name": "Marguerite Duras",
+      "source": "法国作家、剧作家、电影导演，20世纪法国文学与新小说派代表人物",
+      "gist": "法国作家、剧作家与电影导演，1984年凭小说《情人》获龚古尔奖，代表作还包括《广岛之恋》《抵挡太平洋的堤坝》。",
+      "classification": [
+        "real",
+        "法国文化",
+        "20世纪至今"
+      ],
+      "rel_path": "real/法国文化/20世纪至今/Marguerite Duras（玛格丽特·杜拉斯）"
+    },
+    {
+      "character": "玛格丽特·米切尔",
+      "native_name": "Margaret Mitchell",
+      "source": "美国作家，代表作《飘》（Gone with the Wind，1936）",
+      "gist": "美国女作家，凭长篇小说《飘》获1937年普利策小说奖，该作品后被改编为同名经典电影。",
+      "classification": [
+        "real",
+        "美国文化",
+        "20世纪初至二战"
+      ],
+      "rel_path": "real/美国文化/20世纪初至二战/Margaret Mitchell（玛格丽特·米切尔）"
+    },
+    {
+      "character": "玛格丽特·阿特伍德",
+      "native_name": "Margaret Atwood",
+      "source": "加拿大作家、诗人、文学评论家，布克奖得主，以小说《使女的故事》《盲刺客》等闻名于世。",
+      "gist": "加拿大英语作家、诗人，被誉为当代英语文学最重要的作家之一，以反乌托邦小说《使女的故事》享誉全球。",
+      "classification": [
+        "real",
+        "加拿大文化",
+        "20世纪"
+      ],
+      "rel_path": "real/加拿大文化/20世纪/Margaret Atwood（玛格丽特·阿特伍德）"
+    },
+    {
+      "character": "玛格丽特·阿特伍德",
+      "native_name": "Margaret Atwood",
+      "source": "加拿大作家、诗人、文学评论家，布克奖得主，代表作《使女的故事》《盲刺客》《别名格蕾丝》等",
+      "gist": "加拿大英语小说家、诗人与文学评论家，被誉为\"加拿大文学女王\"，以《使女的故事》等反乌托邦小说享誉世界。",
+      "classification": [
+        "real",
+        "加拿大文化",
+        "当代"
+      ],
+      "rel_path": "real/加拿大文化/当代/Margaret Atwood"
+    },
+    {
+      "character": "玛法达",
+      "native_name": "Mafalda",
+      "source": "漫画《Mafalda》（季诺 / Quino，1964年首次发表）",
+      "gist": "阿根廷漫画家季诺创作的漫画主角，一个头戴蝴蝶结、关心世界和平与社会议题的布宜诺斯艾利斯小女孩，以讨厌喝汤闻名。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "欧洲漫画",
+        "阿根廷/拉丁美洲漫画"
+      ],
+      "rel_path": "fiction/动画与漫画/欧洲漫画/阿根廷_拉丁美洲漫画/Mafalda（玛法达）"
+    },
+    {
+      "character": "玛莎",
+      "native_name": "Martha",
+      "source": "《谁害怕弗吉尼亚·伍尔夫？》（Edward Albee，1962）",
+      "gist": "爱德华·阿尔比戏剧《谁害怕弗吉尼亚·伍尔夫？》中的女主角，大学校长的女儿，与丈夫乔治在深夜的酒后对话中展开残酷的心理角力。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "现代戏剧",
+        "阿尔比（Edward Albee，美国）"
+      ],
+      "rel_path": "fiction/戏剧/现代戏剧/阿尔比（Edward Albee，美国）/Martha"
+    },
+    {
+      "character": "玛莎·尼尔森",
+      "native_name": "Martha Nielsen",
+      "source": "《暗黑》（Dark，2017–2020，Netflix 原创剧集，Baran bo Odar、Jantje Friese 主创）",
+      "gist": "德国悬疑科幻剧《暗黑》的核心人物，温登小镇尼尔森家族的女儿，与约拿斯·卡恩瓦尔德的命运交织，身陷跨代时间循环，在镜像世界中成为对抗亚当的“伊娃”。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "其他地区剧集",
+        "德国"
+      ],
+      "rel_path": "fiction/电视剧/其他地区剧集/德国/Martha Nielsen"
+    },
+    {
+      "character": "玛雅·安吉罗",
+      "native_name": "Maya Angelou",
+      "source": "美国诗人、作家、民权活动家",
+      "gist": "美国诗人、作家与民权活动家，以自传《我知道笼中鸟为何歌唱》闻名，作品深刻探讨种族、身份与女性经验。",
+      "classification": [
+        "real",
+        "美国文化",
+        "战后至今"
+      ],
+      "rel_path": "real/美国文化/战后至今/Maya Angelou（玛雅·安吉罗）"
+    },
+    {
+      "character": "珍妮特",
+      "native_name": "Jeanette",
+      "source": "《橘子不是唯一的水果》（Oranges Are Not the Only Fruit），珍妮特·温特森著，1985年",
+      "gist": "珍妮特·温特森半自传体小说《橘子不是唯一的水果》的主人公，一名在保守的宗教家庭中长大、逐步发现并接纳自身同性恋倾向的少女。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "20世纪至今",
+        "Jeanette Winterson"
+      ],
+      "rel_path": "fiction/文学/英国文学/20世纪至今/Jeanette Winterson/Jeanette"
+    },
+    {
+      "character": "珍妮特·弗雷姆",
+      "native_name": "Janet Frame",
+      "source": "新西兰作家、诗人，20世纪大洋洲文学重要代表",
+      "gist": "新西兰女作家、诗人，以自传三部曲《天使在我桌旁》及小说《猫头鹰在哭泣》等意识流作品闻名，被誉为新西兰现代文学最重要的声音之一。",
+      "classification": [
+        "real",
+        "大洋洲文化",
+        "当代"
+      ],
+      "rel_path": "real/大洋洲文化/当代/Janet Frame（珍妮特·弗雷姆）"
+    },
+    {
+      "character": "琪琪",
+      "native_name": "キキ",
+      "source": "《魔女宅急便》（宫崎骏导演，吉卜力工作室，1989年）",
+      "gist": "《魔女宅急便》中骑扫帚飞行、经营送货服务的13岁见习小魔女。",
+      "classification": [
+        "fiction",
+        "电影",
+        "日本电影",
+        "吉卜力及剧场动画（电影版，亦见动画与漫画）"
+      ],
+      "rel_path": "fiction/电影/日本电影/吉卜力及剧场动画（电影版，亦见动画与漫画）/キキ（琪琪）"
+    },
+    {
+      "character": "琼",
+      "native_name": "June Osborne",
+      "source": "电视剧《使女的故事》（The Handmaid's Tale, 2017– ，改编自玛格丽特·阿特伍德1985年同名小说）",
+      "gist": "反乌托邦剧集《使女的故事》女主角，在基列国被迫成为使女“奥芙弗雷德”，周旋于指挥官与指挥官之妻的夹缝中，暗中反抗极权体制。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "美剧",
+        "剧情史诗",
+        "《王冠》/《使女的故事》等（含英美合拍）"
+      ],
+      "rel_path": "fiction/电视剧/美剧/剧情史诗/《王冠》_《使女的故事》等（含英美合拍）/June"
+    },
+    {
+      "character": "琼尼·米歇尔",
+      "native_name": "Joni Mitchell",
+      "source": "加拿大裔美国歌手、词曲作者与画家，20世纪民谣摇滚与流行音乐的代表性人物之一。",
+      "gist": "加拿大裔美国创作型歌手与画家，以独特的开放式吉他调弦、诗性歌词以及横跨民谣、爵士、流行等风格的融合音乐著称，被广泛誉为史上最伟大的创作歌手之一。",
+      "classification": [
+        "real",
+        "加拿大文化",
+        "20世纪"
+      ],
+      "rel_path": "real/加拿大文化/20世纪/Joni Mitchell（琼尼·米歇尔）"
+    },
+    {
+      "character": "瑞秋·格林",
+      "native_name": "Rachel Green",
+      "source": "《老友记》（Friends，David Crane 与 Marta Kauffman 创作，NBC，1994–2004）",
+      "gist": "美剧《老友记》六位主角之一，出身长岛富裕家庭，在婚礼当天逃婚至纽约投靠好友莫妮卡，从中央公园咖啡馆服务员起步，逐步成长为 Ralph Lauren 等品牌的高管，完成了从依赖家庭到独立自主的蜕变。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "美剧",
+        "喜剧与其他",
+        "《老友记》（Friends，NBC，1994-2004）"
+      ],
+      "rel_path": "fiction/电视剧/美剧/喜剧与其他/《老友记》（Friends，NBC，1994-2004）/Rachel Green（瑞秋·格林）"
+    },
+    {
+      "character": "瑟拉娜",
+      "native_name": "Serana",
+      "source": "《上古卷轴V：天际》DLC《黎明守卫》（The Elder Scrolls V: Skyrim - Dawnguard），Bethesda Game Studios，2012年",
+      "gist": "《上古卷轴V：天际·黎明守卫》中的核心角色，沃基哈（Volkihar）氏族的吸血鬼公主，持有上古卷轴之一，可选择与黎明守卫或吸血鬼阵营结盟。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "欧美游戏",
+        "RPG与动作冒险",
+        "上古卷轴系列（The Elder Scrolls，Bethesda）"
+      ],
+      "rel_path": "fiction/游戏/欧美游戏/RPG与动作冒险/上古卷轴系列（The Elder Scrolls，Bethesda）/Serana（瑟拉娜）"
+    },
+    {
+      "character": "瑟曦·兰尼斯特",
+      "native_name": "Cersei Lannister",
+      "source": "乔治·R·R·马丁《冰与火之歌》（A Song of Ice and Fire）系列小说（1996年起）及HBO改编电视剧《权力的游戏》（Game of Thrones，2011–2019）",
+      "gist": "《冰与火之歌》系列中兰尼斯特家族的核心人物，七大王国摄政太后，以野心、权谋与冷酷著称，其名言「在权力的游戏中，不当赢家就只有死路一条」贯穿全作。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "美剧",
+        "剧情史诗",
+        "《权力的游戏》（Game of Thrones，HBO，2011-2019，改编自乔治·R·R·马丁）"
+      ],
+      "rel_path": "fiction/电视剧/美剧/剧情史诗/《权力的游戏》（Game of Thrones，HBO，2011-2019，改编自乔治·R·R·马丁）/Cersei Lannister（瑟曦·兰尼斯特）"
+    },
+    {
+      "character": "甄嬛",
+      "native_name": "甄嬛",
+      "source": "电视剧《甄嬛传》（2011年，郑晓龙导演，改编自流潋紫小说《后宫·甄嬛传》）",
+      "gist": "电视剧《甄嬛传》女主角，由天真少女入宫选秀，在后宫权谋倾轧中步步为营，最终登上太后之位，经典台词\"贱人就是矫情\"深入人心。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "中国电视剧",
+        "宫廷与历史"
+      ],
+      "rel_path": "fiction/电视剧/中国电视剧/宫廷与历史/甄嬛（孙俪）"
+    },
+    {
+      "character": "白素贞",
+      "native_name": "白素贞",
+      "source": "中国民间传说《白蛇传》",
+      "gist": "《白蛇传》中修炼千年的白蛇精，化为人形与凡人许仙相恋，遭法海和尚阻挠，最终被镇压于雷峰塔下的悲剧女主角。",
+      "classification": [
+        "fiction",
+        "神话传说民间故事",
+        "中国神话与传说",
+        "民间传说与精怪"
+      ],
+      "rel_path": "fiction/神话传说民间故事/中国神话与传说/民间传说与精怪/白素贞（白蛇）"
+    },
+    {
+      "character": "神奇女侠",
+      "native_name": "Diana Prince",
+      "source": "DC漫画《神奇女侠》，威廉·莫尔顿·马斯顿创作，1941年首次登场于《全明星漫画》第8期",
+      "gist": "DC漫画超级英雄，亚马逊公主与正义联盟创始成员，拥有真言套索、神力手镯等神器，以超凡力量与战斗技巧著称。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "美国漫画",
+        "正义联盟"
+      ],
+      "rel_path": "fiction/动画与漫画/美国漫画/正义联盟/Diana Prince _ Wonder Woman（神奇女侠）"
+    },
+    {
+      "character": "神奇女侠",
+      "native_name": "Diana Prince",
+      "source": "DC漫画《全明星漫画》第8期（1941），威廉·莫尔顿·马斯顿与哈里·G·彼得联合创作",
+      "gist": "戴安娜·普林斯，称号神奇女侠，DC漫画旗下的超级英雄，天堂岛的亚马逊公主，拥有半神血统与超凡战力，正义联盟创始成员，以真言套索、守护银镯等神器守护和平。",
+      "classification": [
+        "fiction",
+        "电影",
+        "好莱坞",
+        "当代好莱坞",
+        "超级英雄电影（MCU / DC）"
+      ],
+      "rel_path": "fiction/电影/好莱坞/当代好莱坞/超级英雄电影（MCU _ DC）/Diana Prince _ Wonder Woman（神奇女侠）"
+    },
+    {
+      "character": "福斯卡",
+      "native_name": "Fosca",
+      "source": "斯蒂芬·桑德海姆音乐剧《激情》（Passion，1994）",
+      "gist": "桑德海姆音乐剧《激情》中的女主角，一位体弱多病、外表阴郁的意大利贵族女子，以炽烈而不顾一切的爱恋深深撼动了军官乔治。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "音乐剧",
+        "桑德海姆（Stephen Sondheim）作品"
+      ],
+      "rel_path": "fiction/戏剧/音乐剧/桑德海姆（Stephen Sondheim）作品/Fosca"
+    },
+    {
+      "character": "秀子",
+      "native_name": "秀子",
+      "source": "电影《小姐》（아가씨，2016），导演朴赞郁",
+      "gist": "日据朝鲜时期隐居深宅的日本贵族小姐，自幼被姨父控制、被迫为男性宾客朗读色情小说，在一场各怀心思的骗局中与朝鲜女仆淑姬相恋并最终联手挣脱牢笼。",
+      "classification": [
+        "fiction",
+        "电影",
+        "韩国电影",
+        "朴赞郁（박찬욱）"
+      ],
+      "rel_path": "fiction/电影/韩国电影/朴赞郁（박찬욱）/秀子"
+    },
+    {
+      "character": "秀拉",
+      "native_name": "Sula",
+      "source": "托妮·莫里森《秀拉》（Sula，1973）",
+      "gist": "托妮·莫里森小说《秀拉》的女主角，一位蔑视传统、追求自我、在俄亥俄州黑人社区中引发震荡的反叛黑人女性。",
+      "classification": [
+        "fiction",
+        "文学",
+        "美国文学",
+        "战后至今",
+        "托妮·莫里森（Toni Morrison，诺贝尔奖，黑人女作家）"
+      ],
+      "rel_path": "fiction/文学/美国文学/战后至今/托妮·莫里森（Toni Morrison，诺贝尔奖，黑人女作家）/Sula"
+    },
+    {
+      "character": "科拉松·阿基诺",
+      "native_name": "Corazon Aquino",
+      "source": "菲律宾政治家，第11任菲律宾总统（1986–1992）",
+      "gist": "菲律宾政治家，第11任菲律宾总统（1986–1992），菲律宾及亚洲首位女总统，以领导1986年「人民力量革命」推翻马科斯独裁政权而闻名。",
+      "classification": [
+        "real",
+        "东南亚文化",
+        "菲律宾"
+      ],
+      "rel_path": "real/东南亚文化/菲律宾/Corazon Aquino（科拉松·阿基诺）"
+    },
+    {
+      "character": "科西玛",
+      "native_name": "Cosima",
+      "source": "《黑色孤儿》（Orphan Black，2013–2017），Graeme Manson 与 John Fawcett 创作的加拿大科幻电视剧",
+      "gist": "《黑色孤儿》中由 Tatiana Maslany 饰演的克隆人姐妹之一，进化发育生物学博士生，是克隆人团体中的科学顾问与智囊。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "其他地区剧集",
+        "加拿大"
+      ],
+      "rel_path": "fiction/电视剧/其他地区剧集/加拿大/Cosima"
+    },
+    {
+      "character": "空条徐伦",
+      "native_name": "空条徐倫",
+      "source": "《JOJO的奇妙冒险》第六部《石之海》（荒木飞吕彦，1999年起连载）",
+      "gist": "《JOJO的奇妙冒险》第六部《石之海》的主角，空条承太郎之女，替身为操纵丝线的\"石之自由\"（Stone Free）。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "日本动漫",
+        "少年长篇与当代",
+        "《JOJO的奇妙冒险》（ジョジョの奇妙な冒険，荒木飞吕彦，1987起）"
+      ],
+      "rel_path": "fiction/动画与漫画/日本动漫/少年长篇与当代/《JOJO的奇妙冒险》（ジョジョの奇妙な冒険，荒木飞吕彦，1987起）/空条徐倫"
+    },
+    {
+      "character": "简·坎皮恩",
+      "native_name": "Jane Campion",
+      "source": "新西兰电影导演、编剧",
+      "gist": "新西兰电影导演、编剧，代表作《钢琴课》（1993），为首位获得戛纳金棕榈奖的女性导演。",
+      "classification": [
+        "real",
+        "大洋洲文化",
+        "当代"
+      ],
+      "rel_path": "real/大洋洲文化/当代/Jane Campion（简·坎皮恩）"
+    },
+    {
+      "character": "简·奥斯汀",
+      "native_name": "Jane Austen",
+      "source": "英国小说家，代表作包括《傲慢与偏见》《理智与情感》等，活跃于18世纪末至19世纪初的摄政时期。",
+      "gist": "英国摄政时期小说家，以《傲慢与偏见》《理智与情感》等杰作闻名，擅长以细腻笔触与讽刺手法描绘乡绅阶层的婚姻、道德与日常生活。",
+      "classification": [
+        "real",
+        "英国文化",
+        "维多利亚时代"
+      ],
+      "rel_path": "real/英国文化/维多利亚时代/Jane Austen（简·奥斯汀）"
+    },
+    {
+      "character": "简·爱",
+      "native_name": "Jane Eyre",
+      "source": "夏洛蒂·勃朗特小说《简·爱》（1847）",
+      "gist": "夏洛蒂·勃朗特同名小说中的女主角，一位出身卑微、追求灵魂平等与独立人格的英国家庭女教师。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "古典至19世纪",
+        "勃朗特姐妹"
+      ],
+      "rel_path": "fiction/文学/英国文学/古典至19世纪/勃朗特姐妹/Jane Eyre（简·爱）"
+    },
+    {
+      "character": "米琼恩",
+      "native_name": "Michonne",
+      "source": "《行尸走肉》（The Walking Dead），罗伯特·柯克曼（Robert Kirkman）创作，Image Comics，2003年",
+      "gist": "《行尸走肉》中持武士刀的黑人女性幸存者，外号\"刀女\"，以冷静果敢、剑术高超著称。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "美国漫画",
+        "独立漫画与图像漫画"
+      ],
+      "rel_path": "fiction/动画与漫画/美国漫画/独立漫画与图像漫画/Michonne（米琼恩）"
+    },
+    {
+      "character": "米琼恩",
+      "native_name": "Michonne",
+      "source": "《行尸走肉》（The Walking Dead，AMC电视剧，2010-2022）",
+      "gist": "AMC电视剧《行尸走肉》中的主要角色，以手持武士刀作战著称，性格坚韧果决，是末日幸存者团队中的核心战斗力和领导人物之一。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "美剧",
+        "喜剧与其他",
+        "《行尸走肉》（The Walking Dead，AMC，2010-2022）"
+      ],
+      "rel_path": "fiction/电视剧/美剧/喜剧与其他/《行尸走肉》（The Walking Dead，AMC，2010-2022）/Michonne（米琼恩）"
+    },
+    {
+      "character": "米里亚姆·马凯巴",
+      "native_name": "Zenzile Miriam Makeba",
+      "source": "南非女歌手、词曲作者、演员与反种族隔离民权活动家",
+      "gist": "南非传奇女歌手与反种族隔离活动家，被誉为\"非洲妈妈\"（Mama Africa），以《Pata Pata》等代表作将非洲音乐推向世界舞台。",
+      "classification": [
+        "real",
+        "非洲文化",
+        "当代"
+      ],
+      "rel_path": "real/非洲文化/当代/Miriam Makeba（米里亚姆·马凯巴）"
+    },
+    {
+      "character": "糸子",
+      "native_name": "糸子",
+      "source": "《康乃馨》（カーネーション，NHK晨间剧，2011年）",
+      "gist": "NHK晨间剧《康乃馨》的女主角，以时装设计师小篠綾子为原型的虚构人物小原糸子。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "日剧",
+        "晨间剧·大河剧"
+      ],
+      "rel_path": "fiction/电视剧/日剧/晨间剧·大河剧/糸子"
+    },
+    {
+      "character": "索尔·胡安娜·伊内斯·德·拉·克鲁斯",
+      "native_name": "Sor Juana Inés de la Cruz",
+      "source": "新西班牙（今墨西哥）殖民时期修女、诗人、哲学家与作曲家，西班牙黄金世纪文学代表人物",
+      "gist": "17世纪新西班牙殖民地的修女学者，西班牙语文学黄金世纪最重要的诗人之一，被誉为「第十缪斯」与「墨西哥凤凰」，以巴洛克风格抒情诗、宗教剧及女性教育权利论述闻名于世。",
+      "classification": [
+        "real",
+        "拉丁美洲文化",
+        "殖民时期"
+      ],
+      "rel_path": "real/拉丁美洲文化/殖民时期/Sor Juana Inés de la Cruz（索尔·胡安娜·伊内斯·德·拉·克鲁斯）"
+    },
+    {
+      "character": "索朗日",
+      "native_name": "Solange",
+      "source": "《女仆》（Les Bonnes，让·热内，1947）",
+      "gist": "让·热内戏剧《女仆》中的两姐妹之一，在扮演仪式中饰演女仆角色。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "现代戏剧",
+        "热内（Jean Genet，法国）"
+      ],
+      "rel_path": "fiction/戏剧/现代戏剧/热内（Jean Genet，法国）/Solange"
+    },
+    {
+      "character": "紫式部",
+      "native_name": "紫式部",
+      "source": "日本平安时代女作家、歌人，世界最早的长篇小说《源氏物语》的作者",
+      "gist": "日本平安时代女作家，以长篇巨著《源氏物语》闻名于世，被誉为世界最早的长篇小说之一。",
+      "classification": [
+        "real",
+        "日本文化",
+        "古代（飞鸟、奈良、平安）"
+      ],
+      "rel_path": "real/日本文化/古代（飞鸟、奈良、平安）/紫式部（むらさきしきぶ）"
+    },
+    {
+      "character": "纳丁·戈迪默",
+      "native_name": "Nadine Gordimer",
+      "source": "南非作家，1991年诺贝尔文学奖得主",
+      "gist": "南非英语女作家，1991年诺贝尔文学奖得主，作品以小说为主，深刻揭露种族隔离制度下的社会矛盾与人道困境。",
+      "classification": [
+        "real",
+        "非洲文化",
+        "当代"
+      ],
+      "rel_path": "real/非洲文化/当代/Nadine Gordimer（纳丁·戈迪默）"
+    },
+    {
+      "character": "练霓裳",
+      "native_name": "练霓裳",
+      "source": "《白发魔女传》（梁羽生，1957-1958）",
+      "gist": "梁羽生武侠小说《白发魔女传》女主角，原为绿林首领「玉罗刹」，因与武当弟子卓一航的爱情悲剧一夜白发，从此人称「白发魔女」。",
+      "classification": [
+        "fiction",
+        "文学",
+        "中国文学",
+        "当代与类型文学",
+        "梁羽生"
+      ],
+      "rel_path": "fiction/文学/中国文学/当代与类型文学/梁羽生/白发魔女（练霓裳）"
+    },
+    {
+      "character": "继女",
+      "native_name": "La Figliastra",
+      "source": "路易吉·皮兰德娄《六个寻找作者的剧中人》（Sei personaggi in cerca d'autore，1921）",
+      "gist": "皮兰德娄代表作《六个寻找作者的剧中人》中被作者遗弃的六个角色之一，闯入排练场执意要求演完自己与父亲之间那桩未竟的家庭悲剧。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "现代戏剧",
+        "皮兰德娄（Luigi Pirandello，意大利）"
+      ],
+      "rel_path": "fiction/戏剧/现代戏剧/皮兰德娄（Luigi Pirandello，意大利）/The Stepdaughter 等"
+    },
+    {
+      "character": "维多利亚女王",
+      "native_name": "Victoria",
+      "source": "英国汉诺威王朝女王（1837–1901年在位），维多利亚时代因其得名",
+      "gist": "英国汉诺威王朝女王，在位64年，开创了英国工业革命与帝国扩张的鼎盛时期——维多利亚时代，因其子女遍布欧洲王室而被誉为\"欧洲祖母\"。",
+      "classification": [
+        "real",
+        "英国文化",
+        "维多利亚时代"
+      ],
+      "rel_path": "real/英国文化/维多利亚时代/Victoria（维多利亚女王）"
+    },
+    {
+      "character": "维奥莱特·克劳利",
+      "native_name": "Violet Crawley",
+      "source": "《唐顿庄园》（Downton Abbey，ITV，2010–2015，编剧：朱利安·费罗斯）",
+      "gist": "《唐顿庄园》中格兰瑟姆伯爵的遗孀，家族中最年长也最毒舌的长辈，以刻薄犀利的金句和顽固的贵族做派著称。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "英剧",
+        "《唐顿庄园》（Downton Abbey，ITV，2010-2015）"
+      ],
+      "rel_path": "fiction/电视剧/英剧/《唐顿庄园》（Downton Abbey，ITV，2010-2015）/Violet Crawley, Dowager Countess（老伯爵遗孀 _ 玛吉·史密斯）"
+    },
+    {
+      "character": "维斯瓦娃·辛波斯卡",
+      "native_name": "Wisława Szymborska",
+      "source": "波兰诗人、散文家、翻译家，1996年诺贝尔文学奖得主",
+      "gist": "波兰诗人，1996年诺贝尔文学奖得主，以凝练、机智而富于哲思的诗风闻名，代表作有《万物静默如谜》《我曾这样寂寞生活》等。",
+      "classification": [
+        "fiction",
+        "文学",
+        "东欧文学",
+        "波兰"
+      ],
+      "rel_path": "fiction/文学/东欧文学/波兰/Wisława Szymborska"
+    },
+    {
+      "character": "维斯瓦娃·辛波斯卡",
+      "native_name": "Wisława Szymborska",
+      "source": "波兰诗人、翻译家，1996年诺贝尔文学奖得主",
+      "gist": "波兰女诗人，1996年诺贝尔文学奖得主，其诗作以凝练、反讽与哲思著称，被誉为「诗界莫扎特」。",
+      "classification": [
+        "real",
+        "东欧文化（波兰、捷克、匈牙利等）",
+        "冷战时期"
+      ],
+      "rel_path": "real/东欧文化（波兰、捷克、匈牙利等）/冷战时期/Wisława Szymborska（维斯拉瓦·辛波斯卡）"
+    },
+    {
+      "character": "罗丝妈妈",
+      "native_name": "Rose",
+      "source": "音乐剧《玫瑰舞后》（Gypsy，1959），Arthur Laurents 编剧，Jule Styne 作曲，Stephen Sondheim 作词",
+      "gist": "音乐剧《玫瑰舞后》中脱衣舞女王吉普赛·罗斯·李的强势母亲，以其标志性歌曲《Everything's Coming Up Roses》闻名。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "音乐剧",
+        "其他经典百老汇"
+      ],
+      "rel_path": "fiction/戏剧/音乐剧/其他经典百老汇/Mama Rose"
+    },
+    {
+      "character": "罗克西·哈特",
+      "native_name": "Roxie Hart",
+      "source": "音乐剧《芝加哥》（Chicago，1975），作曲 John Kander，作词 Fred Ebb，导演／编舞 Bob Fosse，改编自 Maurine Dallas Watkins 1926 年同名话剧",
+      "gist": "美国音乐剧《芝加哥》女主角，一名梦想成为歌舞明星的杀夫凶手，在狱中利用律师操纵媒体舆论，将刑事案件炒作成个人成名秀，试图逃脱绞刑并实现舞台梦。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "音乐剧",
+        "现代经典"
+      ],
+      "rel_path": "fiction/戏剧/音乐剧/现代经典/Roxie Hart"
+    },
+    {
+      "character": "罗刹",
+      "native_name": "Rogue",
+      "source": "漫威漫画《X战警》系列（创作者 Chris Claremont、Michael Golden，首次登场于1981年《复仇者联盟年刊》第10期）",
+      "gist": "罗刹是漫威《X战警》系列中的变种人超级英雄，能够通过皮肤接触吸收他人的记忆、超能力与生命力。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "美国漫画",
+        "X战警"
+      ],
+      "rel_path": "fiction/动画与漫画/美国漫画/X战警/Rogue（小淘气）"
+    },
+    {
+      "character": "罗希度",
+      "native_name": "나희도",
+      "source": "《二十五，二十一》（스물다섯 스물하나，tvN，2022）",
+      "gist": "韩剧《二十五，二十一》女主角，由金泰梨饰演，梦想夺得世界冠军的高中击剑选手，性格开朗而坚韧。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "韩剧",
+        "2010s至今"
+      ],
+      "rel_path": "fiction/电视剧/韩剧/2010s至今/나희도（罗希度）"
+    },
+    {
+      "character": "罗瑟琳",
+      "native_name": "Rosalind",
+      "source": "《皆大欢喜》（As You Like It），威廉·莎士比亚，约1599年",
+      "gist": "莎士比亚喜剧《皆大欢喜》女主角，被流放的公爵之女，女扮男装化名 Ganymede 逃入亚登森林，凭借机智与辩才主导了多对恋人的爱情纠葛，最终促成和解与团圆。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "莎士比亚",
+        "《皆大欢喜》（As You Like It，约1599）"
+      ],
+      "rel_path": "fiction/戏剧/莎士比亚/《皆大欢喜》（As You Like It，约1599）/Rosalind（罗瑟琳）"
+    },
+    {
+      "character": "罗莎·卢森堡",
+      "native_name": "Róża Luksemburg",
+      "source": "波兰裔德国马克思主义革命家、政治理论家，德国共产党创始人之一",
+      "gist": "波兰裔德国马克思主义革命家与政治理论家，德国共产党创始人之一，1919年柏林起义中遇害。",
+      "classification": [
+        "real",
+        "德国-奥地利文化",
+        "魏玛共和国与第三帝国"
+      ],
+      "rel_path": "real/德国-奥地利文化/魏玛共和国与第三帝国/Rosa Luxemburg（罗莎·卢森堡）"
+    },
+    {
+      "character": "罗莎·帕克斯",
+      "native_name": "Rosa Parks",
+      "source": "美国民权运动活动家",
+      "gist": "美国非裔民权活动家，因1955年在阿拉巴马州蒙哥马利市公交车上拒绝给白人让座遭逮捕，引发蒙哥马利巴士抵制运动，成为美国民权运动的关键转折点，被誉为\"民权运动之母\"。",
+      "classification": [
+        "real",
+        "美国文化",
+        "战后至今"
+      ],
+      "rel_path": "real/美国文化/战后至今/Rosa Parks（罗莎·帕克斯）"
+    },
+    {
+      "character": "美子",
+      "native_name": "혜자",
+      "source": "《母亲》（奉俊昊，2009）",
+      "gist": "奉俊昊执导的韩国电影《母亲》（2009）主角，一位为保护被控谋杀的智障儿子而不惜一切代价的母亲。",
+      "classification": [
+        "fiction",
+        "电影",
+        "韩国电影",
+        "奉俊昊（봉준호）"
+      ],
+      "rel_path": "fiction/电影/韩国电影/奉俊昊（봉준호）/美子"
+    },
+    {
+      "character": "美狄亚",
+      "native_name": "Μήδεια",
+      "source": "欧里庇得斯《美狄亚》（约公元前431年）",
+      "gist": "古希腊悲剧中的科尔基斯公主，被伊阿宋抛弃后以杀死亲生子女复仇。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "古希腊悲剧与喜剧",
+        "欧里庇得斯（Εὐριπίδης / Euripides）"
+      ],
+      "rel_path": "fiction/戏剧/古希腊悲剧与喜剧/欧里庇得斯（Εὐριπίδης _ Euripides）/Μήδεια（Medea，美狄亚）"
+    },
+    {
+      "character": "艾丽丝·门罗",
+      "native_name": "Alice Munro",
+      "source": "加拿大英语短篇小说作家，2013年诺贝尔文学奖得主，被誉为\"当代短篇小说大师\"",
+      "gist": "加拿大英语短篇小说作家，以精细刻画平凡生活中的情感暗流著称，2013年获诺贝尔文学奖。",
+      "classification": [
+        "real",
+        "加拿大文化",
+        "20世纪"
+      ],
+      "rel_path": "real/加拿大文化/20世纪/Alice Munro（艾丽丝·门罗）"
+    },
+    {
+      "character": "艾丽丝·门罗",
+      "native_name": "Alice Munro",
+      "source": "加拿大英语短篇小说作家，2013年诺贝尔文学奖得主，2009年布克国际奖得主",
+      "gist": "加拿大英语短篇小说作家，2013年诺贝尔文学奖得主，被誉为\"当代短篇小说大师\"，以精微细腻的笔触刻画小镇女性日常生活中的暗流与顿悟。",
+      "classification": [
+        "real",
+        "加拿大文化",
+        "当代"
+      ],
+      "rel_path": "real/加拿大文化/当代/Alice Munro"
+    },
+    {
+      "character": "艾伦·雷普利",
+      "native_name": "Ellen Ripley",
+      "source": "《异形》系列电影（Alien, 1979，雷德利·斯科特导演；Aliens, 1986，詹姆斯·卡梅隆导演）",
+      "gist": "《异形》系列电影主角，诺斯特罗莫号太空货船准尉，凭借顽强意志与战术素养多次从异形袭击中幸存，为科幻电影史上最具代表性的女性英雄之一。",
+      "classification": [
+        "fiction",
+        "电影",
+        "好莱坞",
+        "经典好莱坞",
+        "1970s-1980s 科幻与奇幻奠基"
+      ],
+      "rel_path": "fiction/电影/好莱坞/经典好莱坞/1970s-1980s 科幻与奇幻奠基/Ellen Ripley（艾伦·雷普利）"
+    },
+    {
+      "character": "艾比",
+      "native_name": "Abby",
+      "source": "《最后生还者 第二部》（The Last of Us Part II，Naughty Dog，2020）",
+      "gist": "《最后生还者 第二部》主角之一，前火萤组织成员，因父亲被乔尔杀害而踏上复仇之路，其故事展现了复仇循环的另一面。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "欧美游戏",
+        "RPG与动作冒险",
+        "最后生还者系列（The Last of Us，Naughty Dog）"
+      ],
+      "rel_path": "fiction/游戏/欧美游戏/RPG与动作冒险/最后生还者系列（The Last of Us，Naughty Dog）/Abby（艾比）"
+    },
+    {
+      "character": "艾沃尔",
+      "native_name": "Eivor",
+      "source": "《刺客信条：英灵殿》（Assassin's Creed: Valhalla，Ubisoft，2020）",
+      "gist": "《刺客信条：英灵殿》主角，公元9世纪率领渡鸦氏族从挪威远征英格兰的维京劫掠者。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "欧美游戏",
+        "RPG与动作冒险",
+        "刺客信条系列（Assassin's Creed，Ubisoft）"
+      ],
+      "rel_path": "fiction/游戏/欧美游戏/RPG与动作冒险/刺客信条系列（Assassin's Creed，Ubisoft）/Eivor（艾沃尔）"
+    },
+    {
+      "character": "艾米·庞德",
+      "native_name": "Amy Pond",
+      "source": "《神秘博士》（Doctor Who，BBC，1963年起）",
+      "gist": "《神秘博士》中第十一任博士的旅伴，来自苏格兰的活泼女孩，全名 Amelia Jessica Pond，童年时因博士的 TARDIS 坠入后院而与之结缘，后与未婚夫 Rory Williams 一同踏上时空冒险。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "英剧",
+        "《神秘博士》（Doctor Who，BBC，1963起）"
+      ],
+      "rel_path": "fiction/电视剧/英剧/《神秘博士》（Doctor Who，BBC，1963起）/Amy Pond"
+    },
+    {
+      "character": "艾米·菲拉·福勒",
+      "native_name": "Amy Farrah Fowler",
+      "source": "《生活大爆炸》（The Big Bang Theory，2007–2019）",
+      "gist": "美剧《生活大爆炸》主要角色，神经生物学家，谢尔顿·库珀的女友与最终伴侣，最初被塑造成“女版谢尔顿”，后在感情中逐渐成长并展现出更丰富的社交与情感能力。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "美剧",
+        "喜剧与其他",
+        "《生活大爆炸》（The Big Bang Theory，CBS，2007-2019）"
+      ],
+      "rel_path": "fiction/电视剧/美剧/喜剧与其他/《生活大爆炸》（The Big Bang Theory，CBS，2007-2019）/Amy Farrah Fowler"
+    },
+    {
+      "character": "艾米丽",
+      "native_name": "Amélie Poulain",
+      "source": "Jean-Pierre Jeunet《天使爱美丽》（Le Fabuleux Destin d'Amélie Poulain，2001）",
+      "gist": "法国电影《天使爱美丽》中在巴黎蒙马特咖啡馆当女招待、暗中以善意巧思帮助他人寻获幸福的女主角。",
+      "classification": [
+        "fiction",
+        "电影",
+        "欧洲电影",
+        "法国"
+      ],
+      "rel_path": "fiction/电影/欧洲电影/法国/Amélie Poulain（艾米丽）"
+    },
+    {
+      "character": "艾米丽·考德温",
+      "native_name": "Emily Kaldwin",
+      "source": "《羞辱2》（Dishonored 2，Arkane Studios，2016）",
+      "gist": "《羞辱2》双主角之一，群岛帝国女皇，遭篡位后获得界外魔赋予的超自然能力，踏上夺回王位的复仇之路。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "欧美游戏",
+        "射击策略与其他",
+        "潜行/沉浸模拟"
+      ],
+      "rel_path": "fiction/游戏/欧美游戏/射击策略与其他/潜行_沉浸模拟/Emily Kaldwin（艾米莉）"
+    },
+    {
+      "character": "艾米莉·卡尔",
+      "native_name": "Emily Carr",
+      "source": "加拿大画家、作家，加拿大现代艺术先驱之一，以描绘不列颠哥伦比亚省太平洋西北海岸原住民村落、图腾柱及原始森林风景著称。",
+      "gist": "加拿大女画家与作家，以太平洋西北海岸原住民文化、图腾柱及西海岸原始风景为主要创作题材，被誉为加拿大现代艺术先驱。",
+      "classification": [
+        "real",
+        "加拿大文化",
+        "自治领建立"
+      ],
+      "rel_path": "real/加拿大文化/自治领建立/Emily Carr（艾米莉·卡尔）"
+    },
+    {
+      "character": "艾芙芭",
+      "native_name": "Elphaba",
+      "source": "音乐剧《魔法坏女巫》（Wicked，2003）及格雷戈里·马圭尔同名小说（1995）",
+      "gist": "绿皮肤的\"西方坏女巫\"，音乐剧《魔法坏女巫》主角，是《绿野仙踪》中西方坏女巫的另类前传式重塑。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "音乐剧",
+        "现代经典"
+      ],
+      "rel_path": "fiction/戏剧/音乐剧/现代经典/Elphaba（艾芙芭）"
+    },
+    {
+      "character": "艾莉",
+      "native_name": "Ellie",
+      "source": "《最后生还者》系列（The Last of Us，Naughty Dog，2013）",
+      "gist": "《最后生还者》系列女主角，对虫草真菌免疫的少女，在真菌末世中为生存而战。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "欧美游戏",
+        "RPG与动作冒险",
+        "最后生还者系列（The Last of Us，Naughty Dog）"
+      ],
+      "rel_path": "fiction/游戏/欧美游戏/RPG与动作冒险/最后生还者系列（The Last of Us，Naughty Dog）/Ellie（艾莉）"
+    },
+    {
+      "character": "艾莉亚·史塔克",
+      "native_name": "Arya Stark",
+      "source": "《权力的游戏》（Game of Thrones，HBO，2011-2019），改编自乔治·R·R·马丁《冰与火之歌》系列小说",
+      "gist": "艾莉亚·史塔克是史塔克家族的幼女，叛逆果敢，历经家族巨变后远走海外，最终成为无面者刺客，以一份复仇名单和名言\"Not today\"闻名。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "美剧",
+        "剧情史诗",
+        "《权力的游戏》（Game of Thrones，HBO，2011-2019，改编自乔治·R·R·马丁）"
+      ],
+      "rel_path": "fiction/电视剧/美剧/剧情史诗/《权力的游戏》（Game of Thrones，HBO，2011-2019，改编自乔治·R·R·马丁）/Arya Stark（艾莉亚·史塔克）"
+    },
+    {
+      "character": "艾薇塔",
+      "native_name": "Eva Perón",
+      "source": "音乐剧《艾薇塔》（Evita），安德鲁·洛伊德·韦伯作曲，蒂姆·莱斯作词，1978年",
+      "gist": "音乐剧《艾薇塔》（Evita）中的女主角，以阿根廷前第一夫人伊娃·庇隆的真实生平为蓝本，由安德鲁·洛伊德·韦伯与蒂姆·莱斯共同创作。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "音乐剧",
+        "安德鲁·洛伊德·韦伯（Andrew Lloyd Webber）作品"
+      ],
+      "rel_path": "fiction/戏剧/音乐剧/安德鲁·洛伊德·韦伯（Andrew Lloyd Webber）作品/Eva Perón（艾薇塔）"
+    },
+    {
+      "character": "艾达·洛夫莱斯",
+      "native_name": "Ada Lovelace",
+      "source": "英国数学家、作家，维多利亚时代科学先驱，以对查尔斯·巴贝奇分析机的前瞻性研究而闻名",
+      "gist": "英国数学家与作家，因对查尔斯·巴贝奇分析机撰写的前瞻性注释而被公认为人类历史上第一位计算机程序员，维多利亚时代女性科学先驱。",
+      "classification": [
+        "real",
+        "英国文化",
+        "维多利亚时代"
+      ],
+      "rel_path": "real/英国文化/维多利亚时代/Ada Lovelace（艾达·洛夫莱斯）"
+    },
+    {
+      "character": "艾黛尔贾特",
+      "native_name": "エーデルガルト＝フォン＝フレスベルグ",
+      "source": "《火焰纹章：风花雪月》（Fire Emblem: Three Houses，Intelligent Systems/任天堂，2019）",
+      "gist": "《火焰纹章：风花雪月》中黑鹫学级的级长，阿德剌斯忒亚帝国的皇女与后来的皇帝。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "日本游戏",
+        "任天堂经典",
+        "火焰纹章系列（Fire Emblem，1990起）"
+      ],
+      "rel_path": "fiction/游戏/日本游戏/任天堂经典/火焰纹章系列（Fire Emblem，1990起）/Edelgard"
+    },
+    {
+      "character": "芙露格·法罗赫扎德",
+      "native_name": "فروغ فرخزاد",
+      "source": "伊朗现代诗人、电影导演，二十世纪波斯语现代诗歌代表人物",
+      "gist": "伊朗现代女诗人与电影导演，波斯语现代诗歌先驱，以大胆书写女性情感、情欲与社会禁忌著称，代表作《另一种诞生》《让我们相信这寒冷的季节之始》。",
+      "classification": [
+        "real",
+        "波斯文化",
+        "卡扎尔至近现代"
+      ],
+      "rel_path": "real/波斯文化/卡扎尔至近现代/فروغ فرخزاد（Forugh Farrokhzad，芙露格·法罗赫扎德）"
+    },
+    {
+      "character": "芭思谢芭·埃弗登",
+      "native_name": "Bathsheba Everdene",
+      "source": "《远离尘嚣》（Far from the Madding Crowd），托马斯·哈代著，1874年",
+      "gist": "《远离尘嚣》女主角，继承叔叔农场后成为威瑟伯里独立自主的年轻女农场主，美丽骄傲而冲动，在牧羊人加布里埃尔·奥克、农场主伯德伍德与军官特洛伊三位追求者之间经历情感波折，最终走向成熟。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "古典至19世纪",
+        "Thomas Hardy"
+      ],
+      "rel_path": "fiction/文学/英国文学/古典至19世纪/Thomas Hardy/Bathsheba Everdene"
+    },
+    {
+      "character": "芭芭拉少校",
+      "native_name": "Major Barbara",
+      "source": "萧伯纳戏剧《芭芭拉少校》（Major Barbara，1905年）",
+      "gist": "萧伯纳戏剧《芭芭拉少校》的女主角，救世军少校，军火大亨安德鲁·安德沙夫特之女，怀抱宗教慈善理想却被迫直面财富来源的道德悖论。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "现代戏剧",
+        "萧伯纳（George Bernard Shaw，爱尔兰）"
+      ],
+      "rel_path": "fiction/戏剧/现代戏剧/萧伯纳（George Bernard Shaw，爱尔兰）/Major Barbara"
+    },
+    {
+      "character": "苏·布莱德赫德",
+      "native_name": "Sue Bridehead",
+      "source": "托马斯·哈代小说《无名的裘德》（Jude the Obscure，1895）",
+      "gist": "《无名的裘德》女主角，裘德的表妹与爱人，一位思想超前、追求精神自由与理想婚姻的新女性，在维多利亚时代婚姻法与道德观念的重压下最终理想破灭，回归传统婚姻。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "古典至19世纪",
+        "Thomas Hardy"
+      ],
+      "rel_path": "fiction/文学/英国文学/古典至19世纪/Thomas Hardy/Sue Bridehead"
+    },
+    {
+      "character": "苏明玉",
+      "native_name": "苏明玉",
+      "source": "电视剧《都挺好》（2019年，改编自阿耐同名小说）",
+      "gist": "《都挺好》女主角，苏家小女儿，在重男轻女的原生家庭中挣扎成长，凭借自身努力成为企业高管，性格坚韧而独立。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "中国电视剧",
+        "年代/家庭/现代"
+      ],
+      "rel_path": "fiction/电视剧/中国电视剧/年代_家庭_现代/苏明玉（姚晨）"
+    },
+    {
+      "character": "苏珊·B·安东尼",
+      "native_name": "Susan B. Anthony",
+      "source": "美国女权运动领袖与社会改革家，19世纪美国妇女选举权运动核心人物",
+      "gist": "美国女权运动先驱，毕生致力于争取妇女投票权与性别平等，在19世纪美国妇女选举权运动中发挥了关键领导作用。",
+      "classification": [
+        "real",
+        "美国文化",
+        "镀金时代"
+      ],
+      "rel_path": "real/美国文化/镀金时代/Susan B. Anthony（苏珊·B·安东尼）"
+    },
+    {
+      "character": "英迪拉·甘地",
+      "native_name": "इंदिरा गांधी",
+      "source": "印度政治家，曾任印度总理（1966–1977、1980–1984）",
+      "gist": "印度政治家，印度首位且迄今唯一的女总理，尼赫鲁之女，被誉为「印度铁娘子」。",
+      "classification": [
+        "real",
+        "印度文化",
+        "现代（独立至今）"
+      ],
+      "rel_path": "real/印度文化/现代（独立至今）/Indira Gandhi（इंदिरा गांधी，英迪拉·甘地）"
+    },
+    {
+      "character": "草薙素子",
+      "native_name": "草薙素子",
+      "source": "《攻壳机动队》（攻殻機動隊，原作：士郎正宗，1989年起；1995年剧场版：押井守）",
+      "gist": "全身义体化的公安九课（攻壳机动队）队长，人称「少佐」，在赛博朋克世界观中追捕网络犯罪与政治阴谋。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "日本动漫",
+        "经典与其他类型",
+        "《攻壳机动队》（攻殻機動隊，士郎正宗/押井守，1989起）"
+      ],
+      "rel_path": "fiction/动画与漫画/日本动漫/经典与其他类型/《攻壳机动队》（攻殻機動隊，士郎正宗_押井守，1989起）/草薙素子（少佐）"
+    },
+    {
+      "character": "莉丝贝特·萨兰德",
+      "native_name": "Lisbeth Salander",
+      "source": "《千禧年》三部曲（Stieg Larsson 著，2005–2007）",
+      "gist": "瑞典作家斯蒂格·拉森《千禧年》三部曲中的女主角，天才黑客与调查员，性格孤僻叛逆，身上纹有龙纹身，以极端手段对抗不公、追索真相。",
+      "classification": [
+        "fiction",
+        "文学",
+        "北欧文学",
+        "瑞典"
+      ],
+      "rel_path": "fiction/文学/北欧文学/瑞典/Stieg Larsson"
+    },
+    {
+      "character": "莉亚拉·T'苏尼",
+      "native_name": "Liara T'Soni",
+      "source": "《质量效应》系列（Mass Effect，BioWare，2007）",
+      "gist": "阿莎莉（Asari）族考古学家，专注研究普洛仙文明，拥有心灵感应等生物超能力，后成为银河系最大情报网络「影子经纪人」的掌控者。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "欧美游戏",
+        "RPG与动作冒险",
+        "质量效应系列（Mass Effect，BioWare）"
+      ],
+      "rel_path": "fiction/游戏/欧美游戏/RPG与动作冒险/质量效应系列（Mass Effect，BioWare）/Liara T'Soni（莉亚拉·T'苏尼）"
+    },
+    {
+      "character": "莉莉·布里斯科",
+      "native_name": "Lily Briscoe",
+      "source": "《到灯塔去》（弗吉尼亚·伍尔夫，1927）",
+      "gist": "弗吉尼亚·伍尔夫小说《到灯塔去》中的核心人物，一位执着于艺术创作的画家，在小说结尾完成了她构思十年的画作，是现代主义文学中独立女性艺术家的经典形象。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "20世纪至今",
+        "Virginia Woolf"
+      ],
+      "rel_path": "fiction/文学/英国文学/20世纪至今/Virginia Woolf/Lily Briscoe"
+    },
+    {
+      "character": "莉莲娜·维斯",
+      "native_name": "Liliana Vess",
+      "source": "《万智牌》（Magic: The Gathering），威世智（Wizards of the Coast），1993年起",
+      "gist": "《万智牌》中操控黑色法术力的死灵师鹏洛客，以与恶魔契约为代价换取永生与强大的死灵术力量。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "桌游",
+        "万智牌（Magic: The Gathering，Wizards of the Coast，1993起）"
+      ],
+      "rel_path": "fiction/游戏/桌游/万智牌（Magic_ The Gathering，Wizards of the Coast，1993起）/Liliana Vess（莉莲娜·维斯）"
+    },
+    {
+      "character": "莉迪亚嬷嬷",
+      "native_name": "Aunt Lydia",
+      "source": "《使女的故事》（The Handmaid's Tale），玛格丽特·阿特伍德小说，1985年；Hulu电视剧改编，2017年",
+      "gist": "基列共和国中负责训练与监管使女的「嬷嬷」阶层核心人物，以严酷手段对使女进行思想改造与行为规训，使之服从极权统治秩序。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "美剧",
+        "剧情史诗",
+        "《王冠》/《使女的故事》等（含英美合拍）"
+      ],
+      "rel_path": "fiction/电视剧/美剧/剧情史诗/《王冠》_《使女的故事》等（含英美合拍）/Aunt Lydia（莉迪亚嬷嬷）"
+    },
+    {
+      "character": "莎拉·凯瑞甘",
+      "native_name": "Sarah Kerrigan",
+      "source": "《星际争霸》系列（StarCraft，暴雪娱乐，1998年起）",
+      "gist": "原为人类幽灵特工，被虫族改造后成为刀锋女王，最终统一并主宰虫族。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "欧美游戏",
+        "射击策略与其他",
+        "星际争霸系列（StarCraft，Blizzard）"
+      ],
+      "rel_path": "fiction/游戏/欧美游戏/射击策略与其他/星际争霸系列（StarCraft，Blizzard）/Sarah Kerrigan _ Queen of Blades（莎拉·凯瑞甘 _ 刀锋女王）"
+    },
+    {
+      "character": "莎拉·康纳",
+      "native_name": "Sarah Connor",
+      "source": "《终结者》系列电影（詹姆斯·卡梅隆，1984年起）",
+      "gist": "《终结者》系列女主角，未来人类抵抗军领袖约翰·康纳之母，从天真的普通女性成长为坚毅的末日战士与抵抗运动奠基者。",
+      "classification": [
+        "fiction",
+        "电影",
+        "好莱坞",
+        "经典好莱坞",
+        "1970s-1980s 科幻与奇幻奠基"
+      ],
+      "rel_path": "fiction/电影/好莱坞/经典好莱坞/1970s-1980s 科幻与奇幻奠基/Sarah Connor（莎拉·康纳）"
+    },
+    {
+      "character": "莎拉·曼宁",
+      "native_name": "Sarah Manning",
+      "source": "《黑色孤儿》（Orphan Black，2013–2017），加拿大科幻惊悚电视剧，Graeme Manson 与 John Fawcett 主创",
+      "gist": "加拿大科幻剧《黑色孤儿》核心主角，英国出生的街头骗子，发现自己是一批非法克隆人之一，由塔提阿娜·玛斯拉尼一人分饰多角。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "其他地区剧集",
+        "加拿大"
+      ],
+      "rel_path": "fiction/电视剧/其他地区剧集/加拿大/Sarah Manning"
+    },
+    {
+      "character": "莫妮卡·盖勒",
+      "native_name": "Monica Geller",
+      "source": "《老友记》（Friends），David Crane 与 Marta Kauffman 创作，NBC，1994–2004",
+      "gist": "《老友记》核心角色之一，有洁癖与强迫症的餐厅主厨，性格好胜且责任心强，以标志性口头禅「I know!」著称。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "美剧",
+        "喜剧与其他",
+        "《老友记》（Friends，NBC，1994-2004）"
+      ],
+      "rel_path": "fiction/电视剧/美剧/喜剧与其他/《老友记》（Friends，NBC，1994-2004）/Monica Geller（莫妮卡·盖勒）"
+    },
+    {
+      "character": "莫德·贝利",
+      "native_name": "Maud Bailey",
+      "source": "A.S. Byatt《占有》（Possession: A Romance, 1990）",
+      "gist": "《占有》中的现代英国文学学者，致力于研究维多利亚时期女诗人克里斯塔贝尔·拉莫特，与罗兰·米歇尔一同追寻并揭开了拉莫特与诗人伦道夫·阿什之间隐秘的恋情，而她本人正是拉莫特的后裔。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "20世纪至今",
+        "A.S. Byatt"
+      ],
+      "rel_path": "fiction/文学/英国文学/20世纪至今/A.S. Byatt/Maud Bailey"
+    },
+    {
+      "character": "莱娅公主",
+      "native_name": "Leia Organa",
+      "source": "《星球大战》系列电影（乔治·卢卡斯，1977）",
+      "gist": "《星球大战》系列中奥德兰星球的公主，义军同盟核心领袖之一，以果敢坚毅与卓越领导力著称。",
+      "classification": [
+        "fiction",
+        "电影",
+        "好莱坞",
+        "经典好莱坞",
+        "1970s-1980s 科幻与奇幻奠基"
+      ],
+      "rel_path": "fiction/电影/好莱坞/经典好莱坞/1970s-1980s 科幻与奇幻奠基/Princess Leia（莱娅公主）"
+    },
+    {
+      "character": "莱尼·里芬斯塔尔",
+      "native_name": "Leni Riefenstahl",
+      "source": "德国纪录片导演、演员与摄影师，活跃于魏玛共和国与纳粹德国时期",
+      "gist": "德国纪录片导演、演员与摄影师，以纳粹党代会纪录片《意志的胜利》（1935年）和柏林奥运会纪录片《奥林匹亚》（1938年）闻名，其电影美学技法影响深远，但因与第三帝国政权的密切合作而终身备受争议。",
+      "classification": [
+        "real",
+        "德国-奥地利文化",
+        "魏玛共和国与第三帝国"
+      ],
+      "rel_path": "real/德国-奥地利文化/魏玛共和国与第三帝国/Leni Riefenstahl（莱尼·里芬施塔尔）"
+    },
+    {
+      "character": "菲·瓦伦丁",
+      "native_name": "フェイ・ヴァレンタイン",
+      "source": "《星际牛仔》（カウボーイビバップ，渡边信一郎，1998）",
+      "gist": "《星际牛仔》中因冷冻睡眠跨越五十年、失去记忆的女赏金猎人，以赌术与骗技谋生。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "日本动漫",
+        "经典与其他类型",
+        "《星际牛仔》（カウボーイビバップ，渡边信一郎，1998）"
+      ],
+      "rel_path": "fiction/动画与漫画/日本动漫/经典与其他类型/《星际牛仔》（カウボーイビバップ，渡边信一郎，1998）/フェイ·ヴァレンタイン（Faye Valentine）"
+    },
+    {
+      "character": "萨博·玛格达",
+      "native_name": "Szabó Magda",
+      "source": "萨博·玛格达自传体小说《门》（Az ajtó，1987）",
+      "gist": "匈牙利作家萨博·玛格达自传体小说《门》中的女作家叙述者，即作者本人的文学化身，与女仆埃梅伦茨（Emerenc）之间维系着一段横跨二十年的复杂而深刻的羁绊。",
+      "classification": [
+        "fiction",
+        "文学",
+        "东欧文学",
+        "匈牙利"
+      ],
+      "rel_path": "fiction/文学/东欧文学/匈牙利/Magda Szabó"
+    },
+    {
+      "character": "萨罗吉尼·奈都",
+      "native_name": "Sarojini Naidu",
+      "source": "印度诗人、政治家，印度独立运动领袖，曾任印度国民大会党主席（1925年）与印度联合省总督（1947–1949年）",
+      "gist": "印度女诗人、政治活动家，被誉为\"印度的夜莺\"，以英语写作抒情诗，印度独立运动重要领导人之一，曾任国大党首位女主席及印度首位女性邦总督。",
+      "classification": [
+        "real",
+        "印度文化",
+        "英属印度时期"
+      ],
+      "rel_path": "real/印度文化/英属印度时期/Sarojini Naidu（萨罗吉尼·奈都）"
+    },
+    {
+      "character": "萨迦·诺伦",
+      "native_name": "Saga Norén",
+      "source": "瑞典/丹麦合拍电视剧《桥》（Bron / Broen，2011–2018）",
+      "gist": "瑞典马尔默警局女警探，有明显社交障碍与非常规沟通方式，驾驶橙色保时捷911 S古董车，以执着缜密的直觉型办案风格著称。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "其他地区剧集",
+        "北欧/挪威"
+      ],
+      "rel_path": "fiction/电视剧/其他地区剧集/北欧_挪威/Saga Norén（萨迦·诺伦）"
+    },
+    {
+      "character": "葛城美里",
+      "native_name": "葛城ミサト",
+      "source": "《新世纪福音战士》（新世紀エヴァンゲリオン，庵野秀明/贞本义行，1995）",
+      "gist": "NERV 作战部长，碇真嗣的监护人，对使徒作战的现场指挥官。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "日本动漫",
+        "经典与其他类型",
+        "《新世纪福音战士》（新世紀エヴァンゲリオン，庵野秀明/贞本义行，1995）"
+      ],
+      "rel_path": "fiction/动画与漫画/日本动漫/经典与其他类型/《新世纪福音战士》（新世紀エヴァンゲリオン，庵野秀明_贞本义行，1995）/葛城ミサト（葛城美里）"
+    },
+    {
+      "character": "蒂法·洛克哈特",
+      "native_name": "ティファ・ロックハート",
+      "source": "《最终幻想VII》（Final Fantasy VII，Square，1997）",
+      "gist": "《最终幻想VII》女主角之一，米德加第七天堂酒吧的酒保，使用拳套施展格斗术的反抗组织\"雪崩\"核心成员。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "日本游戏",
+        "RPG与动作",
+        "最终幻想系列（Final Fantasy / ファイナルファンタジー，Square Enix，1987起）"
+      ],
+      "rel_path": "fiction/游戏/日本游戏/RPG与动作/最终幻想系列（Final Fantasy _ ファイナルファンタジー，Square Enix，1987起）/Tifa Lockhart（ティファ）"
+    },
+    {
+      "character": "蓓基·夏泼",
+      "native_name": "Becky Sharp",
+      "source": "《名利场》（Vanity Fair），威廉·梅克比斯·萨克雷（William Makepeace Thackeray）著，1847–1848年",
+      "gist": "《名利场》女主角，出身贫寒的孤女，凭美貌、才智与心机不择手段攀附上流社会，是英国文学中经典的\"英雌\"（anti-heroine）形象。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "古典至19世纪",
+        "其他19世纪重要作品"
+      ],
+      "rel_path": "fiction/文学/英国文学/古典至19世纪/其他19世纪重要作品/Vanity Fair（名利场）"
+    },
+    {
+      "character": "蓬帕杜夫人",
+      "native_name": "Madame de Pompadour",
+      "source": "法国国王路易十五的官方情妇（maîtresse-en-titre），蓬帕杜侯爵夫人，18世纪法国重要的艺术与文化赞助人",
+      "gist": "法国国王路易十五的官方情妇与18世纪最具影响力的艺术赞助人之一，大力扶持洛可可艺术、启蒙文人与塞夫尔瓷器，深度参与凡尔赛宫的文化与政治生活。",
+      "classification": [
+        "real",
+        "法国文化",
+        "波旁王朝与旧制度"
+      ],
+      "rel_path": "real/法国文化/波旁王朝与旧制度/Madame de Pompadour（蓬帕杜夫人）"
+    },
+    {
+      "character": "蕾哈尔",
+      "native_name": "라헬",
+      "source": "《神之塔》（Tower of God），SIU，2010年",
+      "gist": "《神之塔》核心角色，主角第二十五夜（夜）的童年伙伴，是夜不顾一切进入塔的原始动机与追逐目标，却在塔的测试中因对自身命运的渴望而背叛夜，成为故事中极具争议的反派式人物。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "韩国漫画",
+        "经典网漫"
+      ],
+      "rel_path": "fiction/动画与漫画/韩国漫画/经典网漫/ラヘル（拉赫尔 _ Rachel）"
+    },
+    {
+      "character": "薇奥拉",
+      "native_name": "Viola",
+      "source": "《第十二夜》（Twelfth Night），威廉·莎士比亚，约1601年",
+      "gist": "莎士比亚喜剧《第十二夜》女主角，因海难流落伊利里亚，女扮男装化名西萨里奥（Cesario）充当奥西诺公爵的侍从，由此陷入奥西诺、奥丽维娅与她之间的三角恋误会。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "莎士比亚",
+        "《第十二夜》（Twelfth Night，约1601）"
+      ],
+      "rel_path": "fiction/戏剧/莎士比亚/《第十二夜》（Twelfth Night，约1601）/Viola（薇奥拉）"
+    },
+    {
+      "character": "薇尔莉特·伊芙加登",
+      "native_name": "ヴァイオレット·エヴァーガーデン",
+      "source": "轻小说及动画《紫罗兰永恒花园》（暁佳奈，2015年／京都动画改编，2018年）",
+      "gist": "前军人少女，战后成为代笔书信的「自动手记人偶」，在替他人传达情感的过程中逐渐理解「爱」的含义。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "日本动漫",
+        "经典与其他类型",
+        "其他青年向 / 经典"
+      ],
+      "rel_path": "fiction/动画与漫画/日本动漫/经典与其他类型/其他青年向 _ 经典/ヴァイオレット·エヴァーガーデン（薇尔莉特·伊芙加登）"
+    },
+    {
+      "character": "薇拉·斯坦霍普",
+      "native_name": "Vera Stanhope",
+      "source": "安·克利夫斯（Ann Cleeves）的薇拉·斯坦霍普系列侦探小说（1999年起）及ITV改编电视剧《探长薇拉》（2011年起）",
+      "gist": "英国诺森伯兰郡警署总督察，性格粗犷直率、不修边幅，常年穿一件墨绿色雨衣，酗酒且孤僻，却拥有极其敏锐的洞察力与破案天赋。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "英剧",
+        "其他英剧经典"
+      ],
+      "rel_path": "fiction/电视剧/英剧/其他英剧经典/Vera Stanhope"
+    },
+    {
+      "character": "薇拉内尔",
+      "native_name": "Villanelle",
+      "source": "《杀死伊芙》（Killing Eve，2018–2022年BBC America电视剧，改编自卢克·詹宁斯小说系列）",
+      "gist": "《杀死伊芙》中的俄罗斯籍天才女刺客，代号\"薇拉内尔\"（Villanelle），真名奥克萨娜·阿斯坦科娃，性格冷酷残忍、善于伪装，与英国军情五处探员伊芙·波拉斯特里展开一场致命的猫鼠游戏。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "美剧",
+        "剧情史诗",
+        "其他重要剧情剧"
+      ],
+      "rel_path": "fiction/电视剧/美剧/剧情史诗/其他重要剧情剧/Villanelle"
+    },
+    {
+      "character": "蝙蝠女",
+      "native_name": "Barbara Gordon",
+      "source": "DC漫画《蝙蝠侠》系列（蝙蝠女首次登场于《侦探漫画》第359期，1967年，由加德纳·福克斯与卡迈恩·因凡蒂诺创造）",
+      "gist": "DC漫画超级英雄，初代蝙蝠女，蝙蝠侠的盟友；被小丑枪击致瘫痪后，以黑客身份“神谕”（Oracle）继续支援英雄活动。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "美国漫画",
+        "蝙蝠侠家族与反派"
+      ],
+      "rel_path": "fiction/动画与漫画/美国漫画/蝙蝠侠家族与反派/Barbara Gordon _ Batgirl _ Oracle（蝙蝠女）"
+    },
+    {
+      "character": "西尔维娅·普拉斯",
+      "native_name": "Sylvia Plath",
+      "source": "美国诗人、小说家，自白派诗歌代表人物之一",
+      "gist": "美国自白派女诗人、小说家，代表作有诗集《巨像》《爱丽儿》及半自传体小说《钟形罩》。",
+      "classification": [
+        "real",
+        "美国文化",
+        "战后至今"
+      ],
+      "rel_path": "real/美国文化/战后至今/Sylvia Plath（西尔维娅·普拉斯）"
+    },
+    {
+      "character": "西格丽德·温塞特",
+      "native_name": "Sigrid Undset",
+      "source": "挪威作家，1928年诺贝尔文学奖得主",
+      "gist": "挪威女作家，1928年获诺贝尔文学奖，以中世纪历史小说《克丽斯汀·拉夫朗的女儿》三部曲闻名。",
+      "classification": [
+        "real",
+        "北欧文化",
+        "20世纪至今"
+      ],
+      "rel_path": "real/北欧文化/20世纪至今/Sigrid Undset（西格丽德·温塞特）"
+    },
+    {
+      "character": "西蒙娜·德·波伏瓦",
+      "native_name": "Simone de Beauvoir",
+      "source": "法国存在主义哲学家、作家与女权主义理论家",
+      "gist": "法国存在主义哲学家、作家与女权主义理论家，被誉为现代女权主义运动的奠基人之一，其代表作《第二性》（1949）系统批判了父权制对女性的建构，深刻影响了20世纪以来的女权主义思潮。",
+      "classification": [
+        "real",
+        "法国文化",
+        "20世纪至今"
+      ],
+      "rel_path": "real/法国文化/20世纪至今/Simone de Beauvoir（西蒙娜·德·波伏瓦）"
+    },
+    {
+      "character": "西蒙娜·韦伊",
+      "native_name": "Simone Veil",
+      "source": "法国政治人物、律师、纳粹大屠杀幸存者，曾任欧洲议会议长（1979–1982），主导通过法国堕胎合法化法案（1975年韦伊法）",
+      "gist": "法国政治人物与纳粹大屠杀幸存者，曾任欧洲议会议长，以主导推动法国堕胎合法化（韦伊法）而载入史册。",
+      "classification": [
+        "real",
+        "法国文化",
+        "20世纪至今"
+      ],
+      "rel_path": "real/法国文化/20世纪至今/Simone Veil（西蒙娜·韦伊）"
+    },
+    {
+      "character": "贝姨",
+      "native_name": "Élisabeth Fischer",
+      "source": "《贝姨》（La Cousine Bette），奥诺雷·德·巴尔扎克，1846年",
+      "gist": "巴尔扎克《人间喜剧》系列长篇小说《贝姨》的主人公，于洛男爵夫人的表妹，一位相貌平平、出身卑微的老处女，因长期遭受冷落与不公而心生嫉恨，以精密的算计对 prosperous 的于洛家族展开复仇，最终将其推向毁灭。",
+      "classification": [
+        "fiction",
+        "文学",
+        "法国文学",
+        "古典至19世纪",
+        "巴尔扎克（Balzac，人间喜剧 La Comédie humaine）"
+      ],
+      "rel_path": "fiction/文学/法国文学/古典至19世纪/巴尔扎克（Balzac，人间喜剧 La Comédie humaine）/Cousine Bette（贝姨）"
+    },
+    {
+      "character": "贝特丽丝",
+      "native_name": "Beatrice",
+      "source": "《无事生非》（Much Ado About Nothing，威廉·莎士比亚，约1598—1599年）",
+      "gist": "莎士比亚喜剧《无事生非》的女主角，意大利墨西拿总督之侄女，以机智善辩、言辞犀利著称，与培尼狄克在尖刻斗嘴中暗生情愫，终成眷属。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "莎士比亚",
+        "《无事生非》（Much Ado About Nothing）"
+      ],
+      "rel_path": "fiction/戏剧/莎士比亚/《无事生非》（Much Ado About Nothing）/Beatrice（贝特丽丝）"
+    },
+    {
+      "character": "贞德",
+      "native_name": "Jeanne d'Arc",
+      "source": "法国民族英雄、军事领袖，天主教圣人，英法百年战争关键人物",
+      "gist": "法国民族英雄与天主教圣女，百年战争期间自称受神启，于1429年领军解奥尔良之围、扭转战局，助查理七世加冕，后遭勃艮第党俘获移交英方，以异端罪被处以火刑（1431年），死后获平反并封圣。",
+      "classification": [
+        "real",
+        "法国文化",
+        "瓦卢瓦王朝"
+      ],
+      "rel_path": "real/法国文化/瓦卢瓦王朝/Jeanne d'Arc（圣女贞德）"
+    },
+    {
+      "character": "贞德",
+      "native_name": "Jeanne d'Arc",
+      "source": "法国民族英雄、天主教圣人，百年战争时期的军事领袖，1920年被封圣",
+      "gist": "法国民族英雄与天主教圣女，在英法百年战争中率军解奥尔良之围，辅佐查理七世加冕，后被俘遭火刑殉国，1920年封圣。",
+      "classification": [
+        "real",
+        "英国文化",
+        "金雀花至玫瑰战争"
+      ],
+      "rel_path": "real/英国文化/金雀花至玫瑰战争/Joan of Arc（圣女贞德 _ Jeanne d'Arc）"
+    },
+    {
+      "character": "费雪小姐",
+      "native_name": "Phryne Fisher",
+      "source": "《费雪小姐探案集》系列小说（Kerry Greenwood，1989年起），同名电视剧（2012–2015）",
+      "gist": "1920年代澳大利亚墨尔本一名贵族出身的女侦探，以独立、机智与魅力破解各类疑难案件。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "其他地区剧集",
+        "澳大利亚/新西兰"
+      ],
+      "rel_path": "fiction/电视剧/其他地区剧集/澳大利亚_新西兰/Phryne Fisher"
+    },
+    {
+      "character": "赛娜",
+      "native_name": "Senua",
+      "source": "《地狱之刃：赛娜的献祭》（Hellblade: Senua's Sacrifice），Ninja Theory，2017年",
+      "gist": "《地狱之刃》系列主角，一位饱受精神分裂症困扰的皮克特女战士，为拯救被维京人杀害的爱人灵魂，只身深入维京冥界。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "欧美游戏",
+        "RPG与动作冒险",
+        "其他重要RPG与动作冒险"
+      ],
+      "rel_path": "fiction/游戏/欧美游戏/RPG与动作冒险/其他重要RPG与动作冒险/Senua（赛娜）"
+    },
+    {
+      "character": "赤名莉香",
+      "native_name": "赤名リカ",
+      "source": "《东京爱情故事》（柴门文漫画，1988–1989；富士电视台电视剧，1991）",
+      "gist": "《东京爱情故事》女主角，性格开朗热情，爱得坦率炽烈，最终选择成全永尾完治与关口里美。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "日剧",
+        "经典日剧（1990s-2000s）"
+      ],
+      "rel_path": "fiction/电视剧/日剧/经典日剧（1990s-2000s）/赤名リカ（赤名莉香）"
+    },
+    {
+      "character": "赫敏·格兰杰",
+      "native_name": "Hermione Granger",
+      "source": "《哈利·波特》系列小说（J.K. Rowling，1997–2007）",
+      "gist": "J.K.罗琳《哈利·波特》系列小说的女主角之一，霍格沃茨格兰芬多学院学生，出身麻瓜家庭的优秀女巫，以过人的聪慧与博学著称，与哈利·波特、罗恩·韦斯莱组成「铁三角」，在对抗伏地魔的战斗中发挥了关键作用。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "20世纪至今",
+        "J.K. Rowling"
+      ],
+      "rel_path": "fiction/文学/英国文学/20世纪至今/J.K. Rowling/Hermione Granger"
+    },
+    {
+      "character": "赵敏",
+      "native_name": "赵敏",
+      "source": "《倚天屠龙记》（金庸，1961—1963年明报连载）",
+      "gist": "金庸武侠小说《倚天屠龙记》女主角之一，蒙古名敏敏特穆尔，封号绍敏郡主，汝阳王察罕帖木儿之女，聪慧机敏、敢爱敢恨，最终与张无忌一同归隐。",
+      "classification": [
+        "fiction",
+        "文学",
+        "中国文学",
+        "当代与类型文学",
+        "金庸"
+      ],
+      "rel_path": "fiction/文学/中国文学/当代与类型文学/金庸/赵敏"
+    },
+    {
+      "character": "赵盼儿",
+      "native_name": "赵盼儿",
+      "source": "关汉卿杂剧《救风尘》（元代）",
+      "gist": "《救风尘》中设计巧计救出被富商周舍虐待的结拜姐妹宋引章的风尘女子。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "中国戏曲",
+        "关汉卿"
+      ],
+      "rel_path": "fiction/戏剧/中国戏曲/关汉卿/赵盼儿"
+    },
+    {
+      "character": "路易丝",
+      "native_name": "Louise",
+      "source": "电影《末路狂花》（Thelma & Louise, 1991，雷德利·斯科特执导）",
+      "gist": "《末路狂花》女主角之一，餐厅女招待，因枪杀企图强奸好友塞尔玛的男子而被迫踏上逃亡之路。",
+      "classification": [
+        "fiction",
+        "电影",
+        "好莱坞",
+        "当代好莱坞",
+        "1990s 经典"
+      ],
+      "rel_path": "fiction/电影/好莱坞/当代好莱坞/1990s 经典/Louise（路易丝）"
+    },
+    {
+      "character": "路易莎",
+      "native_name": "Luisa Cortés",
+      "source": "阿方索·卡隆执导电影《你妈妈也一样》（Y tu mamá también，2001）",
+      "gist": "《你妈妈也一样》中引领两名墨西哥少年踏上公路之旅的西班牙女性，身患绝症，以旅途完成青春与死亡的启蒙。",
+      "classification": [
+        "fiction",
+        "电影",
+        "拉丁美洲电影",
+        "墨西哥"
+      ],
+      "rel_path": "fiction/电影/拉丁美洲电影/墨西哥/Luisa"
+    },
+    {
+      "character": "迈尔斯·弗兰克林",
+      "native_name": "Miles Franklin",
+      "source": "澳大利亚女作家，代表作《我的光辉生涯》（My Brilliant Career，1901）",
+      "gist": "澳大利亚女作家，以自传体小说《我的光辉生涯》闻名，澳大利亚最重要的文学奖迈尔斯·弗兰克林奖以其命名。",
+      "classification": [
+        "real",
+        "大洋洲文化",
+        "20世纪"
+      ],
+      "rel_path": "real/大洋洲文化/20世纪/Miles Franklin（迈尔斯·弗兰克林）"
+    },
+    {
+      "character": "近藤麻美",
+      "native_name": "近藤麻美",
+      "source": "日剧《重启人生》（ブラッシュアップライフ，2023），编剧：笨蛋节奏",
+      "gist": "《重启人生》主角，一名平凡的日本地方政府职员，意外死亡后为积攒阴德而不断重生，努力争取来世投胎为人的机会。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "日剧",
+        "当代经典"
+      ],
+      "rel_path": "fiction/电视剧/日剧/当代经典/近藤麻美（こんどうあさみ）"
+    },
+    {
+      "character": "迪提",
+      "native_name": "Deeti",
+      "source": "阿米塔夫·高希小说《罂粟海》（Sea of Poppies，2008）",
+      "gist": "印度作家阿米塔夫·高希小说《罂粟海》的女主角，一位比哈尔邦农村妇女，在鸦片船「伊布里斯号」上与各色底层人物的命运交汇。",
+      "classification": [
+        "fiction",
+        "文学",
+        "印度文学",
+        "阿米塔夫·高希（Amitav Ghosh）"
+      ],
+      "rel_path": "fiction/文学/印度文学/阿米塔夫·高希（Amitav Ghosh）/迪提（Deeti）"
+    },
+    {
+      "character": "郝薇香小姐",
+      "native_name": "Miss Havisham",
+      "source": "查尔斯·狄更斯《远大前程》（Great Expectations，1861）",
+      "gist": "《远大前程》中在婚礼当天遭抛弃后，终身穿着泛黄婚纱、守着腐朽婚宴的悲剧老妇，象征时间凝固与复仇执念。",
+      "classification": [
+        "fiction",
+        "文学",
+        "英国文学",
+        "古典至19世纪",
+        "Charles Dickens"
+      ],
+      "rel_path": "fiction/文学/英国文学/古典至19世纪/Charles Dickens/Miss Havisham（郝薇香小姐）"
+    },
+    {
+      "character": "里戈韦塔·门楚",
+      "native_name": "Rigoberta Menchú",
+      "source": "危地马拉基切玛雅原住民人权活动家、政治家，1992年诺贝尔和平奖得主。",
+      "gist": "危地马拉基切玛雅原住民人权活动家，1992年诺贝尔和平奖得主，长期为原住民权利、种族平等与社会正义奔走。",
+      "classification": [
+        "real",
+        "拉丁美洲文化",
+        "当代"
+      ],
+      "rel_path": "real/拉丁美洲文化/当代/Rigoberta Menchú（里戈韦塔·门楚）"
+    },
+    {
+      "character": "金·韦克斯勒",
+      "native_name": "Kim Wexler",
+      "source": "《风骚律师》（Better Call Saul），文斯·吉里根与彼得·古尔德创作，AMC，2015–2022",
+      "gist": "《风骚律师》女主角，才华横溢的律师，吉米·麦吉尔的伴侣与妻子，在良知与灰色手段之间挣扎，是吉米道德天平上的关键砝码。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "美剧",
+        "剧情史诗",
+        "《风骚律师》（Better Call Saul，AMC，2015-2022）"
+      ],
+      "rel_path": "fiction/电视剧/美剧/剧情史诗/《风骚律师》（Better Call Saul，AMC，2015-2022）/Kim Wexler（金·韦克斯勒）"
+    },
+    {
+      "character": "金三顺",
+      "native_name": "김삼순",
+      "source": "《我叫金三顺》（내 이름은 김삼순，MBC，2005）",
+      "gist": "韩国电视剧《我叫金三顺》女主角，性格直率开朗的天才烘焙师，凭借精湛手艺与真诚个性实现事业与爱情的双重逆袭。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "韩剧",
+        "经典韩剧（2000s）"
+      ],
+      "rel_path": "fiction/电视剧/韩剧/经典韩剧（2000s）/김삼순（金三顺）"
+    },
+    {
+      "character": "锡耶纳的圣加大利纳",
+      "native_name": "Caterina da Siena",
+      "source": "意大利中世纪天主教圣徒、神秘主义者、教会博士",
+      "gist": "意大利锡耶纳的天主教女圣徒与神秘主义神学家，著有《对话录》，以对教宗的直言劝谏和在教会事务中的影响力闻名，1970年被教宗保禄六世宣布为教会博士。",
+      "classification": [
+        "real",
+        "意大利文化",
+        "中世纪城邦时期"
+      ],
+      "rel_path": "real/意大利文化/中世纪城邦时期/Caterina da Siena（锡耶纳的圣加大利纳）"
+    },
+    {
+      "character": "长袜子皮皮",
+      "native_name": "Pippi Långstrump",
+      "source": "阿斯特丽德·林格伦（Astrid Lindgren）的儿童小说《长袜子皮皮》（1945年）",
+      "gist": "瑞典作家阿斯特丽德·林格伦笔下的红发怪力女孩，力大无穷、独立不羁，独自住在维拉·维洛古拉，是儿童文学中自由精神的经典象征。",
+      "classification": [
+        "fiction",
+        "神话传说民间故事",
+        "欧洲童话",
+        "其他欧洲经典童话"
+      ],
+      "rel_path": "fiction/神话传说民间故事/欧洲童话/其他欧洲经典童话/Pippi Långstrump（Pippi Longstocking，长袜子皮皮）"
+    },
+    {
+      "character": "阿加莎·克里斯蒂",
+      "native_name": "Agatha Christie",
+      "source": "英国侦探小说作家、剧作家，被誉为\"侦探小说女王\"，代表作包括《东方快车谋杀案》《无人生还》《尼罗河上的惨案》等。",
+      "gist": "英国侦探小说女王，全球畅销书作家，创造了赫尔克里·波洛与简·马普尔两大经典侦探形象。",
+      "classification": [
+        "real",
+        "英国文化",
+        "20世纪至今"
+      ],
+      "rel_path": "real/英国文化/20世纪至今/Agatha Christie（阿加莎·克里斯蒂）"
+    },
+    {
+      "character": "阿斯特丽德·林格伦",
+      "native_name": "Astrid Lindgren",
+      "source": "瑞典儿童文学作家，20世纪瑞典文学代表性人物",
+      "gist": "瑞典儿童文学作家，以《长袜子皮皮》闻名世界，作品被译入近百种语言，对现代儿童文学影响深远。",
+      "classification": [
+        "real",
+        "北欧文化",
+        "20世纪至今"
+      ],
+      "rel_path": "real/北欧文化/20世纪至今/Astrid Lindgren（阿斯特丽德·林格伦）"
+    },
+    {
+      "character": "阿曼达·温菲尔德",
+      "native_name": "Amanda Wingfield",
+      "source": "《玻璃动物园》（The Glass Menagerie），田纳西·威廉斯（Tennessee Williams），1944年",
+      "gist": "田纳西·威廉斯戏剧《玻璃动物园》中的核心角色，一位沉溺于南方旧日荣光、强势又脆弱的落魄母亲，执着地为儿女汤姆与劳拉安排未来。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "现代戏剧",
+        "田纳西·威廉斯（Tennessee Williams，美国）"
+      ],
+      "rel_path": "fiction/戏剧/现代戏剧/田纳西·威廉斯（Tennessee Williams，美国）/Amanda Wingfield（阿曼达·温菲尔德）"
+    },
+    {
+      "character": "阿比盖尔·威廉姆斯",
+      "native_name": "Abigail Williams",
+      "source": "阿瑟·米勒戏剧《萨勒姆的女巫》（The Crucible，1953）",
+      "gist": "阿瑟·米勒剧作《萨勒姆的女巫》中的主要反派角色，原为普罗克特家的女仆，因与约翰·普罗克特有染而被伊丽莎白解雇，为夺回爱人与自保，捏造女巫指控诬陷伊丽莎白等人，掀起塞勒姆审巫风波。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "现代戏剧",
+        "阿瑟·米勒（Arthur Miller，美国）"
+      ],
+      "rel_path": "fiction/戏剧/现代戏剧/阿瑟·米勒（Arthur Miller，美国）/Abigail Williams（阿比盖尔）"
+    },
+    {
+      "character": "阿玛莉亚·罗德里格斯",
+      "native_name": "Amália Rodrigues",
+      "source": "葡萄牙法多（Fado）歌手，被誉为\"法多女王\"，20世纪葡萄牙音乐文化的标志性人物。",
+      "gist": "葡萄牙法多女歌手，被誉为\"法多女王\"（Rainha do Fado），以深沉而富有情感的演唱将法多推向世界，是20世纪葡萄牙最具国际影响力的音乐家之一。",
+      "classification": [
+        "real",
+        "西班牙-葡萄牙文化",
+        "20世纪至今"
+      ],
+      "rel_path": "real/西班牙-葡萄牙文化/20世纪至今/Amália Rodrigues（阿玛莉亚·罗德里格斯）"
+    },
+    {
+      "character": "阿米西亚",
+      "native_name": "Amicia de Rune",
+      "source": "《瘟疫传说》系列（A Plague Tale，Asobo Studio，2019/2022）",
+      "gist": "《瘟疫传说》系列游戏主角，14世纪法国贵族少女，在鼠疫肆虐与宗教审判的乱世中，携弟弟雨果逃亡求生。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "欧美游戏",
+        "RPG与动作冒险",
+        "其他重要RPG与动作冒险"
+      ],
+      "rel_path": "fiction/游戏/欧美游戏/RPG与动作冒险/其他重要RPG与动作冒险/Amicia"
+    },
+    {
+      "character": "阿维拉的圣德兰",
+      "native_name": "Santa Teresa de Ávila",
+      "source": "16世纪西班牙加尔默罗会修女、神秘主义神学家与作家，教会圣师，赤足加尔默罗会创始人",
+      "gist": "16世纪西班牙神秘主义女作家与加尔默罗会改革者，以《完美之书》《七宝楼台》等灵修经典传世，被天主教会封为圣人与圣师。",
+      "classification": [
+        "real",
+        "西班牙-葡萄牙文化",
+        "黄金时代（文学艺术）"
+      ],
+      "rel_path": "real/西班牙-葡萄牙文化/黄金时代（文学艺术）/Santa Teresa de Ávila（阿维拉的圣德兰）"
+    },
+    {
+      "character": "雷电将军",
+      "native_name": "雷电影",
+      "source": "《原神》（Genshin Impact，米哈游，2020年起）",
+      "gist": "稻妻的雷之神与统治者，追求「永恒」的孤独神明，本体雷电影为对抗磨损将意识封存于一心净土，由人偶「将军」代行执政。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "中国游戏",
+        "原神（Genshin Impact / 原神，米哈游，2020起）"
+      ],
+      "rel_path": "fiction/游戏/中国游戏/原神（Genshin Impact _ 原神，米哈游，2020起）/雷电将军（Raiden Shogun _ 巴尔）"
+    },
+    {
+      "character": "雷霆",
+      "native_name": "ライトニング",
+      "source": "《最终幻想XIII》（Square Enix，2009年）",
+      "gist": "《最终幻想XIII》主角，原圣府军军人，代号“雷霆”，本名埃克莱尔·法隆，被法尔希选中成为路西后为解放自身与茧的命運而战。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "日本游戏",
+        "RPG与动作",
+        "最终幻想系列（Final Fantasy / ファイナルファンタジー，Square Enix，1987起）"
+      ],
+      "rel_path": "fiction/游戏/日本游戏/RPG与动作/最终幻想系列（Final Fantasy _ ファイナルファンタジー，Square Enix，1987起）/Lightning（ライトニング）"
+    },
+    {
+      "character": "露琪娜",
+      "native_name": "ルキナ",
+      "source": "《火焰纹章：觉醒》（Fire Emblem: Awakening，2012，Intelligent Systems／任天堂）",
+      "gist": "《火焰纹章：觉醒》中来自绝望未来的王女，穿越时空试图改变毁灭的命运，以精湛剑术战斗，曾戴面具化名马尔斯。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "日本游戏",
+        "任天堂经典",
+        "火焰纹章系列（Fire Emblem，1990起）"
+      ],
+      "rel_path": "fiction/游戏/日本游戏/任天堂经典/火焰纹章系列（Fire Emblem，1990起）/Lucina（ルキナ）"
+    },
+    {
+      "character": "露西·莫德·蒙哥马利",
+      "native_name": "Lucy Maud Montgomery",
+      "source": "加拿大英语小说家，以《绿山墙的安妮》（1908）为代表的“安妮”系列闻名世界。",
+      "gist": "加拿大女作家，以经典小说《绿山墙的安妮》系列享誉全球，作品深刻描绘爱德华王子岛的乡村生活与女性成长。",
+      "classification": [
+        "real",
+        "加拿大文化",
+        "自治领建立"
+      ],
+      "rel_path": "real/加拿大文化/自治领建立/Lucy Maud Montgomery（露西·莫德·蒙哥马利）"
+    },
+    {
+      "character": "青豆",
+      "native_name": "青豆",
+      "source": "《1Q84》（村上春树，2009–2010）",
+      "gist": "村上春树小说《1Q84》的女主角，表面身份为健身教练，暗中以暗杀者身份惩治家暴男性，在有两个月亮的平行世界中追寻童年恋人天吾。",
+      "classification": [
+        "fiction",
+        "文学",
+        "日本文学",
+        "村上春樹"
+      ],
+      "rel_path": "fiction/文学/日本文学/村上春樹/青豆"
+    },
+    {
+      "character": "韩菱纱",
+      "native_name": "韩菱纱",
+      "source": "《仙剑奇侠传四》（上海软星 / 大宇资讯，2007）",
+      "gist": "《仙剑奇侠传四》女主角之一，出身盗墓世家韩氏一族，性格机敏爽朗、重情重义，因族人皆受短寿宿命所困而踏上寻仙长生之路，与云天河、柳梦璃、慕容紫英结伴同行。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "中国游戏",
+        "仙剑奇侠传系列（大宇资讯，1995起）"
+      ],
+      "rel_path": "fiction/游戏/中国游戏/仙剑奇侠传系列（大宇资讯，1995起）/韩菱纱"
+    },
+    {
+      "character": "风晴雪",
+      "native_name": "风晴雪",
+      "source": "《古剑奇谭：琴心剑魄今何在》（上海烛龙，2010年）",
+      "gist": "《古剑奇谭》系列女主角，来自幽都的巫姑之女，性情率真善良、坚韧执着，为寻找令爱人百里屠苏重生之法而遍历人间。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "中国游戏",
+        "古剑奇谭系列（上海烛龙）"
+      ],
+      "rel_path": "fiction/游戏/中国游戏/古剑奇谭系列（上海烛龙）/风晴雪"
+    },
+    {
+      "character": "马努",
+      "native_name": "Manu",
+      "source": "《Baise-moi》（《操我》），维尔日妮·德庞特（Virginie Despentes），1993年",
+      "gist": "法国小说《Baise-moi》的女主角之一，遭性暴力后与好友纳丁（Nadine）联手踏上血色复仇之路的边缘女性。",
+      "classification": [
+        "fiction",
+        "文学",
+        "法国文学",
+        "20世纪至今",
+        "维尔日妮·德庞特（Virginie Despentes）"
+      ],
+      "rel_path": "fiction/文学/法国文学/20世纪至今/维尔日妮·德庞特（Virginie Despentes）/Manu"
+    },
+    {
+      "character": "高文英",
+      "native_name": "고문영",
+      "source": "《虽然是精神病但没关系》（사이코지만 괜찮아 / It's Okay to Not Be Okay），韩国tvN电视剧，2020年",
+      "gist": "韩剧《虽然是精神病但没关系》女主角，一位患有反社会人格障碍的畅销童话作家。",
+      "classification": [
+        "fiction",
+        "电视剧",
+        "韩剧",
+        "2010s至今"
+      ],
+      "rel_path": "fiction/电视剧/韩剧/2010s至今/고문영（高文英）"
+    },
+    {
+      "character": "魔女菈妮",
+      "native_name": "魔女ラニ",
+      "source": "《艾尔登法环》（Elden Ring，FromSoftware，2022）",
+      "gist": "《艾尔登法环》中的半神级角色，卡利亚王室公主与暗月继承者，以四臂人偶之姿现身，引导褪色者终结黄金律法、开启群星时代。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "日本游戏",
+        "RPG与动作",
+        "魂系（FromSoftware，宫崎英高）"
+      ],
+      "rel_path": "fiction/游戏/日本游戏/RPG与动作/魂系（FromSoftware，宫崎英高）/Ranni the Witch（魔女菈妮）"
+    },
+    {
+      "character": "魔形女",
+      "native_name": "Mystique",
+      "source": "《X战警》（X-Men），漫威漫画，Chris Claremont 与 Dave Cockrum 创作，1978年首次登场于《Ms. Marvel》第16期",
+      "gist": "漫威漫画《X战警》中的变种人反派／反英雄，拥有任意变形伪装成他人的能力，曾是变种人兄弟会领袖，亦为夜行者（Nightcrawler）的生母与罗刹女（Rogue）的养母。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "美国漫画",
+        "X战警"
+      ],
+      "rel_path": "fiction/动画与漫画/美国漫画/X战警/Mystique（魔形女）"
+    },
+    {
+      "character": "鲁斯·巴德·金斯伯格",
+      "native_name": "Ruth Bader Ginsburg",
+      "source": "美国最高法院大法官（1993—2020），美国最高法院历史上第二位女性大法官",
+      "gist": "美国法学家与美国最高法院大法官（1993—2020），以坚定捍卫性别平等、女性权利与自由派司法理念闻名，外号「声名狼藉的RBG」，是美国历史上第二位女性大法官。",
+      "classification": [
+        "real",
+        "美国文化",
+        "战后至今"
+      ],
+      "rel_path": "real/美国文化/战后至今/Ruth Bader Ginsburg"
+    },
+    {
+      "character": "鲍西娅",
+      "native_name": "Portia",
+      "source": "《威尼斯商人》（The Merchant of Venice，威廉·莎士比亚，约1596）",
+      "gist": "《威尼斯商人》中贝尔蒙特的富家女继承人，女扮男装假扮律师在法庭上以机智辩才击败犹太放贷人夏洛克，拯救了安东尼奥。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "莎士比亚",
+        "《威尼斯商人》（The Merchant of Venice，约1596）"
+      ],
+      "rel_path": "fiction/戏剧/莎士比亚/《威尼斯商人》（The Merchant of Venice，约1596）/Portia（鲍西娅）"
+    },
+    {
+      "character": "麦克白夫人",
+      "native_name": "Lady Macbeth",
+      "source": "《麦克白》（Macbeth，威廉·莎士比亚，约1606年）",
+      "gist": "莎士比亚悲剧《麦克白》中的关键角色，唆使丈夫弑君篡位的野心女人，因深陷罪恶感而在梦游中反复擦拭幻想中的\"血迹\"，最终精神崩溃而死。",
+      "classification": [
+        "fiction",
+        "戏剧",
+        "莎士比亚",
+        "《麦克白》（Macbeth，约1606）"
+      ],
+      "rel_path": "fiction/戏剧/莎士比亚/《麦克白》（Macbeth，约1606）/Lady Macbeth（麦克白夫人）"
+    },
+    {
+      "character": "麦当娜",
+      "native_name": "Madonna",
+      "source": "美国流行歌手、词曲作者、演员、企业家及文化偶像",
+      "gist": "美国流行音乐天后，以持续重塑音乐风格与视觉形象著称，被公认为\"流行女王\"（Queen of Pop），是20世纪末至21世纪流行文化最具影响力的女性艺人之一。",
+      "classification": [
+        "real",
+        "美国文化",
+        "战后至今"
+      ],
+      "rel_path": "real/美国文化/战后至今/Madonna（麦当娜）"
+    },
+    {
+      "character": "黄蓉",
+      "native_name": "黄蓉",
+      "source": "《射雕英雄传》（金庸，1957年）",
+      "gist": "金庸武侠小说《射雕英雄传》女主角，桃花岛主黄药师之女，聪慧绝伦、精通奇门遁甲与五行八卦，后成为丐帮第十九代帮主。",
+      "classification": [
+        "fiction",
+        "文学",
+        "中国文学",
+        "当代与类型文学",
+        "金庸"
+      ],
+      "rel_path": "fiction/文学/中国文学/当代与类型文学/金庸/黄蓉"
+    },
+    {
+      "character": "黑公主",
+      "native_name": "द्रौपदी",
+      "source": "印度史诗《摩诃婆罗多》（毗耶娑，约公元前4世纪—公元4世纪）",
+      "gist": "般度五子共妻，诞生于祭火之中，在骰子赌局中被当众羞辱、险遭剥衣，此事件成为俱卢大战的直接导火索。",
+      "classification": [
+        "fiction",
+        "神话传说民间故事",
+        "印度神话",
+        "《摩诃婆罗多》关键人物"
+      ],
+      "rel_path": "fiction/神话传说民间故事/印度神话/《摩诃婆罗多》关键人物/Draupadī（द्रौपदी，黑公主）"
+    },
+    {
+      "character": "黑寡妇",
+      "native_name": "Natasha Romanoff",
+      "source": "漫威漫画（Marvel Comics），首次登场于《悬疑故事》#52（1964），由斯坦·李、唐·里科、唐·赫克创造",
+      "gist": "红房训练的前俄国间谍，后脱离控制加入神盾局与复仇者联盟，成为超级英雄黑寡妇。",
+      "classification": [
+        "fiction",
+        "动画与漫画",
+        "美国漫画",
+        "复仇者联盟核心"
+      ],
+      "rel_path": "fiction/动画与漫画/美国漫画/复仇者联盟核心/Natasha Romanoff _ Black Widow（黑寡妇）"
+    },
+    {
+      "character": "龙葵",
+      "native_name": "龙葵",
+      "source": "《仙剑奇侠传三》（大宇资讯·上海软星，2003）",
+      "gist": "《仙剑奇侠传三》女主角之一，姜国公主，景天的前世妹妹，国破时投身剑炉、魂魄寄宿魔剑千年，因怨念与眷恋分裂出温婉蓝葵与泼辣红葵双重人格。",
+      "classification": [
+        "fiction",
+        "游戏",
+        "中国游戏",
+        "仙剑奇侠传系列（大宇资讯，1995起）"
+      ],
+      "rel_path": "fiction/游戏/中国游戏/仙剑奇侠传系列（大宇资讯，1995起）/龙葵"
+    }
+  ]
+}
