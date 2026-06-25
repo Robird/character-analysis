@@ -66,6 +66,13 @@ class BatchAskConfig:
         temperature: 采样温度；分类任务建议 0.0-0.2。
         query_status: 是否在循环后追加状态汇报轮次；简单标注可关闭以节省一次请求。
         model: LLM 模型名；None 使用 LLMClient 默认值。
+        classification_filter: 可选的角色分类过滤器。
+            入参为 classification 元组（如 ``('fiction', '文学', '英国文学')``），
+            返回 True 表示纳入处理。None 表示不过滤。
+            例：``lambda c: c[0] == 'fiction'`` 只处理虚构角色。
+        max_retries: 单个人物在未产出结构化结果时的最大重试次数。
+            0 表示不重试；默认 1（首次 + 1 次重试 = 最多 2 次尝试）。
+            重试时重建 Agent 以获得干净的对话状态。
     """
 
     job_name: str
@@ -78,6 +85,8 @@ class BatchAskConfig:
     temperature: float = 0.1
     query_status: bool = False
     model: str | None = None
+    classification_filter: Callable[[tuple[str, ...]], bool] | None = None
+    max_retries: int = 1
 
 
 def _target_dir(base: Path, raw: CharacterGist) -> Path:
@@ -186,6 +195,36 @@ def _try_parse_final_text(
         return None
 
 
+def _run_one_attempt(
+    raw: CharacterGist,
+    stored: StoredProfile | None,
+    config: BatchAskConfig,
+    client: LLMClient,
+) -> BaseModel:
+    """执行一次标注尝试，返回校验通过的产出值；失败抛异常。"""
+    prompt = config.build_task_prompt(raw, stored)
+    agent = _build_agent(config, client)
+    result = agent.run(
+        prompt,
+        temperature=config.temperature,
+        query_status=config.query_status,
+    )
+
+    values = result.by_tool(config.output_tool_name)
+    if not values:
+        tag = _try_parse_final_text(result.final_text, config)
+        if tag is None:
+            raise RuntimeError(
+                f"未产出 {config.output_tool_name}：{raw.name!r} "
+                f"（final_text={result.final_text[:120]!r}）"
+            )
+        return tag
+
+    tag = values[-1]
+    assert isinstance(tag, config.output_schema)
+    return tag
+
+
 def _process_one(
     raw: CharacterGist,
     base: Path,
@@ -200,28 +239,22 @@ def _process_one(
         return output_path  # 幂等：已完成则跳过
 
     stored = _try_load_stored(char_dir)
-    prompt = config.build_task_prompt(raw, stored)
 
-    agent = _build_agent(config, client)
-    result = agent.run(
-        prompt,
-        temperature=config.temperature,
-        query_status=config.query_status,
-    )
-
-    values = result.by_tool(config.output_tool_name)
-    if not values:
-        # 兜底：部分模型偶发把合法 JSON 写入正文而不调用工具，
-        # 尝试从 final_text 中解析以挽救本次调用。
-        tag = _try_parse_final_text(result.final_text, config)
-        if tag is None:
-            raise RuntimeError(
-                f"未产出 {config.output_tool_name}：{raw.name!r} "
-                f"（final_text={result.final_text[:120]!r}）"
-            )
+    last_error: Exception | None = None
+    for attempt in range(config.max_retries + 1):
+        try:
+            tag = _run_one_attempt(raw, stored, config, client)
+            break  # 成功，跳出重试循环
+        except Exception as exc:
+            last_error = exc
+            if attempt < config.max_retries:
+                logger.debug(
+                    "%s 第 %d/%d 次重试（%s）",
+                    raw.name, attempt + 1, config.max_retries, exc,
+                )
     else:
-        tag = values[-1]  # 取最后一条（若有自我修正）
-        assert isinstance(tag, config.output_schema)
+        # 所有重试均已耗尽
+        raise last_error  # type: ignore[misc]
 
     record = _build_envelope(
         raw,
@@ -262,6 +295,8 @@ def run_batch_ask(
     """
     base = Path(base)
     raws = list(iter_characters())
+    if config.classification_filter is not None:
+        raws = [raw for raw in raws if config.classification_filter(raw.classification)]
     if limit is not None:
         raws = raws[:limit]
 
