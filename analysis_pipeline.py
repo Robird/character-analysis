@@ -282,9 +282,9 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--workers",
         type=int,
-        default=1,
+        default=64,
         metavar="W",
-        help="Phase 2 子时期级并发度（默认 1）。",
+        help="Phase 2 子时期级并发度（默认 64）。",
     )
     parser.add_argument(
         "--status",

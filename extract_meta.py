@@ -116,7 +116,7 @@ def extract_meta(
     stored: StoredProfile, client: LLMClient, *, quick: bool = False
 ) -> tuple[Phase0MetaData, AgentResult]:
     """对 *stored* 人物运行 Phase 0 元信息提取，返回 (data, 原始 AgentResult)。"""
-    agent = build_meta_agent(client, max_iterations=2 if quick else None)
+    agent = build_meta_agent(client, max_iterations=16 if quick else 64)
     result = agent.run(_build_task_prompt(stored, quick=quick), temperature=0.4)
     data = Phase0MetaData(
         roles=list(result.by_tool("output_role")),

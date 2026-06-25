@@ -1078,9 +1078,9 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--workers",
         type=int,
-        default=1,
+        default=64,
         metavar="W",
-        help="子时期级并发度（默认 1 串行）。子时期独立可并发，但注意 API 速率限制。",
+        help="子时期级并发度（默认 64 并行）。子时期独立可并发，但注意 API 速率限制。",
     )
     return parser.parse_args()
 
