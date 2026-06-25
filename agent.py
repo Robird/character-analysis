@@ -212,7 +212,7 @@ class Agent:
         system_prompt: str,
         client: AgentClient,
         *,
-        max_iterations: int = 32,
+        max_iterations: int = 64,
     ) -> None:
         """创建一个 Agent 节点。
 

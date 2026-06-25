@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """Phase 1 试点：生平骨架（时间轴）提取。
 
-用 :class:`agent.Agent` 驱动真实 LLM，将人物一生划分为主要阶段，每个阶段进一步
-拆解为若干子时期，并为每个子时期标注：时间范围、核心处境、开端触发事件、结束
-转折事件。这是后续 Phase 2 多轴交叉枚举所需的时间轴骨架。
+用 :class:`agent.Agent` 驱动真实 LLM，将人物一生中**有据可查、有自主行为**的
+时期拆解为结构化时间轴。跳过婴儿期、史料空白期和原著未着墨的时期，每个纳入的
+阶段进一步拆解为若干子时期，并为每个子时期标注：时间范围、核心处境、开端触发
+事件、结束转折事件。这是后续 Phase 2 多轴交叉枚举所需的时间轴骨架。
 
 若人物目录下已存在 ``phase0-meta.json``，其「标志性事件」列表会被提取出来作为
 时间节点锚点一并提供给 LLM，以提升子时期划分的精度和完整性。
@@ -42,11 +43,13 @@ from character_profile import StoredProfile
 logger = logging.getLogger(__name__)
 
 _SYSTEM_PROMPT = (
-    "你是一位资深的传记研究者与人物分析专家。"
-    "你的任务是将一个人物的一生拆解为结构化的时间轴：先划分主要阶段，再在每个阶段内"
-    "进一步细分子时期，并为每个子时期标注核心处境与前后转折事件。"
-    "你熟悉古今中外的历史人物与虚构角色，能基于公认史料或原著忠实还原生平轨迹。"
-    "分析时请特别注意：不要只记录高光时刻，平淡的过渡期、低谷期、等待期同样要列出——"
+    "你是一位资深的传记研究者与人物分析专家。\n"
+    "你的任务是将一个人物一生中**有据可查、有自主行为**的时期拆解为结构化的时间轴：\n"
+    "先划分主要阶段，再在每个阶段内进一步细分子时期，并为每个子时期标注核心处境与前后转折事件。\n"
+    "你熟悉古今中外的历史人物与虚构角色，能基于公认史料或原著忠实还原生平轨迹。\n"
+    "分析时请特别注意：\n"
+    "- 跳过婴儿期及史料/原著中完全空白的时期，不臆造内容。\n"
+    "- 不要只记录高光时刻；平淡的过渡期、低谷期、等待期同样要列出——"
     "这些往往是性格塑造和心理变化的关键阶段。"
     "你只通过工具调用输出结构化结果，每个主要阶段输出一次，按时间先后顺序。"
 )
@@ -58,7 +61,7 @@ _TOOL_DESC = (
 )
 
 
-def build_timeline_agent(client: LLMClient, *, max_iterations: int | None = None) -> Agent:
+def build_timeline_agent(client: LLMClient, *, max_iterations: int) -> Agent:
     agent = Agent(_SYSTEM_PROMPT, client=client, max_iterations=max_iterations)
     agent.add_output_tool(_TOOL_NAME, LifeStage, _TOOL_DESC)
     return agent
@@ -71,26 +74,30 @@ def _build_task_prompt(
     aliases = "、".join(header.aliases) if header.aliases else "无"
 
     lines = [
-        f"请将人物「{header.character}」的一生系统性地拆解为结构化时间轴。",
+        f"请将人物「{header.character}」一生中**有据可查、有自主行为**的时期拆解为结构化时间轴。",
         f"人物信息：母语原名={header.native_name}；别名={aliases}；"
         f"出处={header.source}；分类={header.classification_path}；简介={header.gist}。",
         "",
         "输出规则：",
-        "1. 将一生划分为若干主要阶段（通常 4-8 个），每个阶段用一次 output_life_stage 工具调用输出。",
-        "2. 每个主要阶段内进一步细分为子时期（sub_periods），按时间顺序嵌套在同一工具调用中。",
-        "3. 对每个子时期填写：",
+        "1. 起止边界——只纳入角色行为可被史料或原著支撑的时期：",
+        "   a) 跳过婴儿期及无后续影响的低幼阶段。",
+        "   b) 真实人物：跳过史料完全空白、仅知出生年份而无任何事迹的时期。",
+        "   c) 虚构角色：跳过原著中未着墨或仅一笔带过、无法还原其决策过程的时期。",
+        "2. 将可观测的一生划分为若干主要阶段（通常 4-8 个），每个阶段用一次 output_life_stage 工具调用输出。",
+        "3. 每个主要阶段内进一步细分为子时期（sub_periods），按时间顺序嵌套在同一工具调用中。",
+        "4. 对每个子时期填写：",
         "   - name：子时期名称",
         "   - time_range：时间范围",
         "   - core_situation：核心处境（一句话）",
         "   - opening_event：触发此子时期的事件（一句话）",
         "   - closing_event：结束此子时期的转折事件（一句话；末尾子时期无明确结束事件时留空）",
-        "4. 覆盖原则：不要只关注高光时刻；平淡的过渡期、低谷期、等待期同样要列出。",
-        "5. 按时间先后顺序依次输出各主要阶段；忠实于公认史料或原著，不臆造内容。",
+        "5. 覆盖原则：不要只关注高光时刻；平淡的过渡期、低谷期、等待期同样要列出。",
+        "6. 按时间先后顺序依次输出各主要阶段；忠实于公认史料或原著，不臆造内容。",
     ]
     if quick:
         lines += [
-            "6. 当前为快速流程验证模式：只需输出 1-2 个主要阶段，且每个阶段 1-2 个子时期即可。",
-            "7. 允许明显不完整，但结构必须正确、时间顺序必须自洽。",
+            "7. 当前为快速流程验证模式：只需输出 1-2 个主要阶段，且每个阶段 1-2 个子时期即可。",
+            "8. 允许明显不完整，但结构必须正确、时间顺序必须自洽。",
         ]
 
     if signature_events:
@@ -113,7 +120,7 @@ def extract_timeline(
 ) -> tuple[Phase1TimelineData, AgentResult]:
     """对 *stored* 人物运行 Phase 1 时间轴提取，返回 (data, 原始 AgentResult)。"""
     signature_events = load_signature_event_names(character_dir)
-    agent = build_timeline_agent(client, max_iterations=2 if quick else None)
+    agent = build_timeline_agent(client, max_iterations=16 if quick else 64)
     result = agent.run(
         _build_task_prompt(stored, signature_events, quick=quick),
         temperature=0.3,
